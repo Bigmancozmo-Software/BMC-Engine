@@ -2,6 +2,7 @@
 # and include sub-projects here.
 #
 cmake_minimum_required (VERSION 3.8)
+project(BMC-ENGINE)
 
 # Enable Hot Reload for MSVC compilers if supported.
 if (POLICY CMP0141)
@@ -13,3 +14,4 @@ project ("BMC-ENGINE")
 
 # Include sub-projects.
 add_subdirectory ("BMC-ENGINE")
+add_subdirectory ("extern/glfw")
