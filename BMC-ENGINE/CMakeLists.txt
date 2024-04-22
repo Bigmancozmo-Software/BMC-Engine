@@ -1,6 +1,5 @@
 ﻿# CMakeList.txt : CMake project for BMC-ENGINE, include source and define
 # project specific logic here.
-#
 
 # Add source to this project's executable.
 add_executable (BMC-ENGINE "main.cpp" "main.h" "../libs/glad/src/glad.c")
@@ -10,6 +9,7 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
 endif()
 
 # Libraries
+# TODO: Add Linux (maybe Mac too?) libraries
 if(WIN32)
   target_link_libraries(BMC-ENGINE ${CMAKE_CURRENT_SOURCE_DIR}/../libs/GLFW/lib/glfw3.lib)
   target_link_libraries(BMC-ENGINE ${CMAKE_CURRENT_SOURCE_DIR}/../libs/GLFW/lib/glfw3dll.lib)
