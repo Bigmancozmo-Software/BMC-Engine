@@ -12,8 +12,9 @@ endif()
 
 project ("BMC-ENGINE")
 
-# Include sub-projects.
+# Add subdirectories
 add_subdirectory ("BMC-ENGINE")
-# add_subdirectory ("extern/glfw")
+add_subdirectory ("libs/GLFW/include")
 
-# target_include_directories(BMC-ENGINE PRIVATE extern/glfw/include)
+# Include directories
+target_include_directories(BMC-ENGINE PRIVATE libs/GLFW/include)
