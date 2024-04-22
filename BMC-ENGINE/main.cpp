@@ -36,13 +36,20 @@ int main()
 	// callbacks
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
+	// initialize imgui
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO();
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
+	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplOpenGL3_Init();
+
 	// main loop
 	while (!glfwWindowShouldClose(window))
 	{
 		glClearColor(0.6f, 0.5f, 0.8f, 1.0f); 
 		glClear(GL_COLOR_BUFFER_BIT);
-
-		IMGUI_CHECKVERSION();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
