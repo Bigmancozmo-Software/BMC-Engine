@@ -21,6 +21,12 @@ int main()
 	}
 	glfwMakeContextCurrent(window);
 
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+	{
+		std::cout << "Failed to initialize OpenGL" << std::endl;
+		return -1;
+	}
+
 	while (!glfwWindowShouldClose(window))
 	{
 		glfwSwapBuffers(window);
