@@ -5,6 +5,11 @@
 
 using namespace std;
 
+void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+{
+	glViewport(0, 0, width, height);
+}
+
 int main()
 {
 	// Create GLFW window
@@ -22,6 +27,7 @@ int main()
 	}
 	glfwMakeContextCurrent(window);
 
+	// glad
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		std::cout << "Failed to initialize OpenGL" << std::endl;
@@ -30,9 +36,13 @@ int main()
 
 	glViewport(0, 0, 800, 600);
 
+	// callbacks
+	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+
+	// main loop
 	while (!glfwWindowShouldClose(window))
 	{
-		glClearColor(0.6f, 0.5f, 0.8f, 1.0f);
+		glClearColor(0.6f, 0.5f, 0.8f, 1.0f); 
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		glfwSwapBuffers(window);
