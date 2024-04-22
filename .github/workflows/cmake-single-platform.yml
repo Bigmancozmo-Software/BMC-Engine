@@ -38,7 +38,7 @@ jobs:
       with:
         script: |
           const { repo, owner } = context.repo;
-          const tag_name = 'windows-nightly';
+          const tag_name = 'nightly';
           const releases = await github.rest.repos.listReleases({
             owner,
             repo
@@ -51,9 +51,9 @@ jobs:
               owner,
               repo,
               tag_name,
-              name: 'Windows Nightly',
+              name: 'Nightly',
               draft: false,
-              prerelease: false
+              prerelease: true
             });
             return createReleaseResponse.data;
           }
