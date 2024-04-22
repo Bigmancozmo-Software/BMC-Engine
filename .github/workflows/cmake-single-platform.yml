@@ -44,19 +44,17 @@ jobs:
             repo
           });
           const release = releases.data.find(release => release.tag_name === tag_name);
-          if (release) {
-            console.log('Release found');
-            return { upload_url: release.upload_url };
-          } else {
+          if (!release) {
             throw new Error('No release found for the tag: ' + tag_name);
           }
+          console.log('Release found with upload URL:', release.upload_url);
+          return { upload_url: release.upload_url };
         result-encoding: json
 
     - name: Upload Release Asset
-      if: steps.find_existing_release.outputs.upload_url
       uses: actions/upload-release-asset@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.find_existing_release.outputs.upload_url }}
         asset_path: ${{github.workspace}}/build/build.zip
