@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+	// Create GLFW window
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
