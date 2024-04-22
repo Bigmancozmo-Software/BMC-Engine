@@ -32,8 +32,8 @@ jobs:
     - name: Archive artifacts
       run: Compress-Archive -Path ${{github.workspace}}/build/* -DestinationPath ${{github.workspace}}/build/build.zip
 
-    - name: Get or Create Release
-      id: get_or_create_release
+    - name: Find Existing Release
+      id: find_existing_release
       uses: actions/github-script@v6
       with:
         script: |
@@ -45,26 +45,20 @@ jobs:
           });
           const release = releases.data.find(release => release.tag_name === tag_name);
           if (release) {
+            console.log('Release found');
             return { upload_url: release.upload_url };
           } else {
-            const createReleaseResponse = await github.rest.repos.createRelease({
-              owner,
-              repo,
-              tag_name,
-              name: 'Nightly',
-              draft: false,
-              prerelease: true
-            });
-            return { upload_url: createReleaseResponse.data.upload_url };
+            throw new Error('No release found for the tag: ' + tag_name);
           }
         result-encoding: json
 
     - name: Upload Release Asset
+      if: steps.find_existing_release.outputs.upload_url
       uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        upload_url: ${{ steps.get_or_create_release.outputs.upload_url }}
+        upload_url: ${{ steps.find_existing_release.outputs.upload_url }}
         asset_path: ${{github.workspace}}/build/build.zip
         asset_name: build.zip
         asset_content_type: application/zip
