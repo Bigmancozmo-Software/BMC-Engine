@@ -14,6 +14,6 @@ project ("BMC-ENGINE")
 
 # Include sub-projects.
 add_subdirectory ("BMC-ENGINE")
-add_subdirectory ("extern/glfw")
+# add_subdirectory ("extern/glfw")
 
-target_include_directories(BMC-ENGINE PRIVATE extern/glfw/include)
+# target_include_directories(BMC-ENGINE PRIVATE extern/glfw/include)
