@@ -42,6 +42,8 @@ int main()
 		glClearColor(0.6f, 0.5f, 0.8f, 1.0f); 
 		glClear(GL_COLOR_BUFFER_BIT);
 
+		IMGUI_CHECKVERSION();
+
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}
