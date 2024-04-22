@@ -32,8 +32,8 @@ jobs:
     - name: Archive artifacts
       run: Compress-Archive -Path ${{github.workspace}}/build/* -DestinationPath ${{github.workspace}}/build/build.zip
 
-    - name: Create Release
-      id: create_release
+    - name: Get or Create Release
+      id: get_or_create_release
       uses: actions/github-script@v6
       with:
         script: |
@@ -45,7 +45,7 @@ jobs:
           });
           const release = releases.data.find(release => release.tag_name === tag_name);
           if (release) {
-            return release;
+            return { upload_url: release.upload_url };
           } else {
             const createReleaseResponse = await github.rest.repos.createRelease({
               owner,
@@ -55,7 +55,7 @@ jobs:
               draft: false,
               prerelease: true
             });
-            return createReleaseResponse.data;
+            return { upload_url: createReleaseResponse.data.upload_url };
           }
         result-encoding: json
 
@@ -64,7 +64,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        upload_url: ${{ steps.create_release.outputs.result.upload_url }}
+        upload_url: ${{ steps.get_or_create_release.outputs.upload_url }}
         asset_path: ${{github.workspace}}/build/build.zip
         asset_name: build.zip
         asset_content_type: application/zip
