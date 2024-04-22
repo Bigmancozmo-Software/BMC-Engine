@@ -20,7 +20,6 @@ target_include_directories(BMC-ENGINE PRIVATE libs/GLFW/include)
 target_include_directories(BMC-ENGINE PRIVATE libs/glad/include)
 target_include_directories(BMC-ENGINE PRIVATE libs/imgui)
 target_include_directories(BMC-ENGINE PRIVATE libs/imgui/backends)
-target_include_directories(BMC-ENGINE PRIVATE libs)
 
 # More subdirectories
 add_subdirectory ("libs/GLFW/include")
