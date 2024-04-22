@@ -51,8 +51,17 @@ int main()
 		glClearColor(0.6f, 0.5f, 0.8f, 1.0f); 
 		glClear(GL_COLOR_BUFFER_BIT);
 
-		glfwSwapBuffers(window);
 		glfwPollEvents();
+
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+		ImGui::ShowDemoWindow();
+
+		ImGui::Render();
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+		glfwSwapBuffers(window);
 	}
 
 	glfwTerminate();
