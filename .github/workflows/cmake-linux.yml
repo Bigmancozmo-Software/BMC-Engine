@@ -23,7 +23,14 @@ jobs:
       with:
         submodules: true
 
-    - uses: openrndr/setup-opengl@v1.1
+    - name: Install OpenGL
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libglu1-mesa-dev freeglut3-dev mesa-common-dev
+
+    - name: Verify Installation
+      run: |
+        glxinfo | grep "OpenGL version"
         
     - name: Install OpenGL
       run: xvfb-run glxinfo
