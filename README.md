@@ -1,6 +1,6 @@
 # BMC Engine
 
-A game engine, built from the ground up in C/C++
+A game engine, built from the ground up in C/C++ by Bigmancozmo.
 
 ## Compiling
 This only works on Windows **for now.** We are working on other OSes.
