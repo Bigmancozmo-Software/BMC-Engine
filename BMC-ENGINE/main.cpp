@@ -9,16 +9,19 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 const char* vertexShaderSource = "#version 330 core\n"
 	"layout (location = 0) in vec3 position;\n"
+	"out vec4 vertexColor;\n"
 	"void main()\n"
 	"{\n"
-	"gl_Position = vec4(position.x, position.y, position.z, 1.0);\n"
+	"	gl_Position = vec4(position, 1.0);\n"
+	"	vertexColor = vec4(0.5, 0.0, 0.0, 1.0);\n"
 	"}\0";
 
 const char* fragmentShaderSource = "#version 330 core\n"
 	"out vec4 color;\n"
+	"in vec4 vertexColor;\n"
 	"void main()\n"
 	"{\n"
-	"color = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
+	"	color = vertexColor;\n"
 	"}\n\0";
 
 int main()
@@ -29,7 +32,7 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
-	GLFWwindow* window = glfwCreateWindow(800, 600, "GLFW Window", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(1280, 720, "GLFW Window", NULL, NULL);
 	if (window == NULL)
 	{
 		std::cout << "Failed to create window!" << std::endl;
@@ -45,7 +48,7 @@ int main()
 		return -1;
 	}
 
-	glViewport(0, 0, 800, 600);
+	glViewport(0, 0, 1280, 720);
 
 	// callbacks
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
