@@ -1,4 +1,3 @@
-:)
 # BMC Engine
 
 <a href="LICENSE"><img alt="License Badge" src="https://img.shields.io/github/license/Bigmancozmo-Software/BMC-Engine?label=license&style=flat-square" /></a>
