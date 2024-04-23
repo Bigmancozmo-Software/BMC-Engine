@@ -53,11 +53,11 @@ jobs:
         result-encoding: json
 
     - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      uses: "marvinpinto/action-automatic-releases@latest"
       with:
-        upload_url: https://uploads.github.com/repos/Bigmancozmo/BMC-Engine/releases/152306744/assets%7B?name,label} # ${{ steps.find_existing_release.outputs.upload_url }}
-        asset_path: ${{github.workspace}}/build/build.zip
-        asset_name: build.zip
-        asset_content_type: application/zip
+        repo_token: "${{ secrets.RELEASE_TOKEN }}"
+        automatic_release_tag: "nightly"
+        prerelease: true
+        title: "Nightly"
+        files: |
+          ${{github.workspace}}/build/build.zip
