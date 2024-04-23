@@ -32,34 +32,29 @@ jobs:
       run: ctest -C ${{env.BUILD_TYPE}}
 
     - name: Archive artifacts
-      run: Compress-Archive -Path ${{github.workspace}}/build/* -DestinationPath ${{github.workspace}}/build/build.zip
+      run: Compress-Archive -Path ${{github.workspace}}/build/BMC-ENGINE/Release/* -DestinationPath ${{github.workspace}}/build/build.zip
 
-    - name: Find Existing Release
-      id: find_existing_release
-      uses: actions/github-script@v6
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
       with:
-        script: |
-          const { repo, owner } = context.repo;
-          const tag_name = 'nightly';
-          const releases = await github.rest.repos.listReleases({
-            owner,
-            repo
-          });
-          const release = releases.data.find(release => release.tag_name === tag_name);
-          if (release) {
-            console.log('Release found with upload URL:', release.upload_url);
-            return { upload_url: release.upload_url };
-          } else {
-            throw new Error('No release found for the tag: ' + tag_name);
-          }
-        result-encoding: json
+        name: build-artifact
+        path: ${{github.workspace}}/build/build.zip
+  package:
+    name: Package builds
+    runs-on: ubuntu-latest
+    needs: ['build']
 
-    - name: Upload Release Asset
-      uses: "marvinpinto/action-automatic-releases@latest"
-      with:
-        repo_token: "${{ secrets.RELEASE_TOKEN }}"
-        automatic_release_tag: "nightly"
-        prerelease: true
-        title: "Nightly"
-        files: |
-          ${{github.workspace}}/build/build.zip
+    steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifact
+      
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.RELEASE_TOKEN }}"
+          automatic_release_tag: "nightly"
+          prerelease: true
+          title: "Nightly"
+          files: |
+            /home/runner/work/BMC-Engine/BMC-Engine/build.zip
