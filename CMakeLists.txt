@@ -16,7 +16,7 @@ project ("BMC-ENGINE")
 add_subdirectory ("BMC-ENGINE")
 
 # Include directories
-target_include_directories(BMC-ENGINE PRIVATE extern/GLFW/include)
+target_include_directories(BMC-ENGINE PRIVATE extern/GLFW/include/GLFW)
 target_include_directories(BMC-ENGINE PRIVATE libs/glad/include)
 target_include_directories(BMC-ENGINE PRIVATE libs/imgui)
 target_include_directories(BMC-ENGINE PRIVATE libs/imgui/backends)
