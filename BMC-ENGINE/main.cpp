@@ -9,6 +9,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 const char* vertexShaderSource = "#version 330 core\n"
 	"layout (location = 0) in vec3 position;\n"
+	"layout (location = 1) in vec3 color;\n"
 	"out vec4 vertexColor;\n"
 	"void main()\n"
 	"{\n"
@@ -84,13 +85,13 @@ int main()
 
 
 	float vertices[] = {
-		-0.9f, -0.5f, 0.0f,
-		-0.0f, -0.5f, 0.0f,
-		-0.45f, 0.5f, 0.0f,
+		-0.9f, -0.5f, 0.0f,    1.0f, 0.0f, 0.0f
+		-0.0f, -0.5f, 0.0f,    0.0f, 1.0f, 0.0f,
+		-0.45f, 0.5f, 0.0f,    0.0f, 0.0f, 1.0f,
 
-		 0.0f, -0.5f, 0.0f,
-		 0.9f, -0.5f, 0.0f,
-		 0.45f, 0.5f, 0.0f
+		 0.0f, -0.5f, 0.0f,    1.0f, 0.0f, 0.0f,
+		 0.9f, -0.5f, 0.0f,    1.0f, 0.0f, 0.0f,
+		 0.45f, 0.5f, 0.0f,    0.0f, 1.0f, 1.0f
 	};
 
 	unsigned int VBO, VAO;
