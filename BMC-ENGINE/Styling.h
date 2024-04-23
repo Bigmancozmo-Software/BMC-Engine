@@ -4,5 +4,5 @@
 
 class Styler {
 public:
-	static setToDefault();
+	static void setToDefault();
 };
