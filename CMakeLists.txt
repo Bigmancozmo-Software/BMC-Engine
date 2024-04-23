@@ -10,19 +10,17 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
-project ("BMC-ENGINE")
-
 # Add base subdirectory
 add_subdirectory ("BMC-ENGINE")
 
 # Include directories
-target_include_directories(BMC-ENGINE PRIVATE libs/GLFW/include)
+target_include_directories(BMC-ENGINE PRIVATE extern/GLFW/include)
 target_include_directories(BMC-ENGINE PRIVATE libs/glad/include)
 target_include_directories(BMC-ENGINE PRIVATE libs/imgui)
 target_include_directories(BMC-ENGINE PRIVATE libs/imgui/backends)
 
 # More subdirectories
-add_subdirectory ("libs/GLFW/include")
+add_subdirectory ("extern/GLFW")
 add_subdirectory ("libs/glad/include")
 add_subdirectory ("libs/glad/src")
 add_subdirectory ("libs/imgui")
