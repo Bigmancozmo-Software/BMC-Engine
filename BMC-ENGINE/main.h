@@ -10,4 +10,4 @@
 
 // Rendering
 #include "glad/glad.h"
-#include "glfw3.h"
+#include "GLFW/glfw3.h"
