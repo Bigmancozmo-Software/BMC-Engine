@@ -3,10 +3,8 @@
 name: Windows Build
 
 on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  schedule:
+    - cron: '0 0 * * *'  # Runs at midnight UTC every day
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
