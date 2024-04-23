@@ -33,7 +33,10 @@ jobs:
 
     - name: Archive artifacts
       run: Compress-Archive -Path ${{github.workspace}}/build/* -DestinationPath ${{github.workspace}}/build/build.zip
+  package:
+    runs-on: windows-latest
 
+    steps:
     - name: List output files
       run: |
         dir D:\a\BMC-Engine\BMC-Engine\build\BMC-ENGINE\Release
