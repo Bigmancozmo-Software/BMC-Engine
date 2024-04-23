@@ -35,6 +35,7 @@ jobs:
       run: Compress-Archive -Path ${{github.workspace}}/build/* -DestinationPath ${{github.workspace}}/build/build.zip
   package:
     runs-on: windows-latest
+    needs: ['build']
 
     steps:
     - name: List output files
