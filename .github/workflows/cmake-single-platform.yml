@@ -62,4 +62,4 @@ jobs:
         prerelease: true
         title: "Nightly"
         files: |
-          ${{github.workspace}}/build/build.zip
+          ${{github.workspace}}/build/BMC-ENGINE/Release/BMC-ENGINE.exe
