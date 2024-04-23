@@ -49,15 +49,12 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-artifact
-
-      - name: List downloaded files
-        run: ls -l
       
-      #- uses: "marvinpinto/action-automatic-releases@latest"
-      #  with:
-      #    repo_token: "${{ secrets.RELEASE_TOKEN }}"
-      #    automatic_release_tag: "nightly"
-      #    prerelease: true
-      #    title: "Nightly"
-      #    files: |
-      #      /home/runner/work/_actions/geode-sdk/build-geode-mod/main/combine/artifacts/geode-build-win/bigmancozmo.spacemenu.geode
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.RELEASE_TOKEN }}"
+          automatic_release_tag: "nightly"
+          prerelease: true
+          title: "Nightly"
+          files: |
+            /home/runner/work/BMC-Engine/BMC-Engine/build.zip
