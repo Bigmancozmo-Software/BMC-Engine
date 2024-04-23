@@ -1,6 +1,6 @@
 #include "Styling.h"
 
-Styler::setToDefault()
+void Styler::setToDefault()
 {
 	ImGuiStyle* style = &ImGui::GetStyle();
 
