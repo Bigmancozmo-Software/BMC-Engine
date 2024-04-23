@@ -31,18 +31,7 @@ jobs:
       working-directory: ${{github.workspace}}/build
       run: ctest -C ${{env.BUILD_TYPE}}
 
-    - name: Archive artifacts
-      run: Compress-Archive -Path ${{github.workspace}}/build/* -DestinationPath ${{github.workspace}}/build/build.zip
-  package:
-    runs-on: windows-latest
-    needs: ['build']
-
-    steps:
-    - name: List output files
-      run: |
-        dir D:\a\BMC-Engine\BMC-Engine\build\BMC-ENGINE\Release
-
-    - name: Upload Release Asset
+    - name: Upload Release
       uses: "marvinpinto/action-automatic-releases@latest"
       with:
         repo_token: "${{ secrets.RELEASE_TOKEN }}"
@@ -51,3 +40,6 @@ jobs:
         title: "Nightly"
         files: |
           ${{github.workspace}}\build\BMC-ENGINE\Release\BMC-ENGINE.exe
+
+    - name: Archive artifacts
+      run: Compress-Archive -Path ${{github.workspace}}/build/* -DestinationPath ${{github.workspace}}/build/build.zip
