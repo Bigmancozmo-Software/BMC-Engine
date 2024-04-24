@@ -5,6 +5,10 @@
 file(GLOB BMCE_SOURCE
 	"*.cpp"
 	"*.h"
+	"*/*.cpp"
+	"*/*.h"
+	"*/*/*.cpp"
+	"*/*/*.h"
 	"../libs/glad/src/glad.c"
 	"../libs/imgui/*.cpp"
 	"../libs/imgui/backends/imgui_impl_glfw.cpp"
