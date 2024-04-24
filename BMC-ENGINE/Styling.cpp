@@ -9,8 +9,15 @@ void Styler::setToDefault()
 	style->FrameRounding = 3;
 	style->PopupRounding = 7;
 	style->TabRounding = 3;
+	style->GrabRounding = 3;
 
 	style->WindowPadding = ImVec2(10, 10);
 
 	style->ScrollbarSize = 11;
+
+	style->TableAngledHeadersAngle = 40;
+
+	style->WindowBorderSize = 0;
+	style->FrameBorderSize = 0;
+	style->PopupBorderSize = 0;
 }
