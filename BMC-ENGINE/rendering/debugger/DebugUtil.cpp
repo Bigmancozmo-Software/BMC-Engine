@@ -13,7 +13,7 @@ void DebugUtil::draw()
 
 	ImGui::Begin("Debugging Tools");
 	ImGui::SetWindowCollapsed(true, ImGuiCond_Once);
-	ImGui::SetWindowPos(ImVec2(0, 0), ImGuiCond_Once);
+	ImGui::SetWindowPos(ImVec2(10, 10), ImGuiCond_Once);
 	ImGui::Text("These are the DEBUGGING TOOLS.\nMake sure you know what you're doing!");
 	ImGui::Checkbox("Antialiasing", &(DebugSettings::useAntiAliasing));
 	ImGui::End();
