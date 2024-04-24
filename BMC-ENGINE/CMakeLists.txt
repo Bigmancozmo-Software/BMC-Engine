@@ -29,7 +29,6 @@ add_custom_command(
     COMMENT "Copying resources directory to build tree"
 )
 
-
 add_executable(BMC-ENGINE ${ROOT_SOURCE} ${RENDERING_SOURCE})
 
 find_package(OpenGL REQUIRED)
