@@ -1,0 +1,1 @@
+gource --multi-sampling --bloom-multiplier 1.7 -e 0.5 --bloom-intensity 1.35 --output-framerate 60 --key -a 1 -s 2 --time-scale 2 --title "BMC Engine Development" -o - -f | ffmpeg -f image2pipe -vcodec ppm -i - -vcodec libx264 -pix_fmt yuv420p -crf 18 -preset veryslow -threads 0 -bf 0 -r 60 -y gource-video.mp4
