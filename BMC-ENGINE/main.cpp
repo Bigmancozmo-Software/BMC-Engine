@@ -14,7 +14,7 @@ int main()
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	glfwWindowHint(GLFW_SAMPLES, 4);
+	glfwWindowHint(GLFW_SAMPLES, 16);
 
 	GLFWwindow* window = glfwCreateWindow(1280, 720, "GLFW Window", NULL, NULL);
 	if (window == NULL)
@@ -79,6 +79,11 @@ int main()
 
 	Styler::setToDefault();
 
+	//glDisable(GL_MULTISAMPLE);
+
+	// settings
+	bool useAntiAliasing = true;
+
 	// main loop
 	while (!glfwWindowShouldClose(window))
 	{
@@ -91,15 +96,23 @@ int main()
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 		glBindVertexArray(1);
-		/*
+		
 		ImGui_ImplOpenGL3_NewFrame();
 		ImGui_ImplGlfw_NewFrame();
 		ImGui::NewFrame();
-		ImGui::ShowDemoWindow();
+
+		ImGui::Begin("Debugging Tools");
+		ImGui::Text("These are BMC Engine DEBUGGING TOOLS.\nMake sure you know what you're doing!");
+		ImGui::Checkbox("Antialiasing", &useAntiAliasing);
+		ImGui::End();
 
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-		*/
+
+		if (useAntiAliasing)
+		{ glEnable(GL_MULTISAMPLE); }
+		else { glDisable(GL_MULTISAMPLE); }
+		
 		glfwSwapBuffers(window);
 	}
 
