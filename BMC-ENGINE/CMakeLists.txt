@@ -16,6 +16,18 @@ file(GLOB BMCE_SOURCE
 	"../extern/glfw/src/*.cpp"
 )
 
+# resources dir
+add_custom_target(copy_resources ALL)
+
+add_custom_command(
+    TARGET copy_resources POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/resources
+        ${CMAKE_BINARY_DIR}/BMC-ENGINE/resources
+    COMMENT "Copying resources directory to build tree"
+)
+
+
 add_executable(BMC-ENGINE ${BMCE_SOURCE})
 
 find_package(OpenGL REQUIRED)
