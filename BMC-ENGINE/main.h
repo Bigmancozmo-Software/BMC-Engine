@@ -15,3 +15,4 @@
 // My classes
 #include "Styling.h"
 #include "rendering/shaders/Shader.h"
+#include "rendering/debugger/DebugUtil.h"

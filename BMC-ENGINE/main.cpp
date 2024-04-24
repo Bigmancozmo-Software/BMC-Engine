@@ -78,11 +78,7 @@ int main()
 	glBindVertexArray(0);
 
 	Styler::setToDefault();
-
-	//glDisable(GL_MULTISAMPLE);
-
-	// settings
-	bool useAntiAliasing = true;
+	DebugUtil debugger(window);
 
 	// main loop
 	while (!glfwWindowShouldClose(window))
@@ -97,21 +93,7 @@ int main()
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 		glBindVertexArray(1);
 		
-		ImGui_ImplOpenGL3_NewFrame();
-		ImGui_ImplGlfw_NewFrame();
-		ImGui::NewFrame();
-
-		ImGui::Begin("Debugging Tools");
-		ImGui::Text("These are BMC Engine DEBUGGING TOOLS.\nMake sure you know what you're doing!");
-		ImGui::Checkbox("Antialiasing", &useAntiAliasing);
-		ImGui::End();
-
-		ImGui::Render();
-		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-
-		if (useAntiAliasing)
-		{ glEnable(GL_MULTISAMPLE); }
-		else { glDisable(GL_MULTISAMPLE); }
+		debugger.draw();
 		
 		glfwSwapBuffers(window);
 	}
