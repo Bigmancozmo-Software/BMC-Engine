@@ -2,13 +2,15 @@
 # project specific logic here.
 
 # Add source to this project's executable.
-file(GLOB BMCE_SOURCE
+file(GLOB RENDERING_SOURCE
+	"rendering/*.cpp"
+	"rendering/debugger/*.cpp"
+	"rendering/shaders/*.cpp"
+)
+
+file(GLOB ROOT_SOURCE
 	"*.cpp"
 	"*.h"
-	"*/*.cpp"
-	"*/*.h"
-	"*/*/*.cpp"
-	"*/*/*.h"
 	"../libs/glad/src/glad.c"
 	"../libs/imgui/*.cpp"
 	"../libs/imgui/backends/imgui_impl_glfw.cpp"
@@ -28,7 +30,7 @@ add_custom_command(
 )
 
 
-add_executable(BMC-ENGINE ${BMCE_SOURCE})
+add_executable(BMC-ENGINE ${ROOT_SOURCE} ${RENDERING_SOURCE})
 
 find_package(OpenGL REQUIRED)
 
