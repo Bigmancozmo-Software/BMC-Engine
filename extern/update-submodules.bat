@@ -1,8 +1,10 @@
 cd glfw
+git fetch
 git pull
 cd ..
 
 cd stb
+git fetch
 git pull
 cd ..
 
