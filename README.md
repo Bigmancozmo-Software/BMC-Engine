@@ -2,7 +2,7 @@
 
 A game engine, built from the ground up in C/C++ by Bigmancozmo.
 
-<div align=center>
+<div>
   <span>
     <a href="LICENSE"><img alt="License Badge" src="https://img.shields.io/github/license/Bigmancozmo/Space-Menu?label=license&style=flat-square" /></a>
     <br/>
