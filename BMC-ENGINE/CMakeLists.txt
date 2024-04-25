@@ -8,6 +8,11 @@ file(GLOB RENDERING_SOURCE
 	"rendering/shaders/*.cpp"
 )
 
+file(GLOB FILES_SOURCE
+	"files/*.cpp"
+	"files/image/*.cpp"
+)
+
 file(GLOB ROOT_SOURCE
 	"*.cpp"
 	"*.h"
