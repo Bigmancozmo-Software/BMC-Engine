@@ -5,8 +5,9 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 
-// standard
+// Builtin C++
 #include <iostream>
+#include <cstring>
 
 // Rendering
 #include "glad/glad.h"
