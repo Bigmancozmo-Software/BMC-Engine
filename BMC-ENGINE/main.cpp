@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
 
 	bool useDebugger = checkArg(argc, argv, "--build");
 	
-#ifndef NDEBUG
+#ifndef NDEBUG // If in debug mode, immediately set useDebugger to true.
 	useDebugger = true;
 #endif
 
