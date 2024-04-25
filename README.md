@@ -1,8 +1,19 @@
 # BMC Engine
 
-<a href="LICENSE"><img alt="License Badge" src="https://img.shields.io/github/license/Bigmancozmo-Software/BMC-Engine?label=license&style=flat-square" /></a>
-<br/>
 A game engine, built from the ground up in C/C++ by Bigmancozmo.
+
+<div align=center>
+  <span>
+    <a href="LICENSE"><img alt="License Badge" src="https://img.shields.io/github/license/Bigmancozmo/Space-Menu?label=license&style=flat-square" /></a>
+    <br/>
+    <a href="https://github.com/Bigmancozmo/Space-Menu/issues"><img alt="GitHub Issues - Open" src="https://img.shields.io/github/issues/Bigmancozmo/Space-Menu?style=flat-square" /></a>
+    <a href="https://github.com/Bigmancozmo/Space-Menu/issues"><img alt="GitHub Issues - Closed" src="https://img.shields.io/github/issues-closed/Bigmancozmo/Space-Menu?style=flat-square" /></a>
+    &ensp;&macr;&ensp;
+    <a href="https://github.com/Bigmancozmo/Space-Menu/pulls"><img alt="GitHub Pull Requests - Open" src="https://img.shields.io/github/issues-pr/Bigmancozmo/Space-Menu?style=flat-square" /></a>
+    <a href="https://github.com/Bigmancozmo/Space-Menu/pulls"><img alt="GitHub Pull Requests - Closed" src="https://img.shields.io/github/issues-pr-closed/Bigmancozmo/Space-Menu?style=flat-square" /></a>
+    <br/>
+  </span>
+</div>
 
 ## Compiling
 This only works on Windows **for now.** We are working on other OSes.
