@@ -7,10 +7,9 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	glViewport(0, 0, width, height);
 }
 
-template <typename T>
-bool checkArg(int argc, char* argv[], const T& arg) {
+bool checkArg(int argc, char* argv[], std::string arg) {
 	for (int i = 1; i < argc; ++i) {
-		if (argv[i] == arg) {  // This comparison works directly if T is std::string
+		if (argv[i] == arg) {
 			return true;
 		}
 	}
@@ -88,8 +87,9 @@ int main(int argc, char* argv[])
 
 	Styler::setToDefault();
 
-	bool useDebugger = checkArg(argc, argv, "--debug");
+#ifndef NDEBUG
 	DebugUtil debugger(window);
+#endif
 
 	// main loop
 	while (!glfwWindowShouldClose(window))
@@ -104,10 +104,10 @@ int main(int argc, char* argv[])
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 		glBindVertexArray(1);
 		
-		if (useDebugger) {
-			debugger.draw();
-		}
-		
+#ifndef NDEBUG
+		debugger.draw();
+#endif
+
 		glfwSwapBuffers(window);
 	}
 
