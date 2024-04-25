@@ -95,6 +95,15 @@ int main(int argc, char* argv[])
 	useDebugger = true;
 #endif
 
+	// App Icon
+	int icon_width, icon_height, icon_channels;
+	unsigned char* icon_image = stbi_load("resources/img/icon/logo0001.png", &icon_width, &icon_height, &icon_channels, 4);
+	GLFWimage app_icon[1];
+	app_icon[0].width = icon_width;
+	app_icon[0].height = icon_height;
+	app_icon[0].pixels = icon_image;
+	glfwSetWindowIcon(window, 1, app_icon);
+
 	// main loop
 	while (!glfwWindowShouldClose(window))
 	{
@@ -114,6 +123,10 @@ int main(int argc, char* argv[])
 		glfwSwapBuffers(window);
 	}
 
+	glfwDestroyWindow(window);
 	glfwTerminate();
+
+	stbi_image_free(icon_image);
+
 	return 0;
 }
