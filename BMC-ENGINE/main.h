@@ -1,5 +1,7 @@
 ﻿#pragma once
 
+#define STB_IMAGE_IMPLEMENTATION
+
 // ImGui
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -17,3 +19,4 @@
 #include "Styling.h"
 #include "rendering/shaders/Shader.h"
 #include "rendering/debugger/DebugUtil.h"
+#include "files/image/ImageLoader.h"
