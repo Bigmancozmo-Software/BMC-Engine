@@ -87,8 +87,12 @@ int main(int argc, char* argv[])
 
 	Styler::setToDefault();
 
-#ifndef NDEBUG
 	DebugUtil debugger(window);
+
+	bool useDebugger = checkArg(argc, argv, "--build");
+	
+#ifndef NDEBUG
+	useDebugger = true;
 #endif
 
 	// main loop
@@ -104,9 +108,8 @@ int main(int argc, char* argv[])
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 		glBindVertexArray(1);
 		
-#ifndef NDEBUG
-		debugger.draw();
-#endif
+		if(useDebugger)
+			debugger.draw();
 
 		glfwSwapBuffers(window);
 	}
