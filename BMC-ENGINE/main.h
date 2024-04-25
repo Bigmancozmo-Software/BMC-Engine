@@ -19,4 +19,4 @@
 #include "Styling.h"
 #include "rendering/shaders/Shader.h"
 #include "rendering/debugger/DebugUtil.h"
-#include "files/image/ImageLoader.h"
+#include "stb_image.h"
