@@ -7,7 +7,17 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 	glViewport(0, 0, width, height);
 }
 
-int main()
+template <typename T>
+bool checkArg(int argc, char* argv[], const T& arg) {
+	for (int i = 1; i < argc; ++i) {
+		if (argv[i] == arg) {  // This comparison works directly if T is std::string
+			return true;
+		}
+	}
+	return false;
+}
+
+int main(int argc, char* argv[])
 {
 	// Create GLFW window
 	glfwInit();
@@ -50,7 +60,6 @@ int main()
 
 	Shader defaultShader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
 
-
 	float vertices[] = {
 		0.0f, 0.5f, 0.0f,				1.0f, 0.0f, 0.0f,
 		-0.5f, -0.5f, 0.0f,				0.0f, 1.0f, 0.0f,
@@ -78,6 +87,8 @@ int main()
 	glBindVertexArray(0);
 
 	Styler::setToDefault();
+
+	bool useDebugger = checkArg(argc, argv, "--debug");
 	DebugUtil debugger(window);
 
 	// main loop
@@ -93,7 +104,9 @@ int main()
 		glDrawArrays(GL_TRIANGLES, 0, 6);
 		glBindVertexArray(1);
 		
-		debugger.draw();
+		if (useDebugger) {
+			debugger.draw();
+		}
 		
 		glfwSwapBuffers(window);
 	}
