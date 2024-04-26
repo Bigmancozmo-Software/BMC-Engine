@@ -95,9 +95,13 @@ int main(int argc, char* argv[])
 	useDebugger = true;
 #endif
 
+	srand(time(nullptr));
+	string fileName = to_string(rand() % 8 + 1);
+	string fileDir = "resources/img/icon/logo_" + fileName + ".png";
+
 	// App Icon
 	int icon_width, icon_height, icon_channels;
-	unsigned char* icon_image = stbi_load("resources/img/icon/logo0001.png", &icon_width, &icon_height, &icon_channels, 4);
+	unsigned char* icon_image = stbi_load(fileDir.c_str(), &icon_width, &icon_height, &icon_channels, 4);
 	GLFWimage app_icon[1];
 	app_icon[0].width = icon_width;
 	app_icon[0].height = icon_height;
