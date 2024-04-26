@@ -8,6 +8,11 @@ file(GLOB RENDERING_SOURCE
 	"rendering/shaders/*.cpp"
 )
 
+file(GLOB FILES_SOURCE
+	"files/*.cpp"
+	"files/image/*.cpp"
+)
+
 file(GLOB ROOT_SOURCE
 	"*.cpp"
 	"*.h"
@@ -29,7 +34,7 @@ add_custom_command(
     COMMENT "Copying resources directory to build tree"
 )
 
-add_executable(BMC-ENGINE ${ROOT_SOURCE} ${RENDERING_SOURCE})
+add_executable(BMC-ENGINE ${ROOT_SOURCE} ${RENDERING_SOURCE} ${FILES_SOURCE})
 
 find_package(OpenGL REQUIRED)
 

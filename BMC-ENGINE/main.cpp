@@ -23,7 +23,7 @@ int main(int argc, char* argv[])
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	glfwWindowHint(GLFW_SAMPLES, 16);
+	glfwWindowHint(GLFW_SAMPLES, 8);
 
 	GLFWwindow* window = glfwCreateWindow(1280, 720, "GLFW Window", NULL, NULL);
 	if (window == NULL)
@@ -91,9 +91,18 @@ int main(int argc, char* argv[])
 
 	bool useDebugger = checkArg(argc, argv, "--build");
 	
-#ifndef NDEBUG
+#ifndef NDEBUG // If in debug mode, immediately set useDebugger to true.
 	useDebugger = true;
 #endif
+
+	// App Icon
+	int icon_width, icon_height, icon_channels;
+	unsigned char* icon_image = stbi_load("resources/img/icon/logo0001.png", &icon_width, &icon_height, &icon_channels, 4);
+	GLFWimage app_icon[1];
+	app_icon[0].width = icon_width;
+	app_icon[0].height = icon_height;
+	app_icon[0].pixels = icon_image;
+	glfwSetWindowIcon(window, 1, app_icon);
 
 	// main loop
 	while (!glfwWindowShouldClose(window))
@@ -114,6 +123,10 @@ int main(int argc, char* argv[])
 		glfwSwapBuffers(window);
 	}
 
+	glfwDestroyWindow(window);
 	glfwTerminate();
+
+	stbi_image_free(icon_image);
+
 	return 0;
 }
