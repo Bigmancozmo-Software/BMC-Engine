@@ -27,7 +27,7 @@ file(GLOB ROOT_SOURCE
 add_custom_target(copy_resources ALL)
 
 add_custom_command(
-    TARGET copy_resources POST_BUILD
+    TARGET copy_resources PRE_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${CMAKE_SOURCE_DIR}/resources
         ${CMAKE_BINARY_DIR}/BMC-ENGINE/resources
