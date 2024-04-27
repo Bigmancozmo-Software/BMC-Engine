@@ -76,6 +76,9 @@ int main(int argc, char* argv[])
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
+	int tex_width, tex_height, tex_channels;
+	unsigned char* data = stbi_load("resources/img/smiley.png", &tex_width, &tex_height, &tex_channels, 0);
+
 	unsigned int VBO, VAO;
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
