@@ -62,9 +62,9 @@ int main(int argc, char* argv[])
 	float vertices[] = {
 		// positions          // colors           // texture coords
 		 0.6f,  0.7f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // top right
-		 0.4f, -0.6f, 0.0f,   0.0f, 0.0f, 0.0f,   1.0f, 0.0f, // bottom right
-		-0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 0.0f,   0.0f, 0.0f, // bottom left
-		-0.2f,  0.2f, 0.0f,   0.0f, 0.0f, 0.0f,   0.0f, 1.0f  // top left 
+		 0.4f, -0.6f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f, // bottom right
+		-0.7f, -0.35f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // bottom left
+		-0.2f,  0.2f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // top left 
 	};
 	unsigned int indices[] = {
 		0, 1, 3,
