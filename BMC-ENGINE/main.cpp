@@ -96,7 +96,7 @@ int main(int argc, char* argv[])
 #endif
 
 	srand(time(nullptr));
-	string fileName = to_string(rand() % 8 + 1);
+	string fileName = to_string(rand() % 7 + 1);
 	string fileDir = "resources/img/icon/logo_" + fileName + ".png";
 
 	// App Icon
