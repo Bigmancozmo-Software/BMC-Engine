@@ -60,15 +60,9 @@ int main(int argc, char* argv[])
 	Shader defaultShader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
 
 	float vertices[] = {
-		0.0f, 0.5f, 0.0f,				1.0f, 0.0f, 0.0f,
-		-0.5f, -0.5f, 0.0f,				0.0f, 1.0f, 0.0f,
-		0.5f, -0.5f, 0.0f,				0.0f, 0.0f, 1.0f
-	};
-
-	float textureCoords[] = {
-		0.0f, 0.5f, 0.0f,
-		-0.5f, -0.5f, 0.0f,
-		0.5f, -0.5f, 0.0f
+		0.0f, 0.5f, 0.0f,		1.0f, 0.0f, 0.0f,		0.0f, 0.5f, 0.0f,
+		-0.5f, -0.5f, 0.0f,		0.0f, 1.0f, 0.0f,		-0.5f, -0.5f, 0.0f,
+		0.5f, -0.5f, 0.0f,		0.0f, 0.0f, 1.0f,		0.5f, -0.5f, 0.0f
 	};
 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
@@ -103,6 +97,10 @@ int main(int argc, char* argv[])
 	// color attribute
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
 	glEnableVertexAttribArray(1);
+
+	// texture
+	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+	glEnableVertexAttribArray(2);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
