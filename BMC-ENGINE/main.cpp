@@ -77,7 +77,16 @@ int main(int argc, char* argv[])
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 	int tex_width, tex_height, tex_channels;
-	unsigned char* data = stbi_load("resources/img/smiley.png", &tex_width, &tex_height, &tex_channels, 0);
+	unsigned char* tex_data = stbi_load("resources/img/smiley.png", &tex_width, &tex_height, &tex_channels, 0);
+
+	unsigned int texture;
+	glGenTextures(1, &texture);
+	glBindTexture(GL_TEXTURE_2D, texture);
+
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, tex_width, tex_height, 0, GL_RGB, GL_UNSIGNED_BYTE, tex_data);
+	glGenerateMipmap(GL_TEXTURE_2D);
+
+	stbi_image_free(tex_data);
 
 	unsigned int VBO, VAO;
 	glGenVertexArrays(1, &VAO);
