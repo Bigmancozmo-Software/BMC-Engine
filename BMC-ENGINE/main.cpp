@@ -138,12 +138,6 @@ int main(int argc, char* argv[])
 	app_icon[0].pixels = icon_image;
 	glfwSetWindowIcon(window, 1, app_icon);
 
-	float scale = 0.683f;
-
-	glm::mat4 trans = glm::mat4(1.0f);
-	trans = glm::rotate(trans, glm::radians(45.0f), glm::vec3(0.0, 0.0, 1.0));
-	trans = glm::scale(trans, glm::vec3(scale, scale, scale));
-
 	// main loop
 	while (!glfwWindowShouldClose(window))
 	{
@@ -151,6 +145,10 @@ int main(int argc, char* argv[])
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		glfwPollEvents();
+
+		glm::mat4 trans = glm::mat4(1.0f);
+		trans = glm::translate(trans, glm::vec3(0.0f, 0.0f, 0.0f));
+		trans = glm::rotate(trans, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
 
 		unsigned int transformLoc = glGetUniformLocation(defaultShader.ID, "transform");
 		glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(trans));
