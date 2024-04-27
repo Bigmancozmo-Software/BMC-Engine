@@ -16,7 +16,7 @@
 #include "GLFW/glfw3.h"
 
 // My classes
-#include "Styling.h"
+#include "rendering/Styling.h"
 #include "rendering/shaders/Shader.h"
 #include "rendering/debugger/DebugUtil.h"
 #include "stb_image.h"
