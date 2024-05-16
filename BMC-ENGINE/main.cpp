@@ -1,5 +1,9 @@
 ﻿#include "main.h"
 
+#if WIN32
+#include <Windows.h>
+#endif
+
 using namespace std;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
