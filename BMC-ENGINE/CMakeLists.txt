@@ -23,25 +23,37 @@ file(GLOB ROOT_SOURCE
 	"../extern/glfw/src/*.cpp"
 )
 
+file(GLOB FULL_SRC
+	${ROOT_SOURCE}
+	${RENDERING_SOURCE}
+	${FILES_SOURCE}
+)
+
 # resources dir
 add_custom_target(copy_resources ALL)
 
 add_custom_command(
-    TARGET copy_resources PRE_BUILD
+    TARGET copy_resources POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${CMAKE_SOURCE_DIR}/resources
         ${CMAKE_BINARY_DIR}/BMC-ENGINE/resources
     COMMENT "Copying resources directory to build tree"
 )
 
-add_executable(BMC-ENGINE ${ROOT_SOURCE} ${RENDERING_SOURCE} ${FILES_SOURCE})
+if(WIN32 AND CMAKE_BUILD_TYPE STREQUAL "Release")
+	add_executable(BMC-ENGINE WIN32 ${FULL_SRC})
+else()
+	add_executable(BMC-ENGINE ${FULL_SRC})
+endif()
 
 find_package(OpenGL REQUIRED)
 
 target_link_libraries(BMC-ENGINE glfw)
 target_link_libraries(BMC-ENGINE OpenGL::GL)
 
-# target_link_libraries(BMC-ENGINE PRIVATE GLFW)
+set_target_properties(BMC-ENGINE PROPERTIES
+    LINK_FLAGS "/ENTRY:mainCRTStartup"
+)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET BMC-ENGINE PROPERTY CXX_STANDARD 20)
