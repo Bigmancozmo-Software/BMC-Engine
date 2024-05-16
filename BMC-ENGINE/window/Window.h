@@ -22,6 +22,7 @@ public:
 
 	void setSize(int width, int height);
 	void setSize(Vector2 size);
+	void initImGui();
 
 private:
 	void _create(const char* title, int width, int height);

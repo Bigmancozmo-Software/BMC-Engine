@@ -50,6 +50,17 @@ void Window::setSize(Vector2 size)
 	_setSize(size.x, size.y)
 }
 
+void Window::initImGui()
+{
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO();
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
+	io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
+	ImGui_ImplGlfw_InitForOpenGL(window, true);
+	ImGui_ImplOpenGL3_Init();
+}
+
 // PRIVATE METHODS
 
 void Window::_create(const char* title, int width, int height)

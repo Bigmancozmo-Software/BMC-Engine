@@ -21,13 +21,7 @@ int main(int argc, char* argv[])
 	
 
 	// initialize imgui
-	IMGUI_CHECKVERSION();
-	ImGui::CreateContext();
-	ImGuiIO& io = ImGui::GetIO();
-	io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;
-	io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;
-	ImGui_ImplGlfw_InitForOpenGL(window, true);
-	ImGui_ImplOpenGL3_Init();
+	
 
 	// OpenGL!
 
@@ -48,14 +42,7 @@ int main(int argc, char* argv[])
 	string fileDir = "resources/img/icon/logo_" + fileName + ".png";
 
 	// App Icon
-	stbi_set_flip_vertically_on_load(false);
-	int icon_width, icon_height, icon_channels;
-	unsigned char* icon_image = stbi_load(fileDir.c_str(), &icon_width, &icon_height, &icon_channels, 4);
-	GLFWimage app_icon[1];
-	app_icon[0].width = icon_width;
-	app_icon[0].height = icon_height;
-	app_icon[0].pixels = icon_image;
-	glfwSetWindowIcon(window, 1, app_icon);
+	
 
 	// main loop
 	while (!glfwWindowShouldClose(window))
