@@ -26,4 +26,7 @@ public:
 private:
 	void _create(const char* title, int width, int height);
 	void _setSize(int width, int height);
+	void _framebuffer_size_callback(GLFWwindow* window, int width, int height);
+	
+	GLFWwindow* window;
 };
