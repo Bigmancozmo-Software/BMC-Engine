@@ -17,14 +17,10 @@ bool checkArg(int argc, char* argv[], std::string arg) {
 
 int main(int argc, char* argv[])
 {
-	// Create GLFW window
-	
-
-	// initialize imgui
-	
+	Window window("BMC Engine");
+	window.initImGui();
 
 	// OpenGL!
-
 	Shader defaultShader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
 
 	Styler::setToDefault();
