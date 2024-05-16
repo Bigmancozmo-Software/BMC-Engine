@@ -6,11 +6,6 @@
 
 using namespace std;
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height)
-{
-	glViewport(0, 0, width, height);
-}
-
 bool checkArg(int argc, char* argv[], std::string arg) {
 	for (int i = 1; i < argc; ++i) {
 		if (argv[i] == arg) {
@@ -23,32 +18,7 @@ bool checkArg(int argc, char* argv[], std::string arg) {
 int main(int argc, char* argv[])
 {
 	// Create GLFW window
-	glfwInit();
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-	glfwWindowHint(GLFW_SAMPLES, 8);
-
-	GLFWwindow* window = glfwCreateWindow(1280, 720, "GLFW Window", NULL, NULL);
-	if (window == NULL)
-	{
-		std::cout << "Failed to create window!" << std::endl;
-		glfwTerminate();
-		return -1;
-	}
-	glfwMakeContextCurrent(window);
-
-	// glad
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-	{
-		std::cout << "Failed to initialize OpenGL" << std::endl;
-		return -1;
-	}
-
-	glViewport(0, 0, 1280, 720);
-
-	// callbacks
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	
 
 	// initialize imgui
 	IMGUI_CHECKVERSION();
