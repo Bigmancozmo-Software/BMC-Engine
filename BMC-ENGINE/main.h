@@ -1,12 +1,5 @@
 ﻿#pragma once
 
-#define STB_IMAGE_IMPLEMENTATION
-
-// ImGui
-#include "imgui.h"
-#include "imgui_impl_glfw.h"
-#include "imgui_impl_opengl3.h"
-
 // Builtin C++
 #include <iostream>
 #include <cstring>
@@ -20,6 +13,3 @@
 #include "rendering/shaders/Shader.h"
 #include "rendering/debugger/DebugUtil.h"
 #include "window/Window.h"
-
-// Other
-#include "stb_image.h"

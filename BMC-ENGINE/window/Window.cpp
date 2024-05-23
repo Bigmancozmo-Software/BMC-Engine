@@ -1,4 +1,5 @@
 #include "Window.h"
+#include "Window.h"
 
 // PUBLIC METHODS
 
@@ -25,19 +26,19 @@ Window::~Window()
 
 bool Window::shouldClose()
 {
-	return false;
+	return glfwWindowShouldClose(window);
 }
 
 void Window::setIcon(const char* file)
 {
-	stbi_set_flip_vertically_on_load(false);
+	/*stbi_set_flip_vertically_on_load(false);
 	int icon_width, icon_height, icon_channels;
 	unsigned char* icon_image = stbi_load(file, &icon_width, &icon_height, &icon_channels, 4);
 	GLFWimage app_icon[1];
 	app_icon[0].width = icon_width;
 	app_icon[0].height = icon_height;
 	app_icon[0].pixels = icon_image;
-	glfwSetWindowIcon(window, 1, app_icon);
+	glfwSetWindowIcon(window, 1, app_icon);*/
 }
 
 void Window::setSize(int width, int height)
@@ -47,7 +48,7 @@ void Window::setSize(int width, int height)
 
 void Window::setSize(Vector2 size)
 {
-	_setSize(size.x, size.y)
+	_setSize(size.x, size.y);
 }
 
 void Window::initImGui()
@@ -61,12 +62,18 @@ void Window::initImGui()
 	ImGui_ImplOpenGL3_Init();
 }
 
+GLFWwindow* Window::getWindow()
+{
+	return window;
+}
+
 // PRIVATE METHODS
 
 void Window::_create(const char* title, int width, int height)
 {
 	if (!glfwInit()) {
 		std::cout << "Failed to initialize GLFW" << std::endl;
+		glfwTerminate();
 	}
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -79,19 +86,18 @@ void Window::_create(const char* title, int width, int height)
 	{
 		std::cout << "Failed to create window!" << std::endl;
 		glfwTerminate();
-		return -1;
 	}
 	glfwMakeContextCurrent(window);
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		std::cout << "Failed to initialize OpenGL" << std::endl;
-		return -1;
+		glfwTerminate();
 	}
 
 	glViewport(0, 0, width, height);
 
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
+	glfwSetFramebufferSizeCallback(window, _framebuffer_size_callback);
 }
 
 void Window::_setSize(int width, int height)

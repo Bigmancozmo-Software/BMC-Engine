@@ -6,7 +6,6 @@ file(GLOB RENDERING_SOURCE
 	"rendering/*.cpp"
 	"rendering/debugger/*.cpp"
 	"rendering/shaders/*.cpp"
-	"rendering/window/*.cpp"
 )
 
 file(GLOB FILES_SOURCE
@@ -24,10 +23,20 @@ file(GLOB ROOT_SOURCE
 	"../extern/glfw/src/*.cpp"
 )
 
+file(GLOB OTHER_SOURCE
+	"window/*.cpp"
+)
+
+file(GLOB CLASSES_SOURCE
+	"classes/*.cpp"
+)
+
 file(GLOB FULL_SRC
 	${ROOT_SOURCE}
 	${RENDERING_SOURCE}
 	${FILES_SOURCE}
+	${OTHER_SOURCE}
+	${CLASSES_SOURCE}
 )
 
 # resources dir
