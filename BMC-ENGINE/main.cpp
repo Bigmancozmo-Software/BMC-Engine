@@ -19,6 +19,12 @@ int main(int argc, char* argv[])
 	// OpenGL!
 	Shader defaultShader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
 
+	float verts[] = {
+		0.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f,
+		1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f,
+		0.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f,
+	};
+
 	Styler::setToDefault();
 
 	DebugUtil debugger(window->getWindow());
