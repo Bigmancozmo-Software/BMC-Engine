@@ -58,8 +58,9 @@ int main(int argc, char* argv[])
 	DebugUtil debugger(window->getWindow());
 
 	bool useDebugger = checkArg(argc, argv, "--build");
-	
-#ifndef NDEBUG // If in debug mode, immediately set useDebugger to true.
+
+// If in debug mode, immediately set useDebugger to true.
+#ifndef NDEBUG
 	useDebugger = true;
 #endif
 
