@@ -75,7 +75,7 @@ GLFWwindow* Window::getWindow()
 
 bool Window::_create(const char* title, int width, int height)
 {
-	if (glfwInit()) {
+	if (!glfwInit()) {
 		std::cout << "Failed to initialize GLFW" << std::endl;
 		ErrorHandler::ErrorPopup(ERROR_CRITICAL, "Failed to initialize GLFW");
 		glfwTerminate();
