@@ -1,5 +1,4 @@
 #include "Window.h"
-#include "Window.h"
 
 // PUBLIC METHODS
 
