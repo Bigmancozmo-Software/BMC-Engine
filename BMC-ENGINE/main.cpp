@@ -17,7 +17,7 @@ int main(int argc, char* argv[])
 	window->initImGui();
 
 	// OpenGL!
-	Shader defaultShader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
+	Shader* defaultShader = new Shader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
 
 	float vertices[] = {
 		 0.5f,  0.5f, 0.0f,
@@ -78,6 +78,8 @@ int main(int argc, char* argv[])
 
 		glfwPollEvents();
 
+		defaultShader->use();
+
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
@@ -85,9 +87,14 @@ int main(int argc, char* argv[])
 		if(useDebugger)
 			debugger.draw();
 
+
 		glfwSwapBuffers(window->getWindow());
 	}
 
+	glDeleteVertexArrays(1, &VAO);
+	glDeleteBuffers(1, &VBO);
+
+	delete defaultShader;
 	delete window;
 
 	return 0;
