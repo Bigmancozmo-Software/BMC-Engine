@@ -5,5 +5,5 @@ in vec3 vertPos;
 
 void main()
 {
-    FragColor = vec4(vertPos, 1.0);
+    FragColor = vec4(abs(vertPos), 1.0);
 }
