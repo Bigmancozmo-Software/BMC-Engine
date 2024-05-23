@@ -1,9 +1,8 @@
 #pragma once
 
 #include "ErrorDefinitions.h"
-#include "../main.h"
 #include <string>
-using namespace std;
+#include <GLFW/glfw3.h>
 
 #ifdef WIN32
 #include <Windows.h>
