@@ -31,6 +31,7 @@ public:
 	void setSize(int width, int height);
 	void setSize(Vector2 size);
 	void initImGui();
+	void close();
 
 	GLFWwindow* getWindow();
 

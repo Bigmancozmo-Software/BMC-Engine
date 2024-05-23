@@ -61,6 +61,11 @@ void Window::initImGui()
 	ImGui_ImplOpenGL3_Init();
 }
 
+void Window::close()
+{
+	glfwSetWindowShouldClose(window, GLFW_TRUE);
+}
+
 GLFWwindow* Window::getWindow()
 {
 	return window;
