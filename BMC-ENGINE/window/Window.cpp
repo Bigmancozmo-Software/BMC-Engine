@@ -30,14 +30,14 @@ bool Window::shouldClose()
 
 void Window::setIcon(const char* file)
 {
-	/*stbi_set_flip_vertically_on_load(false);
+	stbi_set_flip_vertically_on_load(false);
 	int icon_width, icon_height, icon_channels;
 	unsigned char* icon_image = stbi_load(file, &icon_width, &icon_height, &icon_channels, 4);
 	GLFWimage app_icon[1];
 	app_icon[0].width = icon_width;
 	app_icon[0].height = icon_height;
 	app_icon[0].pixels = icon_image;
-	glfwSetWindowIcon(window, 1, app_icon);*/
+	glfwSetWindowIcon(window, 1, app_icon);
 }
 
 void Window::setSize(int width, int height)

@@ -67,9 +67,7 @@ int main(int argc, char* argv[])
 	srand(time(nullptr));
 	string fileName = to_string(rand() % 7 + 1);
 	string fileDir = "resources/img/icon/logo_" + fileName + ".png";
-
-	// App Icon
-	
+	window->setIcon(fileDir.c_str());
 
 	// main loop
 	while (!(window->shouldClose()))
