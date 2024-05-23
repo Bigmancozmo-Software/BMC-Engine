@@ -2,8 +2,6 @@
 
 using namespace std;
 
-static Window* window = new Window("BMC Engine");
-
 bool checkArg(int argc, char* argv[], std::string arg) {
 	for (int i = 1; i < argc; ++i) {
 		if (argv[i] == arg) {
@@ -15,6 +13,7 @@ bool checkArg(int argc, char* argv[], std::string arg) {
 
 int main(int argc, char* argv[])
 {
+	Window* window = new Window("BMC Engine");
 	window->initImGui();
 
 	// OpenGL!
