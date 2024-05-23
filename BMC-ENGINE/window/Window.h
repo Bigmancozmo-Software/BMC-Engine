@@ -15,6 +15,10 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 
+#ifdef WIN32
+#include <windows.h>
+#endif
+
 class Window {
 public:
 	Window(const char* title, int width, int height); // title with size
