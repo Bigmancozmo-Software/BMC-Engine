@@ -73,11 +73,13 @@ GLFWwindow* Window::getWindow()
 
 // PRIVATE METHODS
 
-void Window::_create(const char* title, int width, int height)
+bool Window::_create(const char* title, int width, int height)
 {
-	if (!glfwInit()) {
+	if (glfwInit()) {
 		std::cout << "Failed to initialize GLFW" << std::endl;
+		ErrorHandler::ErrorPopup(ERROR_CRITICAL, "Failed to initialize GLFW");
 		glfwTerminate();
+		return false;
 	}
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -102,6 +104,7 @@ void Window::_create(const char* title, int width, int height)
 	glViewport(0, 0, width, height);
 
 	glfwSetFramebufferSizeCallback(window, _framebuffer_size_callback);
+	return true;
 }
 
 void Window::_setSize(int width, int height)

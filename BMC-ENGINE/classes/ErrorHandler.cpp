@@ -9,7 +9,7 @@ void ErrorHandler::ErrorPopup(int type, const char* _text)
 #endif
 
 	std::string textStr(_text);
-	std::string text = "   " + textStr;
+	std::string text = "   " + textStr + "\n   The program will be aborted.";
 
 	switch (type) {
 	case ERROR_CRITICAL:
