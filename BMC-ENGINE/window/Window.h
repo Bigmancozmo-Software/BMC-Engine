@@ -13,7 +13,7 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 
-#include "ErrorHandler.h"
+#include "errors/ErrorHandler.h"
 
 class Window {
 public:
