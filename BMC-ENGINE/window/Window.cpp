@@ -90,15 +90,19 @@ bool Window::_create(const char* title, int width, int height)
 	window = glfwCreateWindow(width, height, title, NULL, NULL);
 	if (window == NULL)
 	{
-		std::cout << "Failed to create window!" << std::endl;
+		std::cout << "Failed to create GLFW window" << std::endl;
+		ErrorHandler::ErrorPopup(ERROR_CRITICAL, "Failed to create GLFW window");
 		glfwTerminate();
+		return false;
 	}
 	glfwMakeContextCurrent(window);
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		std::cout << "Failed to initialize OpenGL" << std::endl;
+		ErrorHandler::ErrorPopup(ERROR_CRITICAL, "Failed to initialize OpenGL");
 		glfwTerminate();
+		return false;
 	}
 
 	glViewport(0, 0, width, height);
