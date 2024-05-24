@@ -30,6 +30,7 @@ void DebugUtil::draw()
 
 void DebugUtil::processVars()
 {
+	// Some settings, such as Render Scale, must be processed in main.cpp
 	if (DebugSettings::useAntiAliasing) { glEnable(GL_MULTISAMPLE); } else { glDisable(GL_MULTISAMPLE); }
 	if (resetScale) { DebugSettings::renderScale = 1.0f; }
 }
