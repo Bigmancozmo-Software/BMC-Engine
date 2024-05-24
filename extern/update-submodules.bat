@@ -1,6 +1,6 @@
 cd glfw
 git fetch
-git pull
+git pull https://github.com/glfw/glfw
 cd ..
 
 cd stb
