@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-#include "Vector2.h"
+#include "math/Vector2.h"
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
