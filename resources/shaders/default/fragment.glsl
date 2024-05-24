@@ -1,9 +1,12 @@
 #version 330 core
+
+// Output variables //
 out vec4 FragColor;
 
-in vec3 vertPos;
+// Input Variables //
+in vec3 color;
 
 void main()
 {
-    FragColor = vec4(abs(vertPos), 1.0);
+    FragColor = vec4(color / 255, 1.0);
 }
