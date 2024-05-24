@@ -86,6 +86,7 @@ int main(int argc, char* argv[])
 		if(useDebugger)
 			debugger.draw();
 
+		defaultShader->setFloat("scale", DebugSettings::renderScale);
 
 		glfwSwapBuffers(window->getWindow());
 	}

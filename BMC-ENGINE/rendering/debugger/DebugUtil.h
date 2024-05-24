@@ -12,6 +12,10 @@ public:
 	DebugUtil(GLFWwindow*);
 	void draw();
 private:
+	// buttons
+	bool resetScale = false;
+
+	// other
 	GLFWwindow* window;
 	void processVars();
 };
@@ -19,4 +23,5 @@ private:
 class DebugSettings {
 public:
 	inline static bool useAntiAliasing = true;
+	inline static float renderScale = 1.0f;
 };
