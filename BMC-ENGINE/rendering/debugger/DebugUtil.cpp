@@ -16,6 +16,8 @@ void DebugUtil::draw()
 	ImGui::SetWindowPos(ImVec2(10, 10), ImGuiCond_Once);
 	ImGui::Text("These are the DEBUGGING TOOLS.\nMake sure you know what you're doing!");
 	ImGui::Checkbox("Antialiasing", &(DebugSettings::useAntiAliasing));
+	ImGui::SliderFloat("Render Scale", &(DebugSettings::renderScale), 0.0f, 5.0f);
+	resetScale = ImGui::Button("Reset Scale", ImVec2(100.0f, 20.0f));
 	ImGui::End();
 
 	//ImGui::ShowDemoWindow();
@@ -28,9 +30,7 @@ void DebugUtil::draw()
 
 void DebugUtil::processVars()
 {
-	if (DebugSettings::useAntiAliasing)
-	{
-		glEnable(GL_MULTISAMPLE);
-	}
-	else { glDisable(GL_MULTISAMPLE); }
+	// Some settings, such as Render Scale, must be processed in main.cpp
+	if (DebugSettings::useAntiAliasing) { glEnable(GL_MULTISAMPLE); } else { glDisable(GL_MULTISAMPLE); }
+	if (resetScale) { DebugSettings::renderScale = 1.0f; }
 }

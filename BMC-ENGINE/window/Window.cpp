@@ -61,6 +61,11 @@ void Window::initImGui()
 	ImGui_ImplOpenGL3_Init();
 }
 
+void Window::close()
+{
+	glfwSetWindowShouldClose(window, GLFW_TRUE);
+}
+
 GLFWwindow* Window::getWindow()
 {
 	return window;
@@ -68,11 +73,13 @@ GLFWwindow* Window::getWindow()
 
 // PRIVATE METHODS
 
-void Window::_create(const char* title, int width, int height)
+bool Window::_create(const char* title, int width, int height)
 {
 	if (!glfwInit()) {
 		std::cout << "Failed to initialize GLFW" << std::endl;
+		ErrorHandler::ErrorPopup(ERROR_CRITICAL, "Failed to initialize GLFW");
 		glfwTerminate();
+		return false;
 	}
 
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -83,20 +90,25 @@ void Window::_create(const char* title, int width, int height)
 	window = glfwCreateWindow(width, height, title, NULL, NULL);
 	if (window == NULL)
 	{
-		std::cout << "Failed to create window!" << std::endl;
+		std::cout << "Failed to create GLFW window" << std::endl;
+		ErrorHandler::ErrorPopup(ERROR_CRITICAL, "Failed to create GLFW window");
 		glfwTerminate();
+		return false;
 	}
 	glfwMakeContextCurrent(window);
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		std::cout << "Failed to initialize OpenGL" << std::endl;
+		ErrorHandler::ErrorPopup(ERROR_CRITICAL, "Failed to initialize OpenGL");
 		glfwTerminate();
+		return false;
 	}
 
 	glViewport(0, 0, width, height);
 
 	glfwSetFramebufferSizeCallback(window, _framebuffer_size_callback);
+	return true;
 }
 
 void Window::_setSize(int width, int height)

@@ -29,6 +29,8 @@ file(GLOB OTHER_SOURCE
 
 file(GLOB CLASSES_SOURCE
 	"classes/*.cpp"
+	"classes/math/*.cpp"
+	"classes/errors/*.cpp"
 )
 
 file(GLOB FULL_SRC
