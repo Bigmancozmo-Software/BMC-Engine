@@ -16,7 +16,7 @@ A game engine, built from the ground up in C/C++ by Bigmancozmo.
 </div>
 
 ## Compiling
-This only works on Windows **for now.** We are working on other OSes.
+This only works on Windows **for now.** We are working on other systems.
 
 ### 1. Install CMake
 Head [here](https://cmake.org/download/) to get CMake. Any version **newer than 3.8** should work.
