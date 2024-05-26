@@ -66,6 +66,25 @@ void Window::close()
 	glfwSetWindowShouldClose(window, GLFW_TRUE);
 }
 
+int Window::getWidth()
+{
+	int width, height = 0;
+	glfwGetWindowSize(window, &width, &height);
+	return width;
+}
+
+int Window::getHeight()
+{
+	int width, height = 0;
+	glfwGetWindowSize(window, &width, &height);
+	return height;
+}
+
+Vector2* Window::getSize()
+{
+	return new Vector2(getWidth(), getHeight()); // laziest possible way of doing this
+}
+
 GLFWwindow* Window::getWindow()
 {
 	return window;

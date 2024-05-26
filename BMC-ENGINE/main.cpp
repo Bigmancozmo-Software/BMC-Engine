@@ -13,22 +13,36 @@ bool checkArg(int argc, char* argv[], std::string arg) {
 
 int main(int argc, char* argv[])
 {
-	Window* window = new Window("BMC Engine");
+	Window* window = new Window("BMC Engine", 800, 800);
 	window->initImGui();
 
 	// OpenGL!
 	Shader* defaultShader = new Shader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
 
 	float vertices[] = {
-		// Coordinates      // Colors     // Textures
-		 0.5f,  0.5f, 0.0f, 255, 155, 79, 1.0f, 1.0f,
-		 0.5f, -0.5f, 0.0f, 250, 137, 50, 1.0f, 0.0f,
-		-0.5f, -0.5f, 0.0f, 250, 137, 50, 0.0f, 0.0f,
-		-0.5f,  0.5f, 0.0f, 255, 155, 79, 0.0f, 1.0f
+		 // Coordinates    // Colors      // Textures
+		 0.5f,  0.5f,  0.5f, 255, 155, 79,  1.0f, 1.0f,
+		-0.5f,  0.5f,  0.5f, 255, 155, 79, -1.0f, 1.0f,
+		-0.5f, -0.5f,  0.5f, 255, 155, 79, -1.0f, 0.0f,
+		 0.5f, -0.5f,  0.5f, 255, 155, 79,  1.0f, 0.0f,
+
+		-0.5f,  0.5f, -0.5f, 255, 155, 79,  1.0f, 1.0f,
+		 0.5f,  0.5f, -0.5f, 255, 155, 79, -1.0f, 1.0f,
+		 0.5f, -0.5f, -0.5f, 255, 155, 79, -1.0f, 0.0f,
+		-0.5f, -0.5f, -0.5f, 255, 155, 79,  1.0f, 0.0f,
 	};
 	unsigned int indices[] = {
 		0, 1, 3,
-		1, 2, 3
+		1, 2, 3,
+
+		4, 5, 7,
+		5, 6, 7,
+
+		1, 2, 4,
+		2, 4, 7,
+
+		1, 4, 5,
+		0, 1, 5,
 	};
 
 	unsigned int VBO, VAO, EBO;
@@ -82,27 +96,34 @@ int main(int argc, char* argv[])
 	Texture* smiley = new Texture("resources/img/smiley.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	smiley->texUnit(defaultShader, "tex0", 0);
 
+	glEnable(GL_DEPTH_TEST);
+
+	Camera* camera = new Camera(window->getSize(), glm::vec3(0.0f, 0.0f, 2.0f));
 
 	// main loop
 	while (!(window->shouldClose()))
 	{
 		glClearColor(0.6f, 0.5f, 0.8f, 1.0f); 
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		glfwPollEvents();
 
 		defaultShader->use();
 
+		camera->inputs(window);
+		camera->matrix(45.0f, 0.1f, 100.0f, defaultShader, "camMatrix");
+
 		smiley->bind();
 
 		glBindVertexArray(VAO);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(int), GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
 
 		if(useDebugger)
 			debugger.draw();
 
 		defaultShader->setFloat("scale", DebugSettings::renderScale);
+		camera->speed = DebugSettings::camSpeed;
 
 		glfwSwapBuffers(window->getWindow());
 	}

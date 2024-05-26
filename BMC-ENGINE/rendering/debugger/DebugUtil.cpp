@@ -18,6 +18,8 @@ void DebugUtil::draw()
 	ImGui::Checkbox("Antialiasing", &(DebugSettings::useAntiAliasing));
 	ImGui::SliderFloat("Render Scale", &(DebugSettings::renderScale), 0.0f, 5.0f);
 	resetScale = ImGui::Button("Reset Scale", ImVec2(100.0f, 20.0f));
+	ImGui::SliderFloat("Camera Speed", &(DebugSettings::camSpeed), 0.001f, 0.1f);
+	ImGui::SliderFloat("Camera Sensitivity", &(DebugSettings::camSensitivity), 25.0f, 500.0f);
 	ImGui::End();
 
 	//ImGui::ShowDemoWindow();

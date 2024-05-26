@@ -20,6 +20,7 @@ target_include_directories(BMC-ENGINE PRIVATE libs/imgui)
 target_include_directories(BMC-ENGINE PRIVATE libs/imgui/backends)
 target_include_directories(BMC-ENGINE PRIVATE extern/stb)
 target_include_directories(BMC-ENGINE PRIVATE BMC-ENGINE/classes)
+target_include_directories(BMC-ENGINE PRIVATE extern/glm)
 
 # More subdirectories
 add_subdirectory ("extern/glfw")
