@@ -40,6 +40,7 @@ jobs:
       run: ctest -C ${{env.BUILD_TYPE}}
 
     - name: Archive artifacts
+      shell: pwsh
       run: Compress-Archive -Path ${{github.workspace}}/build/BMC-ENGINE/Release/* -DestinationPath ${{github.workspace}}/build/Windows.zip
 
     - name: Upload Artifact
