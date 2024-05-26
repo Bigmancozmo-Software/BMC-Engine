@@ -101,6 +101,7 @@ jobs:
           name: build-linux
       
       - uses: "marvinpinto/action-automatic-releases@latest"
+        if: github.event_name == 'push'
         with:
           repo_token: "${{ secrets.RELEASE_TOKEN }}"
           automatic_release_tag: "nightly"
