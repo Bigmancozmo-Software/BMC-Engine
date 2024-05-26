@@ -38,7 +38,7 @@ jobs:
         echo before
         ls ${{github.workspace}}/build/BMC-ENGINE/Release/*
         echo after
-        Copy-Item -Path "resources" -Destination "build" -Recurse
+        Copy-Item -Path "resources" -Destination "build/Release" -Recurse
         ls ${{github.workspace}}/build/BMC-ENGINE/Release/*
         Compress-Archive -Path ${{github.workspace}}/build/BMC-ENGINE/Release/* -DestinationPath ${{github.workspace}}/build/Windows.zip
 
