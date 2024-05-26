@@ -13,6 +13,7 @@
 #include "rendering/shaders/Shader.h"
 #include "rendering/debugger/DebugUtil.h"
 #include "window/Window.h"
+#include "rendering/Texture.h"
 
 // stb
 #define STB_IMAGE_IMPLEMENTATION

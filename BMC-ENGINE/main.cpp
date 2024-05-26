@@ -79,30 +79,9 @@ int main(int argc, char* argv[])
 	window->setIcon(fileDir.c_str());
 
 	// img
-	int imgWidth, imgHeight, imgChannels;
-	stbi_set_flip_vertically_on_load(true);
-	unsigned char* bytes = stbi_load("resources/img/smiley.png", &imgWidth, &imgHeight, &imgChannels, 0);
+	Texture* smiley = new Texture("resources/img/smiley.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	smiley->texUnit(defaultShader, "tex0", 0);
 
-	GLuint texture;
-	glGenTextures(1, &texture);
-	glActiveTexture(GL_TEXTURE0);
-	glBindTexture(GL_TEXTURE_2D, texture);
-
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, imgWidth, imgHeight, 0, GL_RGBA, GL_UNSIGNED_BYTE, bytes);
-	glGenerateMipmap(GL_TEXTURE_2D);
-
-	stbi_image_free(bytes);
-	glBindTexture(GL_TEXTURE_2D, 0);
-
-	GLuint tex0Uni = glGetUniformLocation(defaultShader->ID, "tex0");
-	defaultShader->use();
-	glUniform1i(tex0Uni, 0);
 
 	// main loop
 	while (!(window->shouldClose()))
@@ -114,7 +93,7 @@ int main(int argc, char* argv[])
 
 		defaultShader->use();
 
-		glBindTexture(GL_TEXTURE_2D, texture);
+		smiley->bind();
 
 		glBindVertexArray(VAO);
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
@@ -130,10 +109,10 @@ int main(int argc, char* argv[])
 
 	glDeleteVertexArrays(1, &VAO);
 	glDeleteBuffers(1, &VBO);
-	glDeleteTextures(1, &texture);
 
 	delete defaultShader;
 	delete window;
+	delete smiley;
 
 	return 0;
 }
