@@ -63,9 +63,11 @@ find_package(OpenGL REQUIRED)
 target_link_libraries(BMC-ENGINE glfw)
 target_link_libraries(BMC-ENGINE OpenGL::GL)
 
-set_target_properties(BMC-ENGINE PROPERTIES
-    LINK_FLAGS "/ENTRY:mainCRTStartup"
-)
+if(WIN32)
+	set_target_properties(BMC-ENGINE PROPERTIES
+	    LINK_FLAGS "/ENTRY:mainCRTStartup"
+	)
+endif()
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET BMC-ENGINE PROPERTY CXX_STANDARD 20)
