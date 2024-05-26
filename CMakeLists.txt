@@ -14,7 +14,7 @@ endif()
 add_subdirectory ("BMC-ENGINE")
 
 # Include directories
-target_include_directories(BMC-ENGINE PRIVATE extern/GLFW/include)
+target_include_directories(BMC-ENGINE PRIVATE extern/glfw/include)
 target_include_directories(BMC-ENGINE PRIVATE libs/glad/include)
 target_include_directories(BMC-ENGINE PRIVATE libs/imgui)
 target_include_directories(BMC-ENGINE PRIVATE libs/imgui/backends)
@@ -22,7 +22,7 @@ target_include_directories(BMC-ENGINE PRIVATE extern/stb)
 target_include_directories(BMC-ENGINE PRIVATE BMC-ENGINE/classes)
 
 # More subdirectories
-add_subdirectory ("extern/GLFW")
+add_subdirectory ("extern/glfw")
 add_subdirectory ("libs/glad/include")
 add_subdirectory ("libs/glad/src")
 add_subdirectory ("libs/imgui")
