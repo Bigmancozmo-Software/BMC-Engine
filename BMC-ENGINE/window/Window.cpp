@@ -124,7 +124,7 @@ bool Window::_create(const char* title, int width, int height)
 		return false;
 	}
 
-	glViewport(0, 0, width, height);
+	_calcViewport(width, height);
 
 	glfwSetFramebufferSizeCallback(window, _framebuffer_size_callback);
 	return true;
@@ -133,10 +133,16 @@ bool Window::_create(const char* title, int width, int height)
 void Window::_setSize(int width, int height)
 {
 	glfwSetWindowSize(window, width, height);
+	_calcViewport(width, height);
+}
+
+void Window::_calcViewport(int width, int height)
+{
 	glViewport(0, 0, width, height);
 }
 
 void Window::_framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
+	
 	glViewport(0, 0, width, height);
 }

@@ -98,7 +98,7 @@ int main(int argc, char* argv[])
 
 	glEnable(GL_DEPTH_TEST);
 
-	Camera* camera = new Camera(window->getSize(), glm::vec3(0.0f, 0.0f, 2.0f));
+	Camera* camera = new Camera(window->getSize(), glm::vec3(0.0f, 0.0f, 1.7f));
 
 	// main loop
 	while (!(window->shouldClose()))

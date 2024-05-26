@@ -41,6 +41,7 @@ public:
 private:
 	bool _create(const char* title, int width, int height);
 	void _setSize(int width, int height);
+	void _calcViewport(int width, int height);
 	static void _framebuffer_size_callback(GLFWwindow* window, int width, int height);
 	
 	GLFWwindow* window;
