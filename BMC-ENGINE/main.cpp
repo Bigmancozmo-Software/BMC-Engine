@@ -21,11 +21,11 @@ int main(int argc, char* argv[])
 
 	float vertices[] = {
 		// Coordinates      // Colors     // Textures
-		-0.5f, 0.0f,  0.5f, 255, 155, 79, 1.0f, 1.0f,
-		-0.5f, 0.0f, -0.5f, 250, 137, 50, 1.0f, 0.0f,
-		 0.5f, 0.0f, -0.5f, 250, 137, 50, 0.0f, 0.0f,
-		 0.5f, 0.0f,  0.5f, 255, 155, 79, 0.0f, 1.0f,
-		 0.0f, 0.8f,  0.0f, 255, 155, 79, 0.0f, 1.0f
+		-0.5f, 0.0f,  0.5f, 255, 155, 79, 0.0f,  0.0f,
+		-0.5f, 0.0f, -0.5f, 250, 137, 50, 2.5f,  0.0f,
+		 0.5f, 0.0f, -0.5f, 250, 137, 50, 0.0f,  0.0f,
+		 0.5f, 0.0f,  0.5f, 255, 155, 79, 2.5f,  0.0f,
+		 0.0f, 0.8f,  0.0f, 255, 155, 79, 1.25f, 2.5f
 	};
 	unsigned int indices[] = {
 		0, 1, 2,
@@ -87,20 +87,31 @@ int main(int argc, char* argv[])
 	Texture* smiley = new Texture("resources/img/smiley.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
 	smiley->texUnit(defaultShader, "tex0", 0);
 
+	float rotation = 0.0f;
+	double prevTime = glfwGetTime();
+
+	glEnable(GL_DEPTH_TEST);
 
 	// main loop
 	while (!(window->shouldClose()))
 	{
 		glClearColor(0.6f, 0.5f, 0.8f, 1.0f); 
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		glfwPollEvents();
 
 		defaultShader->use();
 
+		double crntTime = glfwGetTime();
+		if (crntTime - prevTime >= (1.0f / 60.0f)) {
+			rotation += 0.5;
+			prevTime = crntTime;
+		}
+
 		glm::mat4 model = glm::mat4(1.0f);
 		glm::mat4 view = glm::mat4(1.0f);
 		glm::mat4 proj = glm::mat4(1.0f);
+		model = glm::rotate(model, glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
 		view = glm::translate(view, glm::vec3(0.0f, -0.5f, -2.0f));
 		proj = glm::perspective(glm::radians(45.0f), (float)(window->getWidth() / window->getHeight()), 0.1f, 100.0f);
 		defaultShader->setMat4("model", model);
