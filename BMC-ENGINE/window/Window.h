@@ -31,6 +31,11 @@ public:
 	void initImGui();
 	void close();
 
+	int getWidth();
+	int getHeight();
+
+	Vector2* getSize();
+
 	GLFWwindow* getWindow();
 
 private:

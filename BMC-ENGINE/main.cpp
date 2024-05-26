@@ -21,14 +21,19 @@ int main(int argc, char* argv[])
 
 	float vertices[] = {
 		// Coordinates      // Colors     // Textures
-		 0.5f,  0.5f, 0.0f, 255, 155, 79, 1.0f, 1.0f,
-		 0.5f, -0.5f, 0.0f, 250, 137, 50, 1.0f, 0.0f,
-		-0.5f, -0.5f, 0.0f, 250, 137, 50, 0.0f, 0.0f,
-		-0.5f,  0.5f, 0.0f, 255, 155, 79, 0.0f, 1.0f
+		-0.5f, 0.0f,  0.5f, 255, 155, 79, 1.0f, 1.0f,
+		-0.5f, 0.0f, -0.5f, 250, 137, 50, 1.0f, 0.0f,
+		 0.5f, 0.0f, -0.5f, 250, 137, 50, 0.0f, 0.0f,
+		 0.5f, 0.0f,  0.5f, 255, 155, 79, 0.0f, 1.0f,
+		 0.0f, 0.8f,  0.0f, 255, 155, 79, 0.0f, 1.0f
 	};
 	unsigned int indices[] = {
-		0, 1, 3,
-		1, 2, 3
+		0, 1, 2,
+		0, 2, 3,
+		0, 1, 4,
+		1, 2, 4,
+		2, 3, 4,
+		3, 0, 4
 	};
 
 	unsigned int VBO, VAO, EBO;
@@ -93,10 +98,19 @@ int main(int argc, char* argv[])
 
 		defaultShader->use();
 
+		glm::mat4 model = glm::mat4(1.0f);
+		glm::mat4 view = glm::mat4(1.0f);
+		glm::mat4 proj = glm::mat4(1.0f);
+		view = glm::translate(view, glm::vec3(0.0f, -0.5f, -2.0f));
+		proj = glm::perspective(glm::radians(45.0f), (float)(window->getWidth() / window->getHeight()), 0.1f, 100.0f);
+		defaultShader->setMat4("model", model);
+		defaultShader->setMat4("view", view);
+		defaultShader->setMat4("proj", proj);
+
 		smiley->bind();
 
 		glBindVertexArray(VAO);
-		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+		glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(int), GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
 
 		if(useDebugger)
