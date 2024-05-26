@@ -13,27 +13,36 @@ bool checkArg(int argc, char* argv[], std::string arg) {
 
 int main(int argc, char* argv[])
 {
-	Window* window = new Window("BMC Engine");
+	Window* window = new Window("BMC Engine", 800, 800);
 	window->initImGui();
 
 	// OpenGL!
 	Shader* defaultShader = new Shader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
 
 	float vertices[] = {
-		// Coordinates      // Colors     // Textures
-		-0.5f, 0.0f,  0.5f, 255, 155, 79, 0.0f,  0.0f,
-		-0.5f, 0.0f, -0.5f, 250, 137, 50, 2.5f,  0.0f,
-		 0.5f, 0.0f, -0.5f, 250, 137, 50, 0.0f,  0.0f,
-		 0.5f, 0.0f,  0.5f, 255, 155, 79, 2.5f,  0.0f,
-		 0.0f, 0.8f,  0.0f, 255, 155, 79, 1.25f, 2.5f
+		 // Coordinates    // Colors      // Textures
+		 0.5f, 1.0f,  0.5f, 255, 155, 79,  1.0f, 1.0f,
+		-0.5f, 1.0f,  0.5f, 255, 155, 79, -1.0f, 1.0f,
+		-0.5f, 0.0f,  0.5f, 255, 155, 79, -1.0f, 0.0f,
+		 0.5f, 0.0f,  0.5f, 255, 155, 79,  1.0f, 0.0f,
+
+		-0.5f, 1.0f, -0.5f, 255, 155, 79,  1.0f, 1.0f,
+		 0.5f, 1.0f, -0.5f, 255, 155, 79, -1.0f, 1.0f,
+		 0.5f, 0.0f, -0.5f, 255, 155, 79, -1.0f, 0.0f,
+		-0.5f, 0.0f, -0.5f, 255, 155, 79,  1.0f, 0.0f,
 	};
 	unsigned int indices[] = {
-		0, 1, 2,
-		0, 2, 3,
-		0, 1, 4,
+		0, 1, 3,
+		1, 2, 3,
+
+		4, 5, 7,
+		5, 6, 7,
+
 		1, 2, 4,
-		2, 3, 4,
-		3, 0, 4
+		2, 4, 7,
+
+		1, 4, 5,
+		0, 1, 5,
 	};
 
 	unsigned int VBO, VAO, EBO;
@@ -111,7 +120,8 @@ int main(int argc, char* argv[])
 		glm::mat4 model = glm::mat4(1.0f);
 		glm::mat4 view = glm::mat4(1.0f);
 		glm::mat4 proj = glm::mat4(1.0f);
-		model = glm::rotate(model, glm::radians(rotation), glm::vec3(0.0f, 1.0f, 0.0f));
+		model = glm::rotate(model, glm::radians(rotation), glm::vec3(1.0f, 1.0f, 1.0f));
+		model = glm::scale(model, glm::vec3(0.5, 0.5, 0.5));
 		view = glm::translate(view, glm::vec3(0.0f, -0.5f, -2.0f));
 		proj = glm::perspective(glm::radians(45.0f), (float)(window->getWidth() / window->getHeight()), 0.1f, 100.0f);
 		defaultShader->setMat4("model", model);
