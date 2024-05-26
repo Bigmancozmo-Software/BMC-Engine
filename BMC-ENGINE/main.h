@@ -17,6 +17,7 @@
 #include "rendering/debugger/DebugUtil.h"
 #include "window/Window.h"
 #include "rendering/graphics/Texture.h"
+#include "rendering/graphics/Camera.h"
 
 // stb
 #define STB_IMAGE_IMPLEMENTATION
