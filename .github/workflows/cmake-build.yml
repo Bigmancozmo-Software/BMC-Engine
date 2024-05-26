@@ -34,7 +34,13 @@ jobs:
       run: ctest -C ${{env.BUILD_TYPE}}
 
     - name: Archive artifacts
-      run: Compress-Archive -Path ${{github.workspace}}/build/BMC-ENGINE/Release/* -DestinationPath ${{github.workspace}}/build/Windows.zip
+      run: |
+        echo before
+        ls ${{github.workspace}}/build/BMC-ENGINE/Release/*
+        echo after
+        Copy-Item -Path "resources" -Destination "build" -Recurse
+        ls ${{github.workspace}}/build/BMC-ENGINE/Release/*
+        Compress-Archive -Path ${{github.workspace}}/build/BMC-ENGINE/Release/* -DestinationPath ${{github.workspace}}/build/Windows.zip
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v3
