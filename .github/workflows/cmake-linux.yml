@@ -42,7 +42,9 @@ jobs:
     - name: Archive artifacts
       shell: pwsh
       run: |
+          ls ${{github.workspace}}/build
           ls ${{github.workspace}}/build/BMC-ENGINE
+          ls ${{github.workspace}}/build/BMC-ENGINE/BMC-ENGINE
           Compress-Archive -Path ${{github.workspace}}/build/BMC-ENGINE/Release/* -DestinationPath ${{github.workspace}}/build/Windows.zip
 
     - name: Upload Artifact
