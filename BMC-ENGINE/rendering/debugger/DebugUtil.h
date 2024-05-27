@@ -26,4 +26,5 @@ public:
 	inline static float renderScale = 1.0f;
 	inline static float camSpeed = 0.012f;
 	inline static float camSensitivity = 365.5f;
+	inline static float camFOV = 120.0f;
 };

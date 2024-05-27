@@ -111,7 +111,7 @@ int main(int argc, char* argv[])
 		defaultShader->use();
 
 		camera->inputs(window);
-		camera->matrix(45.0f, 0.1f, 100.0f, defaultShader, "camMatrix");
+		camera->matrix(DebugSettings::camFOV, 0.1f, 100.0f, defaultShader, "camMatrix");
 
 		smiley->bind();
 

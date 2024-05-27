@@ -21,6 +21,7 @@ void DebugUtil::draw()
 	ImGui::Text("\nCamera Settings");
 	ImGui::SliderFloat("Camera Speed", &(DebugSettings::camSpeed), 0.001f, 0.1f);
 	ImGui::SliderFloat("Camera Sensitivity", &(DebugSettings::camSensitivity), 25.0f, 500.0f);
+	ImGui::SliderFloat("Camera FOV", &(DebugSettings::camFOV), 30.0f, 180.0f);
 	ImGui::End();
 
 	//ImGui::ShowDemoWindow();
