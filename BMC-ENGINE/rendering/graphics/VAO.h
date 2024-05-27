@@ -7,6 +7,8 @@ class VAO {
 public:
 	GLuint id;
 	VAO(GLfloat verts[]);
+private:
+	GLfloat vertices[];
 };
 
 #endif // VAO_H

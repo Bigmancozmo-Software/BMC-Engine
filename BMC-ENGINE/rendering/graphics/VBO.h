@@ -7,6 +7,8 @@ class VBO {
 public:
 	GLuint id;
 	VBO(GLfloat verts[]);
+private:
+	GLfloat vertices[];
 };
 
 #endif // VBO_H
