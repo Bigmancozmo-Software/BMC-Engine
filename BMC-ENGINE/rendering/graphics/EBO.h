@@ -3,4 +3,4 @@
 
 #include "glad/glad.h"
 
-#endif
+#endif // EBO_H

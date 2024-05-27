@@ -3,4 +3,4 @@
 
 #include "glad/glad.h"
 
-#endif
+#endif // VBO_H
