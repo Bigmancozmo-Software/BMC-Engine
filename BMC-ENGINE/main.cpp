@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
 		4, 6, 7
 	};
 
-	GLuint VBO, VAO, EBO;
+	GLuint VAO, VBO, EBO;
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 	glGenBuffers(1, &EBO);
