@@ -1,6 +1,6 @@
 #include "EBO.h"
 
-EBO::EBO(GLfloat verts[])
+EBO::EBO()
 {
 	glGenBuffers(1, &id);
 }

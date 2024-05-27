@@ -6,7 +6,7 @@
 class EBO {
 public:
 	GLuint id;
-	EBO(GLfloat verts[]);
+	EBO();
 };
 
 #endif // EBO_H
