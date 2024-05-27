@@ -143,6 +143,13 @@ void Window::_calcViewport(int width, int height)
 
 void Window::_framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-	
-	glViewport(0, 0, width, height);
+	float aspectRatio = (float)(width / height);
+	if (aspectRatio >= 1) {
+		float yOffset = (float)(width - height) / 2;
+		glViewport(0, -yOffset, width, width);
+	}
+	else {
+		float xOffset = (float)(height - width) / 2;
+		glViewport(-xOffset, 0, height, height);
+	}
 }
