@@ -27,5 +27,8 @@ Installing Visual Studio is required for compiling -- you do **not** have to cod
 ### 2. Download Repository
 Go to the repository page (you should already be here) and click the green "Code" button. Then, click "Download ZIP." Once the file is downloaded, simply just extract the zip.
 
-### 3. Compile
+### 3a. Compile with Command Prompt
 Open a new **Command Prompt** window in the source code directory.<br/>Then, run the following command:<br/>`cmake -S . -B build && cmake --build build --config Release --target BMC-ENGINE`<br/>This should generate a folder called **build**. Go to `build/BMC-ENGINE/Release`. BMC Engine is compiled!
+
+### 3b. Compile with Visual Studio
+Open up **Visual Studio** and select `Open a local folder`. Then, select the source code folder. If done correctly, Visual Studio **should** recognize it as a CMake project, and allow you to write code and build the engine from there.
