@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef ERROR_CRITICAL
 #define ERROR_CRITICAL 100 // Error is critical - close program
 #endif

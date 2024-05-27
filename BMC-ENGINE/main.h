@@ -1,4 +1,5 @@
-﻿#pragma once
+﻿#ifndef MAIN_H
+#define MAIN_H
 
 // Builtin C++
 #include <iostream>
@@ -27,3 +28,5 @@ class main {
 public:
 	static Window* window;
 };
+
+#endif // MAIN_H

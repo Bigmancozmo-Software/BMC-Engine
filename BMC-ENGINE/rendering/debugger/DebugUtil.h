@@ -1,4 +1,5 @@
-#pragma once
+#ifndef DEBUG_UTIL_H
+#define DEBUG_UTIL_H
 
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
@@ -28,3 +29,5 @@ public:
 	inline static float camSensitivity = 365.5f;
 	inline static float camFOV = 120.0f;
 };
+
+#endif // DEBUG_UTIL_H

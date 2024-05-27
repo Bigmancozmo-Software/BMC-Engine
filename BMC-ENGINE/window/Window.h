@@ -1,4 +1,5 @@
-#pragma once
+#ifndef WINDOW_H
+#define WINDOW_H
 
 #include "stb_image.h"
 
@@ -47,3 +48,5 @@ private:
 	
 	GLFWwindow* window;
 };
+
+#endif // WINDOW_H

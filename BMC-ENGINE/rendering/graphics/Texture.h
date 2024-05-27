@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TEXTURE_H
+#define TEXTURE_H
 
 #include <glad/glad.h>
 #include "../shaders/Shader.h"
@@ -16,3 +17,5 @@ public:
 	void bind();
 	void unbind();
 };
+
+#endif // TEXTURE_H

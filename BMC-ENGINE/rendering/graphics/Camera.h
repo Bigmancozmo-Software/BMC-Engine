@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CAMERA_H
+#define CAMERA_H
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -36,3 +37,5 @@ public:
 	void matrix(Shader* shader, const char* uniform);
 	void inputs(Window* window);
 };
+
+#endif // CAMERA_H
