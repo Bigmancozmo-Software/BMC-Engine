@@ -24,11 +24,11 @@ Head [here](https://cmake.org/download/) to get CMake. Any version **newer than 
 ### 2. Install Visual Studio
 Installing Visual Studio is required for compiling -- you do **not** have to code in it.<br/>Go [here](https://visualstudio.microsoft.com/vs/) and install Visual Studio 2022 (Visual Studio 2019 should work, but it is **untested**).<br/>When in the **Visual Studio Installer,** you **must** enable `Desktop development with C++`.<br/>Click "Modify" in the bottom-right and wait for the changes to be made and/or Visual Studio to be installed.
 
-### 2. Download Repository
+### 3. Download Repository
 Go to the repository page (you should already be here) and click the green "Code" button. Then, click "Download ZIP." Once the file is downloaded, simply just extract the zip.
 
-### 3a. Compile with Command Prompt
+### 4a. Compile with Command Prompt
 Open a new **Command Prompt** window in the source code directory.<br/>Then, run the following command:<br/>`cmake -S . -B build && cmake --build build --config Release --target BMC-ENGINE`<br/>This should generate a folder called **build**. Go to `build/BMC-ENGINE/Release`. BMC Engine is compiled!
 
-### 3b. Compile with Visual Studio
+### 4b. Compile with Visual Studio
 Open up **Visual Studio** and select `Open a local folder`. Then, select the source code folder. If done correctly, Visual Studio **should** recognize it as a CMake project, and allow you to write code and build the engine from there.
