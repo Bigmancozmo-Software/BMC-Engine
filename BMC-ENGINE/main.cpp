@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
 		-0.5f,  0.5f, -0.5f, 255, 155, 79,  1.0f, 1.0f,
 		 0.5f,  0.5f, -0.5f, 255, 155, 79, -1.0f, 1.0f,
 		 0.5f, -0.5f, -0.5f, 255, 155, 79, -1.0f, 0.0f,
-		-0.5f, -0.5f, -0.5f, 255, 155, 79,  1.0f, 0.0f,
+		-0.5f, -0.5f, -0.5f, 255, 155, 79,  1.0f, 0.0f
 	};
 	GLuint indices[] = {
 		0, 1, 3,
@@ -42,7 +42,7 @@ int main(int argc, char* argv[])
 		2, 4, 7,
 
 		1, 4, 5,
-		0, 1, 5,
+		0, 1, 5
 	};
 
 	GLfloat lightVertices[] =
@@ -72,18 +72,17 @@ int main(int argc, char* argv[])
 		4, 6, 7
 	};
 
-	GLuint VAO, VBO, EBO;
-	glGenVertexArrays(1, &VAO);
-	glGenBuffers(1, &VBO);
-	glGenBuffers(1, &EBO);
+	VAO vao(vertices);
+	VBO vbo(vertices);
+	EBO ebo;
 
-	glBindVertexArray(VAO);
+	glBindVertexArray(vao.id);
 
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBindBuffer(GL_ARRAY_BUFFER, vbo.id);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
 	// Connect EBO and indices array
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo.id);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
 	// Tell OpenGL to read vertex coordinates
@@ -145,7 +144,7 @@ int main(int argc, char* argv[])
 
 		smiley->bind();
 
-		glBindVertexArray(VAO);
+		glBindVertexArray(vao.id);
 		glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(int), GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
 
@@ -158,8 +157,8 @@ int main(int argc, char* argv[])
 		glfwSwapBuffers(window->getWindow());
 	}
 
-	glDeleteVertexArrays(1, &VAO);
-	glDeleteBuffers(1, &VBO);
+	glDeleteVertexArrays(1, &vao.id);
+	glDeleteBuffers(1, &vbo.id);
 
 	delete defaultShader;
 	delete window;

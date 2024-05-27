@@ -13,11 +13,16 @@
 
 // My classes
 #include "rendering/debugger/Styling.h"
-#include "rendering/shaders/Shader.h"
 #include "rendering/debugger/DebugUtil.h"
-#include "window/Window.h"
 #include "rendering/graphics/Texture.h"
 #include "rendering/graphics/Camera.h"
+#include "rendering/graphics/VAO.h"
+#include "rendering/graphics/VBO.h"
+#include "rendering/graphics/EBO.h"
+#include "rendering/shaders/Shader.h"
+
+#include "window/Window.h"
+
 
 // stb
 #define STB_IMAGE_IMPLEMENTATION
