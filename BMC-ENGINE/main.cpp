@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 	// OpenGL!
 	Shader* defaultShader = new Shader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
 
-	float vertices[] = {
+	GLfloat vertices[] = {
 		 // Coordinates    // Colors      // Textures
 		 0.5f,  0.5f,  0.5f, 255, 155, 79,  1.0f, 1.0f,
 		-0.5f,  0.5f,  0.5f, 255, 155, 79, -1.0f, 1.0f,
@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 		 0.5f, -0.5f, -0.5f, 255, 155, 79, -1.0f, 0.0f,
 		-0.5f, -0.5f, -0.5f, 255, 155, 79,  1.0f, 0.0f,
 	};
-	unsigned int indices[] = {
+	GLuint indices[] = {
 		0, 1, 3,
 		1, 2, 3,
 
@@ -45,7 +45,7 @@ int main(int argc, char* argv[])
 		0, 1, 5,
 	};
 
-	unsigned int VBO, VAO, EBO;
+	GLuint VBO, VAO, EBO;
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &VBO);
 	glGenBuffers(1, &EBO);
