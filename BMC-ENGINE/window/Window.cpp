@@ -66,6 +66,11 @@ void Window::close()
 	glfwSetWindowShouldClose(window, GLFW_TRUE);
 }
 
+void Window::maximize()
+{
+	glfwMaximizeWindow(window);
+}
+
 int Window::getWidth()
 {
 	int width, height = 0;
