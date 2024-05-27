@@ -1,6 +1,6 @@
 #ifndef VAO_H
 #define VAO_H
 
-#define "glad/glad.h"
+#include "glad/glad.h"
 
 #endif

@@ -1,6 +1,6 @@
 #ifndef VBO_H
 #define VBO_H
 
-#define "glad/glad.h"
+#include "glad/glad.h"
 
 #endif
