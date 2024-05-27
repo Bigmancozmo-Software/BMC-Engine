@@ -30,6 +30,7 @@ public:
 	void setSize(Vector2 size);
 	void initImGui();
 	void close();
+	void maximize();
 
 	int getWidth();
 	int getHeight();
