@@ -3,4 +3,10 @@
 
 #include "glad/glad.h"
 
+class EBO {
+public:
+	GLuint id;
+	EBO(GLfloat verts[]);
+};
+
 #endif // EBO_H
