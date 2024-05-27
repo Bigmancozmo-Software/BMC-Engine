@@ -24,6 +24,6 @@ class DebugSettings {
 public:
 	inline static bool useAntiAliasing = true;
 	inline static float renderScale = 1.0f;
-	inline static float camSpeed = 0.015f;
+	inline static float camSpeed = 0.012f;
 	inline static float camSensitivity = 365.5f;
 };
