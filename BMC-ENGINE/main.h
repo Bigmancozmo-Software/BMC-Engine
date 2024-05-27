@@ -12,7 +12,7 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 // My classes
-#include "Styling.h"
+#include "rendering/debugger/Styling.h"
 #include "rendering/shaders/Shader.h"
 #include "rendering/debugger/DebugUtil.h"
 #include "window/Window.h"
