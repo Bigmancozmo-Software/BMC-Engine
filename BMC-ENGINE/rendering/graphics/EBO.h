@@ -2,7 +2,9 @@
 #define EBO_H
 
 #include "glad/glad.h"
+
 #include <iostream>
+
 class EBO {
 public:
 	GLuint id;

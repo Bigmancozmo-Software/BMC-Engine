@@ -10,7 +10,7 @@ EBO::EBO(GLuint* inds, int length) : size(length)
 void EBO::bind()
 {
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, size * sizeof(GLuint), indices, GL_STATIC_DRAW);
 }
 
 void EBO::cleanup()
