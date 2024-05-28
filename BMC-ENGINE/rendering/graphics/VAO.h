@@ -6,7 +6,7 @@
 class VAO {
 public:
 	GLuint id;
-	VAO(int length);
+	VAO();
 
 	void bind();
 	void cleanup();
