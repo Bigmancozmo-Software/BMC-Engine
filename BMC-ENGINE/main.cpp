@@ -125,7 +125,7 @@ int main(int argc, char* argv[])
 		defaultShader->use();
 
 		camera.inputs(window);
-		camera.updateMatrix(DebugSettings::camFOV, 0.1f, 100.0f);
+		camera.updateMatrix(DebugSettings::camFOV, 0.001f, 100.0f);
 		camera.matrix(defaultShader, "camMatrix");
 
 		smiley.bind();
