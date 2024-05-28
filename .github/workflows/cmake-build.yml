@@ -41,7 +41,7 @@ jobs:
         Compress-Archive -Path ${{github.workspace}}/build/BMC-ENGINE/Release/* -DestinationPath ${{github.workspace}}/build/Windows.zip
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: build-win
         path: ${{github.workspace}}/build/Windows.zip
