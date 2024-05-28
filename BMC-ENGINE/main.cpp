@@ -82,6 +82,7 @@ int main(int argc, char* argv[])
 	};
 
 	Shader* defaultShader = new Shader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
+	Shader* lightShader = new Shader("./resources/shaders/light/vertex.glsl", "./resources/shaders/light/fragment.glsl");
 
 	VAO vao;
 	VBO vbo(vertices, sizeof(vertices) / sizeof(float));
