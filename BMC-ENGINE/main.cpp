@@ -74,6 +74,10 @@ int main(int argc, char* argv[])
 	VBO vbo(vertices, sizeof(vertices) / sizeof(float));
 	EBO ebo(indices, sizeof(indices) / sizeof(int));
 
+	VAO lightVAO;
+	VBO lightVBO(lightVertices, sizeof(lightVertices) / sizeof(float));
+	EBO lightEBO(lightIndices, sizeof(lightIndices) / sizeof(float));
+
 	vao.bind();
 	vbo.bind();
 	ebo.bind();
