@@ -6,7 +6,10 @@
 class VAO {
 public:
 	GLuint id;
-	VAO(GLfloat verts[]);
+	VAO(GLfloat verts[], int length);
+
+	void bind();
+	void cleanup();
 private:
 	GLfloat vertices[];
 };

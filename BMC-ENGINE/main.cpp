@@ -72,9 +72,9 @@ int main(int argc, char* argv[])
 		4, 6, 7
 	};
 
-	VAO vao(vertices);
-	VBO vbo(vertices);
-	EBO ebo;
+	VAO vao(vertices, sizeof(vertices) / sizeof(float));
+	VBO vbo(vertices, sizeof(vertices) / sizeof(float));
+	EBO ebo(indices, sizeof(indices) / sizeof(int));
 
 	glBindVertexArray(vao.id);
 
@@ -104,7 +104,7 @@ int main(int argc, char* argv[])
 
 	Styler::setToDefault();
 
-	DebugUtil debugger(window->getWindow());
+	DebugUtil* debugger = new DebugUtil(window->getWindow());
 
 	bool useDebugger = (checkArg(argc, argv, "--debugger")) || (checkArg(argc, argv, "-d"));
 
@@ -114,9 +114,9 @@ int main(int argc, char* argv[])
 #endif
 
 	srand(time(nullptr));
-	string fileName = to_string(rand() % 7 + 1);
-	string fileDir = "resources/img/icon/logo_" + fileName + ".png";
-	window->setIcon(fileDir.c_str());
+	int randomNumber = rand() % 7 + 1;
+	string* fileDir = new string("resources/img/icon/logo_" + to_string(randomNumber) + ".png");
+	window->setIcon(fileDir->c_str());
 
 	// img
 	Texture* smiley = new Texture("resources/img/smiley.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
@@ -149,7 +149,7 @@ int main(int argc, char* argv[])
 		glBindVertexArray(0);
 
 		if(useDebugger)
-			debugger.draw();
+			debugger->draw();
 
 		defaultShader->setFloat("scale", DebugSettings::renderScale);
 		camera->speed = DebugSettings::camSpeed;
@@ -159,10 +159,15 @@ int main(int argc, char* argv[])
 
 	glDeleteVertexArrays(1, &vao.id);
 	glDeleteBuffers(1, &vbo.id);
+	glDeleteBuffers(1, &ebo.id);
 
 	delete defaultShader;
 	delete window;
 	delete smiley;
+	delete debugger;
+	delete fileDir;
+
+	
 
 	return 0;
 }

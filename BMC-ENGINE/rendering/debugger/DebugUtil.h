@@ -11,6 +11,7 @@
 class DebugUtil {
 public:
 	DebugUtil(GLFWwindow*);
+	~DebugUtil();
 	void draw();
 private:
 	// buttons

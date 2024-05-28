@@ -3,10 +3,12 @@
 
 #include "glad/glad.h"
 
+#include <iostream>
+
 class VBO {
 public:
 	GLuint id;
-	VBO(GLfloat verts[]);
+	VBO(GLfloat verts[], int length);
 private:
 	GLfloat vertices[];
 };

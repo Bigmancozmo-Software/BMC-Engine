@@ -5,6 +5,13 @@ DebugUtil::DebugUtil(GLFWwindow* window)
 	this->window = window;
 }
 
+DebugUtil::~DebugUtil()
+{
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+	ImGui::DestroyContext();
+}
+
 void DebugUtil::draw()
 {
 	ImGui_ImplOpenGL3_NewFrame();
