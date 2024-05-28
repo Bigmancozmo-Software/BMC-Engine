@@ -102,16 +102,15 @@ int main(int argc, char* argv[])
 
 	srand(time(nullptr));
 	int randomNumber = rand() % 7 + 1;
-	string* fileDir = new string("resources/img/icon/logo_" + to_string(randomNumber) + ".png");
-	window->setIcon(fileDir->c_str());
+	string fileDir = "resources/img/icon/logo_" + to_string(randomNumber) + ".png";
+	window->setIcon(fileDir.c_str());
 
-	// img
-	Texture* smiley = new Texture("resources/img/smiley.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
-	smiley->texUnit(defaultShader, "tex0", 0);
+	Texture smiley("resources/img/smiley.png", GL_TEXTURE_2D, GL_TEXTURE0, GL_RGBA, GL_UNSIGNED_BYTE);
+	smiley.texUnit(defaultShader, "tex0", 0);
 
 	glEnable(GL_DEPTH_TEST);
 
-	Camera* camera = new Camera(window->getSize(), glm::vec3(0.0f, 0.0f, 1.7f));
+	Camera camera(window->getSize(), glm::vec3(0.0f, 0.0f, 1.7f));
 
 	window->maximize();
 
@@ -125,21 +124,23 @@ int main(int argc, char* argv[])
 
 		defaultShader->use();
 
-		camera->inputs(window);
-		camera->updateMatrix(DebugSettings::camFOV, 0.1f, 100.0f);
-		camera->matrix(defaultShader, "camMatrix");
+		camera.inputs(window);
+		camera.updateMatrix(DebugSettings::camFOV, 0.1f, 100.0f);
+		camera.matrix(defaultShader, "camMatrix");
 
-		smiley->bind();
-
+		smiley.bind();
 		vao.bind();
+
 		glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(int), GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
+
+		smiley.unbind();
 
 		if(useDebugger)
 			debugger->draw();
 
 		defaultShader->setFloat("scale", DebugSettings::renderScale);
-		camera->speed = DebugSettings::camSpeed;
+		camera.speed = DebugSettings::camSpeed;
 
 		glfwSwapBuffers(window->getWindow());
 	}
@@ -148,11 +149,11 @@ int main(int argc, char* argv[])
 	vbo.cleanup();
 	ebo.cleanup();
 
+	smiley.cleanup();
+
 	delete defaultShader;
 	delete window;
-	delete smiley;
 	delete debugger;
-	delete fileDir;
 
-	//return 0;
+	return 0;
 }

@@ -25,11 +25,6 @@ Texture::Texture(const char* image, GLenum texType, GLenum slot, GLenum format, 
 	glBindTexture(texType, 0);
 }
 
-Texture::~Texture()
-{
-	glDeleteTextures(1, &ID);
-}
-
 void Texture::texUnit(Shader* shader, const char* uniform, GLuint unit)
 {
 	GLuint texUni = glGetUniformLocation(shader->ID, uniform);
@@ -45,4 +40,9 @@ void Texture::bind()
 void Texture::unbind()
 {
 	glBindTexture(type, 0);
+}
+
+void Texture::cleanup()
+{
+	glDeleteTextures(1, &ID);
 }
