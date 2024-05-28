@@ -23,6 +23,11 @@ public:
     void setInt(const std::string& name, int value) const;
     void setFloat(const std::string& name, float value) const;
     void setMat4(const std::string& name, glm::mat4 value) const;
+
+    void vertexAttribPointer(int index, int length, int type, int totalSize, int sizeofMultiplier);
+
+private:
+    int vertexAttribs = 0;
 };
 
 #endif // SHADER_H
