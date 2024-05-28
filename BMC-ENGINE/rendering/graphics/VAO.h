@@ -6,12 +6,10 @@
 class VAO {
 public:
 	GLuint id;
-	VAO(GLfloat verts[], int length);
+	VAO(int length);
 
 	void bind();
 	void cleanup();
-private:
-	GLfloat vertices[];
 };
 
 #endif // VAO_H

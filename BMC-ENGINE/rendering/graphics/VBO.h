@@ -8,9 +8,13 @@
 class VBO {
 public:
 	GLuint id;
-	VBO(GLfloat verts[], int length);
+	VBO(GLfloat* verts, int length);
+
+	void bind();
+	void cleanup();
 private:
-	GLfloat vertices[];
+	GLfloat* vertices;
+	int size;
 };
 
 #endif // VBO_H

@@ -6,9 +6,13 @@
 class EBO {
 public:
 	GLuint id;
-	EBO(GLuint inds[], int length);
+	EBO(GLuint* inds, int length);
+
+	void bind();
+	void cleanup();
 private:
-	GLuint indices[];
+	GLuint* indices;
+	int size;
 };
 
 #endif // EBO_H
