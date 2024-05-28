@@ -17,8 +17,6 @@ int main(int argc, char* argv[])
 	window->initImGui();
 
 	// OpenGL!
-	Shader* defaultShader = new Shader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
-
 	GLfloat vertices[] = {
 		 // Coordinates    // Colors      // Textures
 		 0.5f,  0.5f,  0.5f, 255, 155, 79,  1.0f, 1.0f,
@@ -45,8 +43,7 @@ int main(int argc, char* argv[])
 		0, 1, 5
 	};
 
-	GLfloat lightVertices[] =
-	{
+	GLfloat lightVertices[] = {
 		-0.1f, -0.1f,  0.1f,
 		-0.1f, -0.1f, -0.1f,
 		 0.1f, -0.1f, -0.1f,
@@ -56,8 +53,7 @@ int main(int argc, char* argv[])
 		 0.1f,  0.1f, -0.1f,
 		 0.1f,  0.1f,  0.1f
 	};
-	GLuint lightIndices[] =
-	{
+	GLuint lightIndices[] = {
 		0, 1, 2,
 		0, 2, 3,
 		0, 4, 7,
@@ -72,7 +68,9 @@ int main(int argc, char* argv[])
 		4, 6, 7
 	};
 
-	VAO vao(sizeof(vertices) / sizeof(float));
+	Shader* defaultShader = new Shader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
+
+	VAO vao;
 	VBO vbo(vertices, sizeof(vertices) / sizeof(float));
 	EBO ebo(indices, sizeof(indices) / sizeof(int));
 
