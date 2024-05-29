@@ -163,7 +163,7 @@ int main(int argc, char* argv[])
 		vao.bind();
 
 		glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(int), GL_UNSIGNED_INT, 0);
-		glBindVertexArray(0);
+		//vao.unbind();
 		//smiley.unbind();
 
 		glUseProgram(0);
