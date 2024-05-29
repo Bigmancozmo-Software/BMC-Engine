@@ -88,10 +88,6 @@ int main(int argc, char* argv[])
 	VBO vbo(vertices, sizeof(vertices) / sizeof(float));
 	EBO ebo(indices, sizeof(indices) / sizeof(int));
 
-	VAO lightVAO;
-	VBO lightVBO(lightVertices, sizeof(lightVertices) / sizeof(float));
-	EBO lightEBO(lightIndices, sizeof(lightIndices) / sizeof(float));
-
 	vao.bind();
 	vbo.bind();
 	ebo.bind();
@@ -99,6 +95,24 @@ int main(int argc, char* argv[])
 	defaultShader->vertexAttribPointer(0, 3, GL_FLOAT, 8, 0);
 	defaultShader->vertexAttribPointer(1, 3, GL_FLOAT, 8, 3);
 	defaultShader->vertexAttribPointer(2, 2, GL_FLOAT, 8, 6);
+	
+	glm::vec3 cubePos = glm::vec3(0.0f);
+	glm::mat4 cubeModel = glm::mat4(1.0f);
+	cubeModel = glm::translate(cubeModel, cubePos);
+	defaultShader->use();
+	defaultShader->setMat4("model", cubeModel);
+	
+
+	glBindVertexArray(0);
+
+	VAO lightVAO;
+	VBO lightVBO(lightVertices, sizeof(lightVertices) / sizeof(float));
+	EBO lightEBO(lightIndices, sizeof(lightIndices) / sizeof(float));
+
+	lightVAO.bind();
+	lightVBO.bind();
+	lightEBO.bind();
+
 
 	// Bind VAO and VBO to 0
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -138,10 +152,11 @@ int main(int argc, char* argv[])
 
 		glfwPollEvents();
 
-		defaultShader->use();
-
 		camera.inputs(window);
 		camera.updateMatrix(DebugSettings::camFOV, 0.001f, 100.0f);
+
+		defaultShader->use();
+		
 		camera.matrix(defaultShader, "camMatrix");
 
 		smiley.bind();
@@ -149,8 +164,25 @@ int main(int argc, char* argv[])
 
 		glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(int), GL_UNSIGNED_INT, 0);
 		glBindVertexArray(0);
+		//smiley.unbind();
 
-		smiley.unbind();
+		glUseProgram(0);
+		//lightShader->use();
+		std::cout << "Binding light shader" << endl;
+
+		GLenum err;
+		while ((err = glGetError()) != GL_NO_ERROR) {
+			std::cerr << "OpenGL error: " << err << std::endl;
+		}
+
+		//camera.matrix(lightShader, "camMatrix");
+
+		//lightVAO.bind();
+
+		//glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int), GL_UNSIGNED_INT, 0);
+		//glBindVertexArray(0);
+
+		
 
 		if(useDebugger)
 			debugger->draw();

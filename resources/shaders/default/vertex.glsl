@@ -11,10 +11,11 @@ out vec2 tex;
 // Uniform Variables //
 uniform float scale;
 uniform mat4 camMatrix;
+uniform mat4 model;
 
 void main()
 {
-    gl_Position = camMatrix * vec4(aPos * scale, 1.0);
+    gl_Position = camMatrix * model * vec4(aPos * scale, 1.0);
     color = aColor;
     tex = aTex;
 }
