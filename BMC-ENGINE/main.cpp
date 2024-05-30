@@ -136,6 +136,12 @@ int main(int argc, char* argv[])
 
 	lightShader->use();
 
+	glm::vec3 lightPos = glm::vec3(1.0f);
+	glm::mat4 lightModel = glm::mat4(1.0f);
+	lightModel = glm::translate(lightModel, lightPos);
+	lightShader->use();
+	lightShader->setMat4("model", lightModel);
+
 	lightVAO.bind();
 	lightVBO.bind();
 	lightEBO.bind();
