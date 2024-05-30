@@ -196,6 +196,7 @@ int main(int argc, char* argv[])
 		smiley.unbind();
 
 		lightShader->use();
+		lightShader->setFloat("scale", DebugSettings::renderScale);
 
 		lightVAO.bind();
 
