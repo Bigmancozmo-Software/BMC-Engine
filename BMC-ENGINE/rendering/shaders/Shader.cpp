@@ -107,6 +107,6 @@ void Shader::setMat4(const std::string& name, glm::mat4 value) const
 void Shader::vertexAttribPointer(int index, int length, int type, int totalSize, int sizeofMultiplier)
 {
     glVertexAttribPointer(index, length, type, GL_FALSE, totalSize * sizeof(float), (void*)(sizeofMultiplier * sizeof(float)));
-    glEnableVertexAttribArray(vertexAttribs);
+    glEnableVertexAttribArray(index);
     vertexAttribs++;
 }
