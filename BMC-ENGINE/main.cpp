@@ -49,18 +49,9 @@ int main(int argc, char* argv[])
 		2, 3, 6
 	};
 
-	GLfloat lightVertices[] = {
-		 // Coordinates
-		 0.1f,  0.1f,  0.1f,
-		-0.1f,  0.1f,  0.1f,
-		-0.1f, -0.1f,  0.1f,
-		 0.1f, -0.1f,  0.1f,
+	GLfloat lightVertices[24];
+	CubeGenerator::vertices(lightVertices, 0.1f);
 
-		-0.1f,  0.1f, -0.1f,
-		 0.1f,  0.1f, -0.1f,
-		 0.1f, -0.1f, -0.1f,
-		-0.1f, -0.1f, -0.1f
-	};
 	GLuint lightIndices[] = {
 		0, 1, 3,
 		1, 2, 3,
