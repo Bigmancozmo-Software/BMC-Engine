@@ -50,16 +50,16 @@ int main(int argc, char* argv[])
 	};
 
 	GLfloat lightVertices[] = {
-		 // Coordinates    // Colors      // Textures
-		 0.1f,  0.1f,  0.1f, 255, 155, 79,  1.0f, 1.0f,
-		-0.1f,  0.1f,  0.1f, 255, 155, 79, -1.0f, 1.0f,
-		-0.1f, -0.1f,  0.1f, 255, 155, 79, -1.0f, 0.0f,
-		 0.1f, -0.1f,  0.1f, 255, 155, 79,  1.0f, 0.0f,
+		 // Coordinates
+		 0.1f,  0.1f,  0.1f,
+		-0.1f,  0.1f,  0.1f,
+		-0.1f, -0.1f,  0.1f,
+		 0.1f, -0.1f,  0.1f,
 
-		-0.1f,  0.1f, -0.1f, 255, 155, 79,  1.0f, 1.0f,
-		 0.1f,  0.1f, -0.1f, 255, 155, 79, -1.0f, 1.0f,
-		 0.1f, -0.1f, -0.1f, 255, 155, 79, -1.0f, 0.0f,
-		-0.1f, -0.1f, -0.1f, 255, 155, 79,  1.0f, 0.0f
+		-0.1f,  0.1f, -0.1f,
+		 0.1f,  0.1f, -0.1f,
+		 0.1f, -0.1f, -0.1f,
+		-0.1f, -0.1f, -0.1f
 	};
 	GLuint lightIndices[] = {
 		0, 1, 3,
@@ -102,17 +102,23 @@ int main(int argc, char* argv[])
 	defaultShader->use();
 	defaultShader->setMat4("model", cubeModel);
 	
-
 	glBindVertexArray(0);
+
+	vao.unbind();
+	vbo.unbind();
+	ebo.unbind();
 
 	VAO lightVAO;
 	VBO lightVBO(lightVertices, sizeof(lightVertices) / sizeof(float));
 	EBO lightEBO(lightIndices, sizeof(lightIndices) / sizeof(float));
 
+	lightShader->use();
+
 	lightVAO.bind();
 	lightVBO.bind();
 	lightEBO.bind();
 
+	lightShader->vertexAttribPointer(0, 3, GL_FLOAT, 3, 0);
 
 	// Bind VAO and VBO to 0
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -149,48 +155,39 @@ int main(int argc, char* argv[])
 	{
 		glClearColor(0.6f, 0.5f, 0.8f, 1.0f); 
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
 		glfwPollEvents();
 
 		camera.inputs(window);
 		camera.updateMatrix(DebugSettings::camFOV, 0.001f, 100.0f);
 
 		defaultShader->use();
-		
+		defaultShader->setFloat("scale", DebugSettings::renderScale);
+
 		camera.matrix(defaultShader, "camMatrix");
 
 		smiley.bind();
 		vao.bind();
 
 		glDrawElements(GL_TRIANGLES, sizeof(indices)/sizeof(int), GL_UNSIGNED_INT, 0);
-		//vao.unbind();
-		//smiley.unbind();
+		glBindVertexArray(0);
 
-		glUseProgram(0);
-		//lightShader->use();
-		std::cout << "Binding light shader" << endl;
+		smiley.unbind();
 
-		GLenum err;
-		while ((err = glGetError()) != GL_NO_ERROR) {
-			std::cerr << "OpenGL error: " << err << std::endl;
-		}
+		lightShader->use();
 
-		//camera.matrix(lightShader, "camMatrix");
+		lightVAO.bind();
 
-		//lightVAO.bind();
+		camera.matrix(lightShader, "camMatrix");
 
-		//glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int), GL_UNSIGNED_INT, 0);
-		//glBindVertexArray(0);
-
-		
+		glDrawElements(GL_TRIANGLES, sizeof(lightIndices) / sizeof(int), GL_UNSIGNED_INT, 0);
+		glBindVertexArray(0);
 
 		if(useDebugger)
 			debugger->draw();
 
-		defaultShader->setFloat("scale", DebugSettings::renderScale);
 		camera.speed = DebugSettings::camSpeed;
 
-		glfwSwapBuffers(window->getWindow());
+		glfwSwapBuffers(window->getWindow());		
 	}
 
 	vao.cleanup();
