@@ -49,18 +49,14 @@ int main(int argc, char* argv[])
 		2, 3, 6
 	};
 
-	GLfloat lightVertices[] = {
-		 // Coordinates
-		 0.1f,  0.1f,  0.1f,
-		-0.1f,  0.1f,  0.1f,
-		-0.1f, -0.1f,  0.1f,
-		 0.1f, -0.1f,  0.1f,
+	GLfloat lightVertices[24];
+	CubeGenerator::vertices(lightVertices, 0.1f);
 
-		-0.1f,  0.1f, -0.1f,
-		 0.1f,  0.1f, -0.1f,
-		 0.1f, -0.1f, -0.1f,
-		-0.1f, -0.1f, -0.1f
-	};
+	for (int i = 0; i < 24; ++i) {
+		std::cout << lightVertices[i] << " ";
+		if ((i + 1) % 3 == 0) std::cout << std::endl;
+	}
+
 	GLuint lightIndices[] = {
 		0, 1, 3,
 		1, 2, 3,
