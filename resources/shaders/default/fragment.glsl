@@ -1,3 +1,4 @@
+// default/fragment.glsl
 #version 330 core
 
 // Output variables //
