@@ -8,9 +8,13 @@ out vec4 FragColor;
 in vec3 color;
 in vec2 tex;
 
+in vec3 normal;
+in vec3 currentPos;
+
 // Uniforms //
 uniform sampler2D tex0;
 uniform vec4 lightColor;
+uniform vec3 lightPos;
 
 void main()
 {
