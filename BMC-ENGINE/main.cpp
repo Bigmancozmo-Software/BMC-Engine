@@ -18,7 +18,7 @@ int main(int argc, char* argv[])
 
 	// OpenGL!
 	GLfloat vertices[] = {
-		 // Coordinates    // Colors      // Textures
+		 // Coordinates      // Colors      // Textures
 		 0.5f,  0.5f,  0.5f, 255, 155, 79,  1.0f, 1.0f,
 		-0.5f,  0.5f,  0.5f, 255, 155, 79, -1.0f, 1.0f,
 		-0.5f, -0.5f,  0.5f, 255, 155, 79, -1.0f, 0.0f,
