@@ -81,23 +81,32 @@ int main(int argc, char* argv[])
 	vbo.unbind();
 	ebo.unbind();
 
+	glm::vec4 lightColor = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f);
+
+	defaultShader->setVec4("lightColor", lightColor);
+
 	VAO lightVAO;
 	VBO lightVBO(lightVertices, sizeof(lightVertices) / sizeof(float));
 	EBO lightEBO(lightIndices, sizeof(lightIndices) / sizeof(float));
 
 	lightShader->use();
 
+	lightVAO.bind();
+	lightVBO.bind();
+	lightEBO.bind();
+
 	glm::vec3 lightPos = glm::vec3(1.0f);
 	glm::mat4 lightModel = glm::mat4(1.0f);
 	lightModel = glm::translate(lightModel, lightPos);
 	lightShader->use();
 	lightShader->setMat4("model", lightModel);
-
-	lightVAO.bind();
-	lightVBO.bind();
-	lightEBO.bind();
+	lightShader->setVec4("lightColor", lightColor);
 
 	lightShader->vertexAttribPointer(0, 3, GL_FLOAT, 3, 0);
+
+	lightVAO.unbind();
+	lightVBO.unbind();
+	lightEBO.unbind();
 
 	// Bind VAO and VBO to 0
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
