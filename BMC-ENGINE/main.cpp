@@ -83,7 +83,7 @@ int main(int argc, char* argv[])
 	ebo.unbind();
 
 	glm::vec4 lightColor = glm::vec4(1.0f, 0.0f, 0.0f, 0.5f);
-	glm::vec3 lightPos = glm::vec3(1.0f);
+	glm::vec3 lightPos = glm::vec3(1.0f, 1.0f, 0.0f);
 
 	defaultShader->setVec4("lightColor", lightColor);
 	defaultShader->setVec3("lightPos", lightPos);
