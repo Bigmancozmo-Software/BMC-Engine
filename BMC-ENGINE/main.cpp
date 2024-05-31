@@ -50,27 +50,9 @@ int main(int argc, char* argv[])
 	};
 
 	GLfloat lightVertices[24];
+	GLuint lightIndices[36];
 	CubeGenerator::vertices(lightVertices, 0.1f);
-
-	GLuint lightIndices[] = {
-		0, 1, 3,
-		1, 2, 3,
-
-		4, 5, 7,
-		5, 6, 7,
-
-		1, 2, 4,
-		2, 4, 7,
-
-		1, 4, 5,
-		0, 1, 5,
-
-		0, 5, 6,
-		0, 3, 6,
-
-		2, 6, 7,
-		2, 3, 6
-	};
+	CubeGenerator::indices(lightIndices);
 
 	Shader* defaultShader = new Shader("./resources/shaders/default/vertex.glsl", "./resources/shaders/default/fragment.glsl");
 	Shader* lightShader = new Shader("./resources/shaders/light/vertex.glsl", "./resources/shaders/light/fragment.glsl");
