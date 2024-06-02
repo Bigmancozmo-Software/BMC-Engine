@@ -25,7 +25,7 @@
 
 #include "rendering/model/Generators.h"
 
-#include "window/Window.h"
+#include "rendering/window/Window.h"
 
 
 // stb

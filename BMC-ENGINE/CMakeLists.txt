@@ -7,7 +7,8 @@ file(GLOB RENDERING_SOURCE
 	"rendering/debugger/*.cpp"
 	"rendering/shaders/*.cpp"
 	"rendering/graphics/*.cpp"
-	"rendering/model/*.cpp"
+	"rendering/model/*.cpp",
+	"rendering/window/*.cpp"
 )
 
 file(GLOB FILES_SOURCE
@@ -24,10 +25,6 @@ file(GLOB ROOT_SOURCE
 	"../extern/glfw/src/*.cpp"
 )
 
-file(GLOB OTHER_SOURCE
-	"window/*.cpp"
-)
-
 file(GLOB CLASSES_SOURCE
 	"classes/*.cpp"
 	"classes/math/*.cpp"
@@ -38,7 +35,6 @@ file(GLOB FULL_SRC
 	${ROOT_SOURCE}
 	${RENDERING_SOURCE}
 	${FILES_SOURCE}
-	${OTHER_SOURCE}
 	${CLASSES_SOURCE}
 )
 
