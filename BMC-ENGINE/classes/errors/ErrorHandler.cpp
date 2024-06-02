@@ -12,7 +12,7 @@ void ErrorHandler::ErrorPopup(int type, const char* _text)
 		glfwTerminate(); // terminate the program
 		break;
 	case ERROR_CAN_CONTINUE:
-		MessageBox(NULL, text.c_str(), "An Error Occurred", MB_ICONWARNING | MB_OK);
+		MessageBox(NULL, text.c_str(), "Error", MB_ICONWARNING | MB_OK);
 		break;
 	}
 #endif
