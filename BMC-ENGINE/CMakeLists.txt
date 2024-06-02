@@ -12,7 +12,6 @@ file(GLOB RENDERING_SOURCE
 
 file(GLOB FILES_SOURCE
 	"files/*.cpp"
-	"files/image/*.cpp"
 )
 
 file(GLOB ROOT_SOURCE
