@@ -3,9 +3,14 @@ window.main.title=BMC Engine
 window.error.critical.title=Critical Error
 
 window.debugger.title=Debugging Tool
-
 window.debugger.description.line1=These are the DEBUGGING TOOLS.
 window.debugger.description.line2=Make sure you know what you're doing!
 
-settings.option.render.antialiasing=Antialiasing
-settings.option.render.scale=Render Scale
+settings.render.option.antialiasing=Antialiasing
+settings.render.option.scale=Render Scale
+settings.render.button.scale.reset=Reset Scale
+
+settings.camera.header=Camera Settings
+settings.camera.option.speed=Camera Speed
+settings.camera.option.sensitivity=Camera Sensitivity
+settings.camera.option.fov=Camera FOV
