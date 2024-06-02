@@ -4,6 +4,7 @@
 // Builtin C++
 #include <iostream>
 #include <cstring>
+#include <sstream>
 
 // Rendering
 #include "glad/glad.h"
@@ -26,6 +27,8 @@
 #include "rendering/model/Generators.h"
 
 #include "rendering/window/Window.h"
+
+#include "files/FileReader.h"
 
 
 // stb

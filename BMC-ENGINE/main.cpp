@@ -140,6 +140,38 @@ int main(int argc, char* argv[])
 
 	window->maximize();
 
+
+
+
+	std::string enUScontents = FileReader::readFile("resources/lang/en-US.lang");
+	std::cout << enUScontents << std::endl;
+
+	vector<string> strings;
+	istringstream enUSstream(enUScontents);
+	string str;
+
+	while (getline(enUSstream, str)) {
+		string strValue;
+		string strKey;
+
+		size_t pos = str.find('=');
+
+		if (pos != std::string::npos) {
+			// Extract the key and value using substr
+			strKey = str.substr(0, pos);
+			strValue = str.substr(pos + 1);
+
+			std::cout << "Key: " << strKey << std::endl;
+			std::cout << "Value: " << strValue << std::endl;
+		}
+		else {
+			std::cerr << "Invalid format: " << str << std::endl;
+		}
+
+		strings.push_back(str);
+	}
+
+
 	// main loop
 	while (!(window->shouldClose()))
 	{
