@@ -1,2 +1,8 @@
-window.title.main=BMC Engine
-window.title.error.critical=Critical Error
+window.main.title=BMC Engine
+
+window.error.critical.title=Critical Error
+
+window.title.debugger=Debugging Tool
+
+window.description.debugger.line1=These are the DEBUGGING TOOLS.
+window.description.debugger.line2=Make sure you know what you're doing!

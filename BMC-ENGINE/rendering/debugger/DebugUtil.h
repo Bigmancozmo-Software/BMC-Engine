@@ -1,6 +1,9 @@
 #ifndef DEBUG_UTIL_H
 #define DEBUG_UTIL_H
 
+#include "../../classes/lang/Translator.h"
+#include "../../main-class.h"
+
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
@@ -20,6 +23,7 @@ private:
 	// other
 	GLFWwindow* window;
 	void processVars();
+	Translator* translator;
 };
 
 class DebugSettings {

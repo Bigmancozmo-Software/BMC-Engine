@@ -2,6 +2,7 @@
 
 DebugUtil::DebugUtil(GLFWwindow* window)
 {
+	translator = new Translator(main::locale);
 	this->window = window;
 }
 
@@ -10,6 +11,7 @@ DebugUtil::~DebugUtil()
 	ImGui_ImplOpenGL3_Shutdown();
 	ImGui_ImplGlfw_Shutdown();
 	ImGui::DestroyContext();
+	delete translator;
 }
 
 void DebugUtil::draw()
@@ -18,10 +20,10 @@ void DebugUtil::draw()
 	ImGui_ImplGlfw_NewFrame();
 	ImGui::NewFrame();
 
-	ImGui::Begin("Debugging Tools");
+	ImGui::Begin(translator->translate("window.title.debugger").c_str());
 	ImGui::SetWindowCollapsed(true, ImGuiCond_Once);
 	ImGui::SetWindowPos(ImVec2(10, 10), ImGuiCond_Once);
-	ImGui::Text("These are the DEBUGGING TOOLS.\nMake sure you know what you're doing!");
+	ImGui::Text((translator->translate("window.description.debugger_line1") + "\n" + translator->translate("window.description.debugger_line2")).c_str());
 	ImGui::Checkbox("Antialiasing", &(DebugSettings::useAntiAliasing));
 	ImGui::SliderFloat("Render Scale", &(DebugSettings::renderScale), 0.0f, 5.0f);
 	resetScale = ImGui::Button("Reset Scale", ImVec2(100.0f, 20.0f));

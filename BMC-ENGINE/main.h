@@ -32,16 +32,11 @@
 
 #include "classes/lang/Translator.h"
 
+#include "main-class.h"
+
 
 // stb
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
-
-// class
-class main {
-public:
-	static Window* window;
-	static string locale;
-};
 
 #endif // MAIN_H
