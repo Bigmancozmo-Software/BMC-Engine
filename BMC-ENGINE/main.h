@@ -30,6 +30,8 @@
 
 #include "files/FileReader.h"
 
+#include "classes/lang/Translator.h"
+
 
 // stb
 #define STB_IMAGE_IMPLEMENTATION
@@ -39,6 +41,7 @@
 class main {
 public:
 	static Window* window;
+	static string locale;
 };
 
 #endif // MAIN_H
