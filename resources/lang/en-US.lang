@@ -1,6 +1,7 @@
 window.main.title=BMC Engine
 
 window.error.critical.title=Critical Error
+window.error.regular.title=Error
 
 window.debugger.title=Debugging Tool
 window.debugger.description.line1=These are the DEBUGGING TOOLS.
