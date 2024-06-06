@@ -23,7 +23,6 @@ private:
 	// other
 	GLFWwindow* window;
 	void processVars();
-	Translator* translator;
 };
 
 class DebugSettings {
