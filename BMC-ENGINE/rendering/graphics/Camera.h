@@ -13,7 +13,7 @@
 //#include <glm/gtx/vector_angle.hpp>
 
 #include "../shaders/Shader.h"
-#include "../../window/Window.h"
+#include "../../rendering/window/Window.h"
 
 class Camera {
 public:

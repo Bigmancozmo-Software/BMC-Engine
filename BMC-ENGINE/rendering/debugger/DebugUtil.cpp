@@ -2,6 +2,7 @@
 
 DebugUtil::DebugUtil(GLFWwindow* window)
 {
+	translator = new Translator(main::locale);
 	this->window = window;
 }
 
@@ -10,6 +11,7 @@ DebugUtil::~DebugUtil()
 	ImGui_ImplOpenGL3_Shutdown();
 	ImGui_ImplGlfw_Shutdown();
 	ImGui::DestroyContext();
+	delete translator;
 }
 
 void DebugUtil::draw()
@@ -18,17 +20,17 @@ void DebugUtil::draw()
 	ImGui_ImplGlfw_NewFrame();
 	ImGui::NewFrame();
 
-	ImGui::Begin("Debugging Tools");
+	ImGui::Begin(translator->translate("window.debugger.title").c_str());
 	ImGui::SetWindowCollapsed(true, ImGuiCond_Once);
 	ImGui::SetWindowPos(ImVec2(10, 10), ImGuiCond_Once);
-	ImGui::Text("These are the DEBUGGING TOOLS.\nMake sure you know what you're doing!");
-	ImGui::Checkbox("Antialiasing", &(DebugSettings::useAntiAliasing));
-	ImGui::SliderFloat("Render Scale", &(DebugSettings::renderScale), 0.0f, 5.0f);
-	resetScale = ImGui::Button("Reset Scale", ImVec2(100.0f, 20.0f));
-	ImGui::Text("\nCamera Settings");
-	ImGui::SliderFloat("Camera Speed", &(DebugSettings::camSpeed), 0.001f, 0.1f);
-	ImGui::SliderFloat("Camera Sensitivity", &(DebugSettings::camSensitivity), 25.0f, 500.0f);
-	ImGui::SliderFloat("Camera FOV", &(DebugSettings::camFOV), 30.0f, 180.0f);
+	ImGui::Text((translator->translate("window.debugger.description.line1") + "\n" + translator->translate("window.debugger.description.line2")).c_str());
+	ImGui::Checkbox(translator->translate("settings.render.option.antialiasing").c_str(), &(DebugSettings::useAntiAliasing));
+	ImGui::SliderFloat(translator->translate("settings.render.option.scale").c_str(), &(DebugSettings::renderScale), 0.0f, 5.0f);
+	resetScale = ImGui::Button(translator->translate("settings.render.button.scale.reset").c_str(), ImVec2(100.0f, 20.0f));
+	ImGui::Text(("\n" + translator->translate("settings.camera.header")).c_str());
+	ImGui::SliderFloat(translator->translate("settings.camera.option.speed").c_str(), &(DebugSettings::camSpeed), 0.001f, 0.1f);
+	ImGui::SliderFloat(translator->translate("settings.camera.option.sensitivity").c_str(), &(DebugSettings::camSensitivity), 25.0f, 500.0f);
+	ImGui::SliderFloat(translator->translate("settings.camera.option.fov").c_str(), &(DebugSettings::camFOV), 30.0f, 180.0f);
 	ImGui::End();
 
 	//ImGui::ShowDemoWindow();

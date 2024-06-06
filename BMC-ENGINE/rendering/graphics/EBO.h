@@ -11,6 +11,7 @@ public:
 	EBO(GLuint* inds, int length);
 
 	void bind();
+	void unbind();
 	void cleanup();
 private:
 	GLuint* indices;

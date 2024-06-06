@@ -11,6 +11,7 @@ public:
 	VBO(GLfloat* verts, int length);
 
 	void bind();
+	void unbind();
 	void cleanup();
 private:
 	GLfloat* vertices;

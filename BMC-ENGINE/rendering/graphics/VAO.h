@@ -9,6 +9,7 @@ public:
 	VAO();
 
 	void bind();
+	void unbind();
 	void cleanup();
 };
 
