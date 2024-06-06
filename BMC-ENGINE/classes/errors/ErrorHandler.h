@@ -15,8 +15,6 @@
 class ErrorHandler {
 public:
 	static void ErrorPopup(int type, const char* _text);
-private:
-	static Translator* translator;
 };
 
 #endif // ERROR_HANDLER_H
