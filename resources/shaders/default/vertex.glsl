@@ -24,5 +24,5 @@ void main()
     gl_Position = camMatrix * vec4(currentPos, 1.0);
     color = aColor;
     tex = aTex;
-    normal = aPos;
+    normal = aNormal;
 }

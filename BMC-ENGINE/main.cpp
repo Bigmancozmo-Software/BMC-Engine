@@ -21,16 +21,16 @@ int main(int argc, char* argv[])
 
 	// OpenGL!
 	GLfloat vertices[] = {
-		 // Coordinates      // Colors      // Textures
-		 0.5f,  0.5f,  0.5f, 255, 155, 79,  1.0f, 1.0f,
-		-0.5f,  0.5f,  0.5f, 255, 155, 79, -1.0f, 1.0f,
-		-0.5f, -0.5f,  0.5f, 255, 155, 79, -1.0f, 0.0f,
-		 0.5f, -0.5f,  0.5f, 255, 155, 79,  1.0f, 0.0f,
+		 // Coordinates      // Colors      // Textures  // Normals
+		 0.5f,  0.5f,  0.5f, 255, 155, 79,  1.0f, 1.0f,  0.5f,  0.5f,  0.5f,
+		-0.5f,  0.5f,  0.5f, 255, 155, 79, -1.0f, 1.0f, -0.5f,  0.5f,  0.5f, 
+		-0.5f, -0.5f,  0.5f, 255, 155, 79, -1.0f, 0.0f, -0.5f, -0.5f,  0.5f,
+		 0.5f, -0.5f,  0.5f, 255, 155, 79,  1.0f, 0.0f,  0.5f, -0.5f,  0.5f,
 
-		-0.5f,  0.5f, -0.5f, 255, 155, 79,  1.0f, 1.0f,
-		 0.5f,  0.5f, -0.5f, 255, 155, 79, -1.0f, 1.0f,
-		 0.5f, -0.5f, -0.5f, 255, 155, 79, -1.0f, 0.0f,
-		-0.5f, -0.5f, -0.5f, 255, 155, 79,  1.0f, 0.0f
+		-0.5f,  0.5f, -0.5f, 255, 155, 79,  1.0f, 1.0f, -0.5f,  0.5f, -0.5f,
+		 0.5f,  0.5f, -0.5f, 255, 155, 79, -1.0f, 1.0f,  0.5f,  0.5f, -0.5f,
+		 0.5f, -0.5f, -0.5f, 255, 155, 79, -1.0f, 0.0f,  0.5f, -0.5f, -0.5f,
+		-0.5f, -0.5f, -0.5f, 255, 155, 79,  1.0f, 0.0f, -0.5f, -0.5f, -0.5f
 	};
 	GLuint indices[] = {
 		0, 1, 3,
@@ -68,9 +68,10 @@ int main(int argc, char* argv[])
 	vbo.bind();
 	ebo.bind();
 
-	defaultShader->vertexAttribPointer(0, 3, GL_FLOAT, 8, 0);
-	defaultShader->vertexAttribPointer(1, 3, GL_FLOAT, 8, 3);
-	defaultShader->vertexAttribPointer(2, 2, GL_FLOAT, 8, 6);
+	defaultShader->vertexAttribPointer(0, 3, GL_FLOAT, 11, 0);
+	defaultShader->vertexAttribPointer(1, 3, GL_FLOAT, 11, 3);
+	defaultShader->vertexAttribPointer(2, 2, GL_FLOAT, 11, 6);
+	defaultShader->vertexAttribPointer(3, 3, GL_FLOAT, 11, 8);
 	
 	glm::vec3 cubePos = glm::vec3(0.0f);
 	glm::mat4 cubeModel = glm::mat4(1.0f);
