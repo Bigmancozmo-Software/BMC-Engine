@@ -16,7 +16,7 @@ int main(int argc, char* argv[])
 	main::locale = "en-US";
 
 	Translator translator(main::locale);
-	Window* window = new Window(translator.translate("window.title.main").c_str(), 800, 800);
+	Window* window = new Window(translator.translate("window.main.title").c_str(), 800, 800);
 	window->initImGui();
 
 	// OpenGL!
