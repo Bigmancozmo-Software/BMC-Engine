@@ -18,9 +18,9 @@
 
 #include "rendering/graphics/Texture.h"
 #include "rendering/graphics/Camera.h"
-#include "rendering/graphics/VAO.h"
-#include "rendering/graphics/VBO.h"
-#include "rendering/graphics/EBO.h"
+#include "rendering/graphics/buffers/VAO.h"
+#include "rendering/graphics/buffers/VBO.h"
+#include "rendering/graphics/buffers/EBO.h"
 
 #include "rendering/shaders/Shader.h"
 

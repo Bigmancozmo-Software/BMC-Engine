@@ -7,6 +7,7 @@ file(GLOB RENDERING_SOURCE
 	"rendering/debugger/*.cpp"
 	"rendering/shaders/*.cpp"
 	"rendering/graphics/*.cpp"
+	"rendering/graphics/buffers/*.cpp"
 	"rendering/model/*.cpp",
 	"rendering/window/*.cpp"
 )
