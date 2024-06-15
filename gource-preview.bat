@@ -1,1 +1,1 @@
-gource --multi-sampling -e 0.02 --bloom-multiplier 1.9 --bloom-intensity 1.25 --output-framerate 60 --key -a 1 -s 2 --time-scale 2 --title "BMC Engine Development" -f
+gource --multi-sampling -e 0.02 --output-framerate 60 --key -a 1 -s 2 --time-scale 2 --title "BMC Engine Development" -f
