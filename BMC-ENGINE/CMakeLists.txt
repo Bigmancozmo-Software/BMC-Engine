@@ -57,7 +57,10 @@ else()
 	add_executable(BMC-ENGINE ${FULL_SRC})
 endif()
 
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+
 find_package(OpenGL REQUIRED)
+find_package(FMOD REQUIRED)
 
 target_link_libraries(BMC-ENGINE glfw)
 target_link_libraries(BMC-ENGINE OpenGL::GL)
