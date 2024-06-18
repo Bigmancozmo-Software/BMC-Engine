@@ -1,1 +1,0 @@
-sudo apt-get install --fix-missing -y libgl1-mesa-dev libwayland-dev wayland-protocols libxkbcommon-dev libxrandr-dev libxinerama-dev libx11-dev libxcursor-dev libxi-dev
