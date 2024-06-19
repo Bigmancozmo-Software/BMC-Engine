@@ -29,9 +29,10 @@ Installing Visual Studio is required for compiling -- you do **not** have to cod
 In your `Command Prompt/Terminal`, enter the directory you want to download the code to, and run<br/>`git clone https://github.com/bigmancozmo-software/bmc-engine --recurse-submodules`.
 
 ### 4a. Compile with the Terminal
-Open a new **Command Prompt/terminal** window in the source code directory.<br/>Then, run the following command:<br/>`cmake -S . -B build && cmake --build build --config RelWithDebInfo --target BMC-ENGINE`<br/>This should generate a folder called **build**. Go to `build/BMC-ENGINE/Release`. BMC Engine is compiled!<br/>
-<sub>Hey! If you're getting errors on Linux, try running</sub><br/>
-<sup>`sudo apt-get install --fix-missing -y libgl1-mesa-dev libwayland-dev wayland-protocols libxkbcommon-dev libxrandr-dev libxinerama-dev libx11-dev libxcursor-dev libxi-dev pkg-config`</sup>
+Open a new **Command Prompt/terminal** window in the source code directory.<br/>Then, run the following command:<br/>`cmake -S . -B build && cmake --build build --config RelWithDebInfo --target BMC-ENGINE`<br/>This should generate a folder called **build**. Go to `build/BMC-ENGINE/Release` (`build/BMC-ENGINE` on linux). BMC Engine is compiled!<br/>
+If you're getting errors on Linux, try running<br/>
+`sudo apt-get install --fix-missing -y libgl1-mesa-dev libwayland-dev wayland-protocols libxkbcommon-dev libxrandr-dev libxinerama-dev libx11-dev libxcursor-dev libxi-dev pkg-config`<br/>
+You may also need to run `copy-resources.sh`.
 
 ### 4b. Compile with Visual Studio
 Open up **Visual Studio** and select `Open a local folder`. Then, select the source code folder. If done correctly, Visual Studio **should** recognize it as a CMake project, and allow you to write code and build the engine from there.
