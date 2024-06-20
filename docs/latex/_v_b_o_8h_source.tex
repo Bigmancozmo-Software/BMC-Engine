@@ -1,0 +1,27 @@
+\doxysection{VBO.\+h}
+\hypertarget{_v_b_o_8h_source}{}\label{_v_b_o_8h_source}\index{BMC-\/ENGINE/rendering/graphics/buffers/VBO.h@{BMC-\/ENGINE/rendering/graphics/buffers/VBO.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VBO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VBO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}glad/glad.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_v_b_o}{VBO}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ GLuint\ id;}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{class_v_b_o}{VBO}}(GLfloat*\ verts,\ \textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{void}\ bind();}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ unbind();}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{void}\ cleanup();}
+\DoxyCodeLine{00016\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00017\ \ \ \ \ GLfloat*\ vertices;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VBO\_H}}
+
+\end{DoxyCode}

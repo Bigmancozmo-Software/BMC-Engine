@@ -1,0 +1,30 @@
+\doxysection{Texture.\+h}
+\hypertarget{_texture_8h_source}{}\label{_texture_8h_source}\index{BMC-\/ENGINE/rendering/graphics/Texture.h@{BMC-\/ENGINE/rendering/graphics/Texture.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TEXTURE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TEXTURE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glad/glad.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../shaders/Shader.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}stb\_image.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture}{Texture}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ GLuint\ ID;}
+\DoxyCodeLine{00012\ \ \ \ \ GLenum\ type;}
+\DoxyCodeLine{00013\ \ \ \ \ GLuint\ unit;}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{class_texture}{Texture}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ image,\ GLenum\ texType,\ GLuint\ slot,\ GLenum\ format,\ GLenum\ pixelType);}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ texUnit(\mbox{\hyperlink{class_shader}{Shader}}*\ shader,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ uniform,\ GLuint\ unit);}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ bind();}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ unbind();}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ cleanup();}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TEXTURE\_H}}
+
+\end{DoxyCode}
