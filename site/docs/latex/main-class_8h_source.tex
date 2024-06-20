@@ -10,14 +10,15 @@
 \DoxyCodeLine{00006\ }
 \DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain}{main}}\ \{}
 \DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\ locale\ =\ \textcolor{stringliteral}{"{}en-\/US"{}};}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_translator}{Translator}}*\ translator\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_translator}{Translator}}(locale);}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\ translate(std::string\ key)\ \{}
-\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ translator-\/>\mbox{\hyperlink{class_translator_ab93822ee62308cef7b8e469cc139b10e}{translate}}(key);}
-\DoxyCodeLine{00014\ \ \ \ \ \}}
-\DoxyCodeLine{00015\ \};}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classmain_a8ebcbaca2fb786528949c4556d6feac9}{locale}}\ =\ \textcolor{stringliteral}{"{}en-\/US"{}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_translator}{Translator}}*\ \mbox{\hyperlink{classmain_adae1c2d9630cc2522f9615c306659b33}{translator}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_translator}{Translator}}(\mbox{\hyperlink{classmain_a8ebcbaca2fb786528949c4556d6feac9}{locale}});}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classmain_a281072ee855f8c2353ea0bb8a6efcee5}{translate}}(std::string\ key)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_adae1c2d9630cc2522f9615c306659b33}{translator}}-\/>\mbox{\hyperlink{class_translator_ab93822ee62308cef7b8e469cc139b10e}{translate}}(key);}
+\DoxyCodeLine{00025\ \ \ \ \ \}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

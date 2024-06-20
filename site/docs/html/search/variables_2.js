@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unit_0',['unit',['../class_texture.html#a9041cdeccaf234cd3945ef88e1092ebf',1,'Texture']]]
+  ['translator_0',['translator',['../classmain.html#adae1c2d9630cc2522f9615c306659b33',1,'main']]],
+  ['type_1',['type',['../class_texture.html#a66407e358ec8b32a7bfe1e047d5628d7',1,'Texture']]]
 ];
