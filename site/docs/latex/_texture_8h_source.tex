@@ -1,0 +1,34 @@
+\doxysection{Texture.\+h}
+\hypertarget{_texture_8h_source}{}\label{_texture_8h_source}\index{BMC-\/ENGINE/rendering/graphics/Texture.h@{BMC-\/ENGINE/rendering/graphics/Texture.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ TEXTURE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ TEXTURE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <glad/glad.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}../shaders/Shader.h"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}stb\_image.h"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_texture}{Texture}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ GLuint\ \mbox{\hyperlink{class_texture_ab36997a503d4ee65aac557b857a1db8e}{ID}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \ \ \ \ GLenum\ \mbox{\hyperlink{class_texture_a66407e358ec8b32a7bfe1e047d5628d7}{type}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \ \ \ \ GLuint\ \mbox{\hyperlink{class_texture_a9041cdeccaf234cd3945ef88e1092ebf}{unit}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{class_texture_a293275085ee1bf36b3e283197367dfae}{Texture}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ image,\ GLenum\ texType,\ GLuint\ slot,\ GLenum\ format,\ GLenum\ pixelType);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_texture_aa48c66d91ec1d9b10ba1a3f1b5eeba3e}{texUnit}}(\mbox{\hyperlink{class_shader}{Shader}}*\ shader,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ uniform,\ GLuint\ \mbox{\hyperlink{class_texture_a9041cdeccaf234cd3945ef88e1092ebf}{unit}});}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_texture_a3840dc7429982ffaddeafc8d62345b5d}{bind}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_texture_a8480eed7ed703a937c3e6ab528f559bd}{unbind}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_texture_ae13a97cde8768d3b61fd9524c21fbfac}{cleanup}}();}
+\DoxyCodeLine{00058\ \};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ TEXTURE\_H}}
+
+\end{DoxyCode}

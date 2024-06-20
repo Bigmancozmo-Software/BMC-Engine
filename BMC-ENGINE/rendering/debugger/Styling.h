@@ -7,6 +7,9 @@
 
 class Styler {
 public:
+	/// 
+	/// Resets the ImGui style to the program's default.
+	/// 
 	static void setToDefault();
 };
 

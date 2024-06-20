@@ -1,0 +1,190 @@
+\doxysection{Window Class Reference}
+\hypertarget{class_window}{}\label{class_window}\index{Window@{Window}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_window_a315084d17424d10fe4a77c581084b65a}{Window}} (const char \texorpdfstring{$\ast$}{*}title, int width, int height)
+\item 
+\mbox{\hyperlink{class_window_a83d61d0ed6e101dd035ae71f452046c8}{Window}} (const char \texorpdfstring{$\ast$}{*}title, \mbox{\hyperlink{class_vector2}{Vector2}} size)
+\item 
+\mbox{\hyperlink{class_window_a0f8afd6ee05aaa710dc59d4327807b20}{Window}} (const char \texorpdfstring{$\ast$}{*}title)
+\item 
+\mbox{\hyperlink{class_window_a245d821e6016fa1f6970ccbbedd635f6}{\texorpdfstring{$\sim$}{\string~}\+Window}} ()
+\item 
+bool \mbox{\hyperlink{class_window_ae779be3a5327f62c5e86a3e3d8a37289}{should\+Close}} ()
+\item 
+void \mbox{\hyperlink{class_window_acbb2e7275bd1b410c3e28c7ad010bf8b}{set\+Icon}} (const char \texorpdfstring{$\ast$}{*}file)
+\item 
+void \mbox{\hyperlink{class_window_a21298af7780e4b1c43b5a8bc2e3cab18}{set\+Size}} (int width, int height)
+\item 
+void \mbox{\hyperlink{class_window_a5202b1c60cd86d2a67436e38452a4e2e}{set\+Size}} (\mbox{\hyperlink{class_vector2}{Vector2}} size)
+\item 
+void \mbox{\hyperlink{class_window_aacab3edab070f2ef946319d45d5b9db6}{init\+Im\+Gui}} ()
+\item 
+void \mbox{\hyperlink{class_window_a35055c04498121d39741bfcd5082705b}{close}} ()
+\item 
+void \mbox{\hyperlink{class_window_a652b249e69ee5ff3ba8aa3bd4feccdae}{maximize}} ()
+\item 
+int \mbox{\hyperlink{class_window_a2d459fe21a48b6a41834a32a6c84fe2e}{get\+Width}} ()
+\item 
+int \mbox{\hyperlink{class_window_a02acaaf02d8b63d4bd74d99482fe3a78}{get\+Height}} ()
+\item 
+\mbox{\hyperlink{class_vector2}{Vector2}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_window_abd27e67e38160bce3351c9a35e0a6272}{get\+Size}} ()
+\item 
+GLFWwindow \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_window_a0a091d94124d3d94a2ce6fc30d9883a8}{get\+Window}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_window_a315084d17424d10fe4a77c581084b65a}\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \label{class_window_a315084d17424d10fe4a77c581084b65a} 
+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+Creates the window object. 
+\begin{DoxyParams}{Parameters}
+{\em title} & const char\texorpdfstring{$\ast$}{*} to assign to the window\textquotesingle{}s name to. \\
+\hline
+{\em width} & The width, in pixels, to create the window with. \\
+\hline
+{\em height} & The height, in pixels, to create the window with. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_a83d61d0ed6e101dd035ae71f452046c8}\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \label{class_window_a83d61d0ed6e101dd035ae71f452046c8} 
+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{, }\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{size}{}\end{DoxyParamCaption})}
+
+Creates the window object. 
+\begin{DoxyParams}{Parameters}
+{\em title} & const char\texorpdfstring{$\ast$}{*} to assign to the window\textquotesingle{}s name to. \\
+\hline
+{\em size} & The size, as a \doxylink{class_vector2}{Vector2}, to set the window size to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_a0f8afd6ee05aaa710dc59d4327807b20}\index{Window@{Window}!Window@{Window}}
+\index{Window@{Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{Window()}{Window()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \label{class_window_a0f8afd6ee05aaa710dc59d4327807b20} 
+Window\+::\+Window (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{title}{}\end{DoxyParamCaption})}
+
+Creates the window object. 
+\begin{DoxyParams}{Parameters}
+{\em title} & const char\texorpdfstring{$\ast$}{*} to assign to the window\textquotesingle{}s name to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_a245d821e6016fa1f6970ccbbedd635f6}\index{Window@{Window}!````~Window@{\texorpdfstring{$\sim$}{\string~}Window}}
+\index{````~Window@{\texorpdfstring{$\sim$}{\string~}Window}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Window()}{\string~Window()}}
+{\footnotesize\ttfamily \label{class_window_a245d821e6016fa1f6970ccbbedd635f6} 
+Window\+::\texorpdfstring{$\sim$}{\string~}\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Delete the window and clean up GLFW. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_window_a35055c04498121d39741bfcd5082705b}\index{Window@{Window}!close@{close}}
+\index{close@{close}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily \label{class_window_a35055c04498121d39741bfcd5082705b} 
+void Window\+::close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Call glfw\+Set\+Window\+Should\+Close to tell GLFW to close the window. \Hypertarget{class_window_a02acaaf02d8b63d4bd74d99482fe3a78}\index{Window@{Window}!getHeight@{getHeight}}
+\index{getHeight@{getHeight}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{getHeight()}{getHeight()}}
+{\footnotesize\ttfamily \label{class_window_a02acaaf02d8b63d4bd74d99482fe3a78} 
+int Window\+::get\+Height (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The height of the window, in pixels. 
+\end{DoxyReturn}
+\Hypertarget{class_window_abd27e67e38160bce3351c9a35e0a6272}\index{Window@{Window}!getSize@{getSize}}
+\index{getSize@{getSize}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \label{class_window_abd27e67e38160bce3351c9a35e0a6272} 
+\mbox{\hyperlink{class_vector2}{Vector2}} \texorpdfstring{$\ast$}{*} Window\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+A pointer to the window\textquotesingle{}s size, as a \doxylink{class_vector2}{Vector2}. 
+\end{DoxyReturn}
+\Hypertarget{class_window_a2d459fe21a48b6a41834a32a6c84fe2e}\index{Window@{Window}!getWidth@{getWidth}}
+\index{getWidth@{getWidth}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{getWidth()}{getWidth()}}
+{\footnotesize\ttfamily \label{class_window_a2d459fe21a48b6a41834a32a6c84fe2e} 
+int Window\+::get\+Width (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+The width of the window, in pixels. 
+\end{DoxyReturn}
+\Hypertarget{class_window_a0a091d94124d3d94a2ce6fc30d9883a8}\index{Window@{Window}!getWindow@{getWindow}}
+\index{getWindow@{getWindow}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{getWindow()}{getWindow()}}
+{\footnotesize\ttfamily \label{class_window_a0a091d94124d3d94a2ce6fc30d9883a8} 
+GLFWwindow \texorpdfstring{$\ast$}{*} Window\+::get\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+A pointer to the GLFWwindow associated with this \doxylink{class_window}{Window} class. 
+\end{DoxyReturn}
+\Hypertarget{class_window_aacab3edab070f2ef946319d45d5b9db6}\index{Window@{Window}!initImGui@{initImGui}}
+\index{initImGui@{initImGui}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{initImGui()}{initImGui()}}
+{\footnotesize\ttfamily \label{class_window_aacab3edab070f2ef946319d45d5b9db6} 
+void Window\+::init\+Im\+Gui (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Initialize Im\+Gui \Hypertarget{class_window_a652b249e69ee5ff3ba8aa3bd4feccdae}\index{Window@{Window}!maximize@{maximize}}
+\index{maximize@{maximize}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{maximize()}{maximize()}}
+{\footnotesize\ttfamily \label{class_window_a652b249e69ee5ff3ba8aa3bd4feccdae} 
+void Window\+::maximize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Maximize the window. \Hypertarget{class_window_acbb2e7275bd1b410c3e28c7ad010bf8b}\index{Window@{Window}!setIcon@{setIcon}}
+\index{setIcon@{setIcon}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{setIcon()}{setIcon()}}
+{\footnotesize\ttfamily \label{class_window_acbb2e7275bd1b410c3e28c7ad010bf8b} 
+void Window\+::set\+Icon (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{file}{}\end{DoxyParamCaption})}
+
+Sets the icon of the window on the taskbar and title bar. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file path to set the icon to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_a21298af7780e4b1c43b5a8bc2e3cab18}\index{Window@{Window}!setSize@{setSize}}
+\index{setSize@{setSize}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_window_a21298af7780e4b1c43b5a8bc2e3cab18} 
+void Window\+::set\+Size (\begin{DoxyParamCaption}\item[{int}]{width}{, }\item[{int}]{height}{}\end{DoxyParamCaption})}
+
+Set the size of the window. 
+\begin{DoxyParams}{Parameters}
+{\em width} & The width, in pixels, to set. \\
+\hline
+{\em height} & The height, in pixels, to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_a5202b1c60cd86d2a67436e38452a4e2e}\index{Window@{Window}!setSize@{setSize}}
+\index{setSize@{setSize}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_window_a5202b1c60cd86d2a67436e38452a4e2e} 
+void Window\+::set\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}}}]{size}{}\end{DoxyParamCaption})}
+
+Set the size of the window. 
+\begin{DoxyParams}{Parameters}
+{\em size} & The size, as a \doxylink{class_vector2}{Vector2}, to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_window_ae779be3a5327f62c5e86a3e3d8a37289}\index{Window@{Window}!shouldClose@{shouldClose}}
+\index{shouldClose@{shouldClose}!Window@{Window}}
+\doxysubsubsection{\texorpdfstring{shouldClose()}{shouldClose()}}
+{\footnotesize\ttfamily \label{class_window_ae779be3a5327f62c5e86a3e3d8a37289} 
+bool Window\+::should\+Close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+Is the window still open? 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+BMC-\/\+ENGINE/rendering/window/Window.\+h\item 
+BMC-\/\+ENGINE/rendering/window/Window.\+cpp\end{DoxyCompactItemize}

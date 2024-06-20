@@ -1,0 +1,30 @@
+\doxysection{VBO.\+h}
+\hypertarget{_v_b_o_8h_source}{}\label{_v_b_o_8h_source}\index{BMC-\/ENGINE/rendering/graphics/buffers/VBO.h@{BMC-\/ENGINE/rendering/graphics/buffers/VBO.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VBO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VBO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}glad/glad.h"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_v_b_o}{VBO}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ GLuint\ \mbox{\hyperlink{class_v_b_o_ad5826819690b602ef07442dea9597f3b}{id}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_v_b_o_a73df46473a0cda0856a96d89751cac75}{VBO}}(GLfloat*\ verts,\ \textcolor{keywordtype}{int}\ length);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_b_o_a63c913f623e45e6e7c03506a6705ea21}{bind}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_b_o_aad7aac5eb2e2d7d397b7f38bb33d3370}{unbind}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_v_b_o_acb52325d93f21856da9cf2e0c47fe282}{cleanup}}();}
+\DoxyCodeLine{00036\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00037\ \ \ \ \ GLfloat*\ vertices;}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ VBO\_H}}
+
+\end{DoxyCode}

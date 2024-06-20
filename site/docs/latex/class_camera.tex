@@ -1,0 +1,56 @@
+\doxysection{Camera Class Reference}
+\hypertarget{class_camera}{}\label{class_camera}\index{Camera@{Camera}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_camera_a4cc661022f19e481fabdf02dc46c0e02}\label{class_camera_a4cc661022f19e481fabdf02dc46c0e02} 
+{\bfseries Camera} (int width, int height, glm\+::vec3 position)
+\item 
+\Hypertarget{class_camera_a3f69e3e801b38f19e5c6a8a1c5c69c3f}\label{class_camera_a3f69e3e801b38f19e5c6a8a1c5c69c3f} 
+{\bfseries Camera} (\mbox{\hyperlink{class_vector2}{Vector2}} \texorpdfstring{$\ast$}{*}size, glm\+::vec3 position)
+\item 
+\Hypertarget{class_camera_af2f7d8094afc9fe8fc2a74deb7088909}\label{class_camera_af2f7d8094afc9fe8fc2a74deb7088909} 
+void {\bfseries update\+Matrix} (float FOVdeg, float near\+Plane, float far\+Plane)
+\item 
+\Hypertarget{class_camera_a7f56af367ee2479dfaff6cda227e1793}\label{class_camera_a7f56af367ee2479dfaff6cda227e1793} 
+void {\bfseries matrix} (\mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*}shader, const char \texorpdfstring{$\ast$}{*}uniform)
+\item 
+\Hypertarget{class_camera_a130d59d482d22ec4650bf010cfecd267}\label{class_camera_a130d59d482d22ec4650bf010cfecd267} 
+void {\bfseries inputs} (\mbox{\hyperlink{class_window}{Window}} \texorpdfstring{$\ast$}{*}window)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5}\label{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5} 
+glm\+::vec3 {\bfseries position}
+\item 
+\Hypertarget{class_camera_a1be00c1e1049e3f682094be8d85060a8}\label{class_camera_a1be00c1e1049e3f682094be8d85060a8} 
+glm\+::vec3 {\bfseries orientation} = glm\+::vec3(0.\+0f, 0.\+0f, -\/1.\+0f)
+\item 
+\Hypertarget{class_camera_a3fe5f351380fb118ffc600591769f049}\label{class_camera_a3fe5f351380fb118ffc600591769f049} 
+glm\+::vec3 {\bfseries up} = glm\+::vec3(0.\+0f, 1.\+0f, 0.\+0f)
+\item 
+\Hypertarget{class_camera_ab64c758c9bfd88201598e8f77cb380eb}\label{class_camera_ab64c758c9bfd88201598e8f77cb380eb} 
+glm\+::mat4 {\bfseries camera\+Matrix} = glm\+::mat4(1.\+0f)
+\item 
+\Hypertarget{class_camera_a9ab381eac17a629e3451328622c6c5a9}\label{class_camera_a9ab381eac17a629e3451328622c6c5a9} 
+bool {\bfseries first\+Click} = true
+\item 
+\Hypertarget{class_camera_a7f3890bf4c4bd76790569c1c42014e32}\label{class_camera_a7f3890bf4c4bd76790569c1c42014e32} 
+int {\bfseries width}
+\item 
+\Hypertarget{class_camera_a71d4b6a3a1bcd937a9f147a3e35a8fed}\label{class_camera_a71d4b6a3a1bcd937a9f147a3e35a8fed} 
+int {\bfseries height}
+\item 
+\Hypertarget{class_camera_a2960f533df18fe6d7d574c316c6d217a}\label{class_camera_a2960f533df18fe6d7d574c316c6d217a} 
+float {\bfseries speed} = 0.\+012f
+\item 
+\Hypertarget{class_camera_a5431c8caefafb42a667ca4c801bef07f}\label{class_camera_a5431c8caefafb42a667ca4c801bef07f} 
+float {\bfseries sensitivity} = 365.\+5f
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+BMC-\/\+ENGINE/rendering/graphics/Camera.\+h\item 
+BMC-\/\+ENGINE/rendering/graphics/Camera.\+cpp\end{DoxyCompactItemize}
