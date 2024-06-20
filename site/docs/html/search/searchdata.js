@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "bcdefgimstuvwxyz~",
   1: "cdefmstvw",
   2: "bcegimstuvw~",
-  3: "ixyz"
+  3: "ituxyz"
 };
 
 var indexSectionNames =

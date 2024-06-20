@@ -103,23 +103,35 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_texture.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="class_texture.html">Texture</a></div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    GLuint ID;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    GLenum type;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    GLuint unit;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="class_texture.html">Texture</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* image, GLenum texType, GLuint slot, GLenum format, GLenum pixelType);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> texUnit(<a class="code hl_class" href="class_shader.html">Shader</a>* shader, <span class="keyword">const</span> <span class="keywordtype">char</span>* uniform, GLuint unit);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> bind();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">void</span> unbind();</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_texture.html#ab36997a503d4ee65aac557b857a1db8e">   14</a></span>    GLuint <a class="code hl_variable" href="class_texture.html#ab36997a503d4ee65aac557b857a1db8e">ID</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_texture.html#a66407e358ec8b32a7bfe1e047d5628d7">   19</a></span>    GLenum <a class="code hl_variable" href="class_texture.html#a66407e358ec8b32a7bfe1e047d5628d7">type</a>;</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">void</span> cleanup();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_texture.html#a9041cdeccaf234cd3945ef88e1092ebf">   24</a></span>    GLuint <a class="code hl_variable" href="class_texture.html#a9041cdeccaf234cd3945ef88e1092ebf">unit</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_function" href="class_texture.html#a293275085ee1bf36b3e283197367dfae">Texture</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* image, GLenum texType, GLuint slot, GLenum format, GLenum pixelType);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#aa48c66d91ec1d9b10ba1a3f1b5eeba3e">texUnit</a>(<a class="code hl_class" href="class_shader.html">Shader</a>* shader, <span class="keyword">const</span> <span class="keywordtype">char</span>* uniform, GLuint <a class="code hl_variable" href="class_texture.html#a9041cdeccaf234cd3945ef88e1092ebf">unit</a>);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a3840dc7429982ffaddeafc8d62345b5d">bind</a>();</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#a8480eed7ed703a937c3e6ab528f559bd">unbind</a>();</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_texture.html#ae13a97cde8768d3b61fd9524c21fbfac">cleanup</a>();</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>};</div>
 </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif </span><span class="comment">// TEXTURE_H</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#endif </span><span class="comment">// TEXTURE_H</span></div>
 <div class="ttc" id="aclass_shader_html"><div class="ttname"><a href="class_shader.html">Shader</a></div><div class="ttdef"><b>Definition</b> Shader.h:18</div></div>
 <div class="ttc" id="aclass_texture_html"><div class="ttname"><a href="class_texture.html">Texture</a></div><div class="ttdef"><b>Definition</b> Texture.h:9</div></div>
+<div class="ttc" id="aclass_texture_html_a293275085ee1bf36b3e283197367dfae"><div class="ttname"><a href="class_texture.html#a293275085ee1bf36b3e283197367dfae">Texture::Texture</a></div><div class="ttdeci">Texture(const char *image, GLenum texType, GLuint slot, GLenum format, GLenum pixelType)</div><div class="ttdef"><b>Definition</b> Texture.cpp:3</div></div>
+<div class="ttc" id="aclass_texture_html_a3840dc7429982ffaddeafc8d62345b5d"><div class="ttname"><a href="class_texture.html#a3840dc7429982ffaddeafc8d62345b5d">Texture::bind</a></div><div class="ttdeci">void bind()</div><div class="ttdef"><b>Definition</b> Texture.cpp:35</div></div>
+<div class="ttc" id="aclass_texture_html_a66407e358ec8b32a7bfe1e047d5628d7"><div class="ttname"><a href="class_texture.html#a66407e358ec8b32a7bfe1e047d5628d7">Texture::type</a></div><div class="ttdeci">GLenum type</div><div class="ttdef"><b>Definition</b> Texture.h:19</div></div>
+<div class="ttc" id="aclass_texture_html_a8480eed7ed703a937c3e6ab528f559bd"><div class="ttname"><a href="class_texture.html#a8480eed7ed703a937c3e6ab528f559bd">Texture::unbind</a></div><div class="ttdeci">void unbind()</div><div class="ttdef"><b>Definition</b> Texture.cpp:41</div></div>
+<div class="ttc" id="aclass_texture_html_a9041cdeccaf234cd3945ef88e1092ebf"><div class="ttname"><a href="class_texture.html#a9041cdeccaf234cd3945ef88e1092ebf">Texture::unit</a></div><div class="ttdeci">GLuint unit</div><div class="ttdef"><b>Definition</b> Texture.h:24</div></div>
+<div class="ttc" id="aclass_texture_html_aa48c66d91ec1d9b10ba1a3f1b5eeba3e"><div class="ttname"><a href="class_texture.html#aa48c66d91ec1d9b10ba1a3f1b5eeba3e">Texture::texUnit</a></div><div class="ttdeci">void texUnit(Shader *shader, const char *uniform, GLuint unit)</div><div class="ttdef"><b>Definition</b> Texture.cpp:28</div></div>
+<div class="ttc" id="aclass_texture_html_ab36997a503d4ee65aac557b857a1db8e"><div class="ttname"><a href="class_texture.html#ab36997a503d4ee65aac557b857a1db8e">Texture::ID</a></div><div class="ttdeci">GLuint ID</div><div class="ttdef"><b>Definition</b> Texture.h:14</div></div>
+<div class="ttc" id="aclass_texture_html_ae13a97cde8768d3b61fd9524c21fbfac"><div class="ttname"><a href="class_texture.html#ae13a97cde8768d3b61fd9524c21fbfac">Texture::cleanup</a></div><div class="ttdeci">void cleanup()</div><div class="ttdef"><b>Definition</b> Texture.cpp:46</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

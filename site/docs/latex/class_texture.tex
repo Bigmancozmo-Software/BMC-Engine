@@ -3,34 +3,105 @@
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_texture_a293275085ee1bf36b3e283197367dfae}\label{class_texture_a293275085ee1bf36b3e283197367dfae} 
-{\bfseries Texture} (const char \texorpdfstring{$\ast$}{*}image, GLenum tex\+Type, GLuint slot, GLenum format, GLenum pixel\+Type)
+\mbox{\hyperlink{class_texture_a293275085ee1bf36b3e283197367dfae}{Texture}} (const char \texorpdfstring{$\ast$}{*}image, GLenum tex\+Type, GLuint slot, GLenum format, GLenum pixel\+Type)
 \item 
-\Hypertarget{class_texture_aa48c66d91ec1d9b10ba1a3f1b5eeba3e}\label{class_texture_aa48c66d91ec1d9b10ba1a3f1b5eeba3e} 
-void {\bfseries tex\+Unit} (\mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*}shader, const char \texorpdfstring{$\ast$}{*}uniform, GLuint unit)
+void \mbox{\hyperlink{class_texture_aa48c66d91ec1d9b10ba1a3f1b5eeba3e}{tex\+Unit}} (\mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*}shader, const char \texorpdfstring{$\ast$}{*}uniform, GLuint \mbox{\hyperlink{class_texture_a9041cdeccaf234cd3945ef88e1092ebf}{unit}})
 \item 
-\Hypertarget{class_texture_a3840dc7429982ffaddeafc8d62345b5d}\label{class_texture_a3840dc7429982ffaddeafc8d62345b5d} 
-void {\bfseries bind} ()
+void \mbox{\hyperlink{class_texture_a3840dc7429982ffaddeafc8d62345b5d}{bind}} ()
 \item 
-\Hypertarget{class_texture_a8480eed7ed703a937c3e6ab528f559bd}\label{class_texture_a8480eed7ed703a937c3e6ab528f559bd} 
-void {\bfseries unbind} ()
+void \mbox{\hyperlink{class_texture_a8480eed7ed703a937c3e6ab528f559bd}{unbind}} ()
 \item 
-\Hypertarget{class_texture_ae13a97cde8768d3b61fd9524c21fbfac}\label{class_texture_ae13a97cde8768d3b61fd9524c21fbfac} 
-void {\bfseries cleanup} ()
+void \mbox{\hyperlink{class_texture_ae13a97cde8768d3b61fd9524c21fbfac}{cleanup}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_texture_ab36997a503d4ee65aac557b857a1db8e}\label{class_texture_ab36997a503d4ee65aac557b857a1db8e} 
-GLuint {\bfseries ID}
+GLuint \mbox{\hyperlink{class_texture_ab36997a503d4ee65aac557b857a1db8e}{ID}}
 \item 
-\Hypertarget{class_texture_a66407e358ec8b32a7bfe1e047d5628d7}\label{class_texture_a66407e358ec8b32a7bfe1e047d5628d7} 
-GLenum {\bfseries type}
+GLenum \mbox{\hyperlink{class_texture_a66407e358ec8b32a7bfe1e047d5628d7}{type}}
 \item 
-\Hypertarget{class_texture_a9041cdeccaf234cd3945ef88e1092ebf}\label{class_texture_a9041cdeccaf234cd3945ef88e1092ebf} 
-GLuint {\bfseries unit}
+GLuint \mbox{\hyperlink{class_texture_a9041cdeccaf234cd3945ef88e1092ebf}{unit}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_texture_a293275085ee1bf36b3e283197367dfae}\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}}
+{\footnotesize\ttfamily \label{class_texture_a293275085ee1bf36b3e283197367dfae} 
+Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{image}{, }\item[{GLenum}]{tex\+Type}{, }\item[{GLuint}]{slot}{, }\item[{GLenum}]{format}{, }\item[{GLenum}]{pixel\+Type}{}\end{DoxyParamCaption})}
+
+Creates the texture object. 
+\begin{DoxyParams}{Parameters}
+{\em image} & The path to the image file. \\
+\hline
+{\em tex\+Type} & The type of texture to store \\
+\hline
+{\em slot} & The Open\+GL texture slot to store the texture to. \\
+\hline
+{\em format} & The texture\textquotesingle{}s color format (ex. RGBA) \\
+\hline
+{\em pixel\+Type} & The texture\textquotesingle{}s pixel type (ex. GL\+\_\+\+UNSIGNED\+\_\+\+BYTE) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_texture_a3840dc7429982ffaddeafc8d62345b5d}\index{Texture@{Texture}!bind@{bind}}
+\index{bind@{bind}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{bind()}{bind()}}
+{\footnotesize\ttfamily \label{class_texture_a3840dc7429982ffaddeafc8d62345b5d} 
+void Texture\+::bind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Bind the texture. \Hypertarget{class_texture_ae13a97cde8768d3b61fd9524c21fbfac}\index{Texture@{Texture}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily \label{class_texture_ae13a97cde8768d3b61fd9524c21fbfac} 
+void Texture\+::cleanup (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Delete the texture. \Hypertarget{class_texture_aa48c66d91ec1d9b10ba1a3f1b5eeba3e}\index{Texture@{Texture}!texUnit@{texUnit}}
+\index{texUnit@{texUnit}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{texUnit()}{texUnit()}}
+{\footnotesize\ttfamily \label{class_texture_aa48c66d91ec1d9b10ba1a3f1b5eeba3e} 
+void Texture\+::tex\+Unit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform}{, }\item[{GLuint}]{unit}{}\end{DoxyParamCaption})}
+
+Assigns the texture to the shader. 
+\begin{DoxyParams}{Parameters}
+{\em shader} & The \doxylink{class_shader}{Shader} object to assign the texture to. \\
+\hline
+{\em uniform} & The name of the uniform in the fragment shader for the texture. \\
+\hline
+{\em unit} & The texture\textquotesingle{}s slot, as an integer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_texture_a8480eed7ed703a937c3e6ab528f559bd}\index{Texture@{Texture}!unbind@{unbind}}
+\index{unbind@{unbind}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{unbind()}{unbind()}}
+{\footnotesize\ttfamily \label{class_texture_a8480eed7ed703a937c3e6ab528f559bd} 
+void Texture\+::unbind (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Unbind the texture. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_texture_ab36997a503d4ee65aac557b857a1db8e}\index{Texture@{Texture}!ID@{ID}}
+\index{ID@{ID}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily \label{class_texture_ab36997a503d4ee65aac557b857a1db8e} 
+GLuint Texture\+::\+ID}
+
+The ID to store the texture to. \Hypertarget{class_texture_a66407e358ec8b32a7bfe1e047d5628d7}\index{Texture@{Texture}!type@{type}}
+\index{type@{type}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{class_texture_a66407e358ec8b32a7bfe1e047d5628d7} 
+GLenum Texture\+::type}
+
+The type of texture to store. \Hypertarget{class_texture_a9041cdeccaf234cd3945ef88e1092ebf}\index{Texture@{Texture}!unit@{unit}}
+\index{unit@{unit}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{unit}{unit}}
+{\footnotesize\ttfamily \label{class_texture_a9041cdeccaf234cd3945ef88e1092ebf} 
+GLuint Texture\+::unit}
+
+The Open\+GL texture slot to store the texture to. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
