@@ -22,7 +22,7 @@ public:
 	/// Creates the window object.
 	/// @param title const char* to assign to the window's name to.
 	/// @param width The width, in pixels, to create the window with.
-	/// @param width The height, in pixels, to create the window with.
+	/// @param height The height, in pixels, to create the window with.
 	/// 
 	Window(const char* title, int width, int height); // title with size
 
