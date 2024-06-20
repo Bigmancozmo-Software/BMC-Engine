@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unbind_0',['unbind',['../class_e_b_o.html#a8857542d7b10bc6ecd3aadd0567d4d42',1,'EBO::unbind()'],['../class_v_a_o.html#ae96e88a466b44d968315b5dc1f612946',1,'VAO::unbind()'],['../class_v_b_o.html#aad7aac5eb2e2d7d397b7f38bb33d3370',1,'VBO::unbind()']]]
+  ['translate_0',['translate',['../class_translator.html#ab93822ee62308cef7b8e469cc139b10e',1,'Translator']]],
+  ['translator_1',['Translator',['../class_translator.html#a920302395a35ebf8e72e2632c4634500',1,'Translator']]]
 ];
