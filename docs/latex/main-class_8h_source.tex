@@ -1,0 +1,23 @@
+\doxysection{main-\/class.h}
+\hypertarget{main-class_8h_source}{}\label{main-class_8h_source}\index{BMC-\/ENGINE/main-\/class.h@{BMC-\/ENGINE/main-\/class.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAIN\_CLASS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAIN\_CLASS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}classes/lang/Translator.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain}{main}}\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\ locale\ =\ \textcolor{stringliteral}{"{}en-\/US"{}};}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_translator}{Translator}}*\ translator\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_translator}{Translator}}(locale);}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\ translate(std::string\ key)\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ translator-\/>translate(key);}
+\DoxyCodeLine{00014\ \ \ \ \ \}}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
