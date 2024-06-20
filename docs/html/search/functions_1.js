@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['getheight_0',['getHeight',['../class_window.html#a02acaaf02d8b63d4bd74d99482fe3a78',1,'Window']]],
-  ['getsize_1',['getSize',['../class_window.html#abd27e67e38160bce3351c9a35e0a6272',1,'Window']]],
-  ['getwidth_2',['getWidth',['../class_window.html#a2d459fe21a48b6a41834a32a6c84fe2e',1,'Window']]],
-  ['getwindow_3',['getWindow',['../class_window.html#a0a091d94124d3d94a2ce6fc30d9883a8',1,'Window']]]
+  ['cleanup_0',['cleanup',['../class_e_b_o.html#abf37908beb498131149d30ac7afc782b',1,'EBO::cleanup()'],['../class_v_a_o.html#a6b29d15e0b8b09fdadd29b6673b58898',1,'VAO::cleanup()'],['../class_v_b_o.html#acb52325d93f21856da9cf2e0c47fe282',1,'VBO::cleanup()']]],
+  ['close_1',['close',['../class_window.html#a35055c04498121d39741bfcd5082705b',1,'Window']]]
 ];
