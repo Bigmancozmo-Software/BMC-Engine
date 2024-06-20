@@ -68,9 +68,9 @@ int main(int argc, char* argv[])
 	vbo.bind();
 	ebo.bind();
 
-	defaultShader->vertexAttribPointer(0, 3, GL_FLOAT, 8, 0);
-	defaultShader->vertexAttribPointer(1, 3, GL_FLOAT, 8, 3);
-	defaultShader->vertexAttribPointer(2, 2, GL_FLOAT, 8, 6);
+	defaultShader->vertexAttribPointer(0, 3, GL_FLOAT, 8);
+	defaultShader->vertexAttribPointer(1, 3, GL_FLOAT, 8);
+	defaultShader->vertexAttribPointer(2, 2, GL_FLOAT, 8);
 	
 	glm::vec3 cubePos = glm::vec3(0.0f);
 	glm::mat4 cubeModel = glm::mat4(1.0f);
@@ -106,7 +106,7 @@ int main(int argc, char* argv[])
 	lightShader->setMat4("model", lightModel);
 	lightShader->setVec4("lightColor", lightColor);
 
-	lightShader->vertexAttribPointer(0, 3, GL_FLOAT, 3, 0);
+	lightShader->vertexAttribPointer(0, 3, GL_FLOAT, 3);
 
 	lightVAO.unbind();
 	lightVBO.unbind();

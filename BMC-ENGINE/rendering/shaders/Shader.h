@@ -20,8 +20,7 @@ public:
     /// 
     /// The ID to assign the shader to.
     /// 
-    unsigned int ID;
-
+    GLuint ID;
 
     /// 
     /// The ID to assign the shader to.
@@ -83,10 +82,10 @@ public:
     /// @param totalSize The length of 1 vertex in the vertices array.
     /// @param sizeofMultiplier This will be removed soon - wait patiently for that!
     /// 
-    void vertexAttribPointer(int index, int length, int type, int totalSize, int sizeofMultiplier);
+    void vertexAttribPointer(int index, int length, int type, int totalSize);
 
 private:
-    int vertexAttribs = 0;
+    int sizeofMultiplier = 0;
 };
 
 #endif // SHADER_H
