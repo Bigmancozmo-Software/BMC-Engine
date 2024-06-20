@@ -28,10 +28,10 @@ public:
     void setVec3(const std::string& name, glm::vec3 value) const;
     void setVec4(const std::string& name, glm::vec4 value) const;
 
-    void vertexAttribPointer(int index, int length, int type, int totalSize, int sizeofMultiplier);
+    void vertexAttribPointer(int index, int length, int type, int totalSize);
 
 private:
-    int vertexAttribs = 0;
+    int sizeofMultiplier = 0;
 };
 
 #endif // SHADER_H
