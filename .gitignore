@@ -32,7 +32,9 @@ bld/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
-[Bb]uild # how was this not here by default :skull:
+[Bb]uild/ # how was this not here by default :skull:
+[Bb]uild/x64-debug/
+[Bb]uild/x64-release/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
