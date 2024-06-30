@@ -19,12 +19,12 @@ void \mbox{\hyperlink{class_shader_ab309c3332890cfd6767ac1d190229796}{set\+Vec3}
 \item 
 void \mbox{\hyperlink{class_shader_adb520b04adb0258ff0df62f45bf28779}{set\+Vec4}} (const std\+::string \&name, glm\+::vec4 value) const
 \item 
-void \mbox{\hyperlink{class_shader_aef2cdb40af02ea6d4b6d2c4d10bdcd99}{vertex\+Attrib\+Pointer}} (int index, int length, int type, int total\+Size, int sizeof\+Multiplier)
+void \mbox{\hyperlink{class_shader_acf3b1aca02ced8a7358486b47453c63d}{vertex\+Attrib\+Pointer}} (int index, int length, int type, int total\+Size)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-unsigned int \mbox{\hyperlink{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}{ID}}
+GLuint \mbox{\hyperlink{class_shader_a7be2afcbd5ba5873a04536a2b4b5e576}{ID}}
 \end{DoxyCompactItemize}
 
 
@@ -122,11 +122,11 @@ Sets a vec4 uniform in the shader.
 {\footnotesize\ttfamily \label{class_shader_a870fa9f13d69e558815d6fd351a469dc} 
 void Shader\+::use (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
-The ID to assign the shader to. \Hypertarget{class_shader_aef2cdb40af02ea6d4b6d2c4d10bdcd99}\index{Shader@{Shader}!vertexAttribPointer@{vertexAttribPointer}}
+The ID to assign the shader to. \Hypertarget{class_shader_acf3b1aca02ced8a7358486b47453c63d}\index{Shader@{Shader}!vertexAttribPointer@{vertexAttribPointer}}
 \index{vertexAttribPointer@{vertexAttribPointer}!Shader@{Shader}}
 \doxysubsubsection{\texorpdfstring{vertexAttribPointer()}{vertexAttribPointer()}}
-{\footnotesize\ttfamily \label{class_shader_aef2cdb40af02ea6d4b6d2c4d10bdcd99} 
-void Shader\+::vertex\+Attrib\+Pointer (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{int}]{length}{, }\item[{int}]{type}{, }\item[{int}]{total\+Size}{, }\item[{int}]{sizeof\+Multiplier}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_shader_acf3b1aca02ced8a7358486b47453c63d} 
+void Shader\+::vertex\+Attrib\+Pointer (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{int}]{length}{, }\item[{int}]{type}{, }\item[{int}]{total\+Size}{}\end{DoxyParamCaption})}
 
 Create a vertex attribute pointer. 
 \begin{DoxyParams}{Parameters}
@@ -138,17 +138,15 @@ Create a vertex attribute pointer.
 \hline
 {\em total\+Size} & The length of 1 vertex in the vertices array. \\
 \hline
-{\em sizeof\+Multiplier} & This will be removed soon -\/ wait patiently for that! \\
-\hline
 \end{DoxyParams}
 
 
 \doxysubsection{Member Data Documentation}
-\Hypertarget{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d}\index{Shader@{Shader}!ID@{ID}}
+\Hypertarget{class_shader_a7be2afcbd5ba5873a04536a2b4b5e576}\index{Shader@{Shader}!ID@{ID}}
 \index{ID@{ID}!Shader@{Shader}}
 \doxysubsubsection{\texorpdfstring{ID}{ID}}
-{\footnotesize\ttfamily \label{class_shader_a142a08b6fbdfc982d82ca10ee0b0f38d} 
-unsigned int Shader\+::\+ID}
+{\footnotesize\ttfamily \label{class_shader_a7be2afcbd5ba5873a04536a2b4b5e576} 
+GLuint Shader\+::\+ID}
 
 The ID to assign the shader to. 
 

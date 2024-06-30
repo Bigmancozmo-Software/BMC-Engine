@@ -111,13 +111,13 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab309c3332890cfd6767ac1d190229796"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb520b04adb0258ff0df62f45bf28779" id="r_adb520b04adb0258ff0df62f45bf28779"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb520b04adb0258ff0df62f45bf28779">setVec4</a> (const std::string &amp;name, glm::vec4 value) const</td></tr>
 <tr class="separator:adb520b04adb0258ff0df62f45bf28779"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef2cdb40af02ea6d4b6d2c4d10bdcd99" id="r_aef2cdb40af02ea6d4b6d2c4d10bdcd99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef2cdb40af02ea6d4b6d2c4d10bdcd99">vertexAttribPointer</a> (int index, int length, int type, int totalSize, int sizeofMultiplier)</td></tr>
-<tr class="separator:aef2cdb40af02ea6d4b6d2c4d10bdcd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3b1aca02ced8a7358486b47453c63d" id="r_acf3b1aca02ced8a7358486b47453c63d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf3b1aca02ced8a7358486b47453c63d">vertexAttribPointer</a> (int index, int length, int type, int totalSize)</td></tr>
+<tr class="separator:acf3b1aca02ced8a7358486b47453c63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a142a08b6fbdfc982d82ca10ee0b0f38d" id="r_a142a08b6fbdfc982d82ca10ee0b0f38d"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a142a08b6fbdfc982d82ca10ee0b0f38d">ID</a></td></tr>
-<tr class="separator:a142a08b6fbdfc982d82ca10ee0b0f38d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7be2afcbd5ba5873a04536a2b4b5e576" id="r_a7be2afcbd5ba5873a04536a2b4b5e576"><td class="memItemLeft" align="right" valign="top">GLuint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be2afcbd5ba5873a04536a2b4b5e576">ID</a></td></tr>
+<tr class="separator:a7be2afcbd5ba5873a04536a2b4b5e576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3e135bbf914b087a939114d79c10d283" name="a3e135bbf914b087a939114d79c10d283"></a>
@@ -329,8 +329,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aef2cdb40af02ea6d4b6d2c4d10bdcd99" name="aef2cdb40af02ea6d4b6d2c4d10bdcd99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef2cdb40af02ea6d4b6d2c4d10bdcd99">&#9670;&#160;</a></span>vertexAttribPointer()</h2>
+<a id="acf3b1aca02ced8a7358486b47453c63d" name="acf3b1aca02ced8a7358486b47453c63d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3b1aca02ced8a7358486b47453c63d">&#9670;&#160;</a></span>vertexAttribPointer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -353,12 +353,7 @@ Public Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>totalSize</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>sizeofMultiplier</em></span>&#160;)</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>totalSize</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -368,7 +363,6 @@ Public Attributes</h2></td></tr>
     <tr><td class="paramname">length</td><td>The length of the vertex attribute pointer (ex. a vec3 would be 3). </td></tr>
     <tr><td class="paramname">type</td><td>The type of the data in the vertices array. </td></tr>
     <tr><td class="paramname">totalSize</td><td>The length of 1 vertex in the vertices array. </td></tr>
-    <tr><td class="paramname">sizeofMultiplier</td><td>This will be removed soon - wait patiently for that! </td></tr>
   </table>
   </dd>
 </dl>
@@ -376,14 +370,14 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a142a08b6fbdfc982d82ca10ee0b0f38d" name="a142a08b6fbdfc982d82ca10ee0b0f38d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a142a08b6fbdfc982d82ca10ee0b0f38d">&#9670;&#160;</a></span>ID</h2>
+<a id="a7be2afcbd5ba5873a04536a2b4b5e576" name="a7be2afcbd5ba5873a04536a2b4b5e576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7be2afcbd5ba5873a04536a2b4b5e576">&#9670;&#160;</a></span>ID</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned int Shader::ID</td>
+          <td class="memname">GLuint Shader::ID</td>
         </tr>
       </table>
 </div><div class="memdoc">

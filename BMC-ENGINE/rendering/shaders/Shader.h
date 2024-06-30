@@ -80,7 +80,6 @@ public:
     /// @param length The length of the vertex attribute pointer (ex. a vec3 would be 3).
     /// @param type The type of the data in the vertices array.
     /// @param totalSize The length of 1 vertex in the vertices array.
-    /// @param sizeofMultiplier This will be removed soon - wait patiently for that!
     /// 
     void vertexAttribPointer(int index, int length, int type, int totalSize);
 
