@@ -1,7 +1,17 @@
 var searchData=
 [
-  ['unbind_0',['unbind',['../class_e_b_o.html#a8857542d7b10bc6ecd3aadd0567d4d42',1,'EBO::unbind()'],['../class_v_a_o.html#ae96e88a466b44d968315b5dc1f612946',1,'VAO::unbind()'],['../class_v_b_o.html#aad7aac5eb2e2d7d397b7f38bb33d3370',1,'VBO::unbind()'],['../class_texture.html#a8480eed7ed703a937c3e6ab528f559bd',1,'Texture::unbind()']]],
-  ['unit_1',['unit',['../class_texture.html#a9041cdeccaf234cd3945ef88e1092ebf',1,'Texture']]],
-  ['use_2',['use',['../class_shader.html#a870fa9f13d69e558815d6fd351a469dc',1,'Shader']]],
-  ['useantialiasing_3',['useAntiAliasing',['../class_debug_settings.html#a14397a9c130134055c706bb6a5ede224',1,'DebugSettings']]]
+  ['sensitivity_0',['sensitivity',['../class_camera.html#a5431c8caefafb42a667ca4c801bef07f',1,'Camera']]],
+  ['setbool_1',['setBool',['../class_shader.html#ab1a56d6c299bd7eaa18c2e142ef7bd9f',1,'Shader']]],
+  ['setfloat_2',['setFloat',['../class_shader.html#afe7367621f74c2d26431d8ac15252bf3',1,'Shader']]],
+  ['seticon_3',['setIcon',['../class_window.html#acbb2e7275bd1b410c3e28c7ad010bf8b',1,'Window']]],
+  ['setint_4',['setInt',['../class_shader.html#ad362e2b654cd95a3574cd505411e41fd',1,'Shader']]],
+  ['setmat4_5',['setMat4',['../class_shader.html#ad5949442e2f9a2896fd7256458e436f5',1,'Shader']]],
+  ['setsize_6',['setSize',['../class_window.html#a21298af7780e4b1c43b5a8bc2e3cab18',1,'Window::setSize(int width, int height)'],['../class_window.html#a5202b1c60cd86d2a67436e38452a4e2e',1,'Window::setSize(Vector2 size)']]],
+  ['settodefault_7',['setToDefault',['../class_styler.html#ad7ba91d786c8b4c197e55d8b6eb442d0',1,'Styler']]],
+  ['setvec3_8',['setVec3',['../class_shader.html#ab309c3332890cfd6767ac1d190229796',1,'Shader']]],
+  ['setvec4_9',['setVec4',['../class_shader.html#adb520b04adb0258ff0df62f45bf28779',1,'Shader']]],
+  ['shader_10',['Shader',['../class_shader.html',1,'Shader'],['../class_shader.html#a3e135bbf914b087a939114d79c10d283',1,'Shader::Shader()']]],
+  ['shouldclose_11',['shouldClose',['../class_window.html#ae779be3a5327f62c5e86a3e3d8a37289',1,'Window']]],
+  ['speed_12',['speed',['../class_camera.html#a2960f533df18fe6d7d574c316c6d217a',1,'Camera']]],
+  ['styler_13',['Styler',['../class_styler.html',1,'']]]
 ];

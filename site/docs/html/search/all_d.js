@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['vao_0',['VAO',['../class_v_a_o.html',1,'VAO'],['../class_v_a_o.html#a3b2ec9574d0aa9e86e5288095f58097e',1,'VAO::VAO()']]],
-  ['vbo_1',['VBO',['../class_v_b_o.html',1,'VBO'],['../class_v_b_o.html#a73df46473a0cda0856a96d89751cac75',1,'VBO::VBO()']]],
-  ['vector2_2',['Vector2',['../class_vector2.html',1,'Vector2'],['../class_vector2.html#a321cf468f0b0caa050fc802f29af48ee',1,'Vector2::Vector2(int x, int y)'],['../class_vector2.html#a393a25d8f437ff96f706be0a67b3ec10',1,'Vector2::Vector2(int xy)'],['../class_vector2.html#a22104d1809be26a419ef1f959e3761bf',1,'Vector2::Vector2()']]],
-  ['vector3_3',['Vector3',['../class_vector3.html',1,'Vector3'],['../class_vector3.html#af7339592cdacffdfc39566133bd285d0',1,'Vector3::Vector3(int x, int y, int z)'],['../class_vector3.html#a50d06a1259fbab25a9467d3273ad6055',1,'Vector3::Vector3(int xyz)'],['../class_vector3.html#a0f49191f7e001e7f7ae1cb49522118b4',1,'Vector3::Vector3()']]],
-  ['vertexattribpointer_4',['vertexAttribPointer',['../class_shader.html#acf3b1aca02ced8a7358486b47453c63d',1,'Shader']]]
+  ['texture_0',['Texture',['../class_texture.html',1,'Texture'],['../class_texture.html#a293275085ee1bf36b3e283197367dfae',1,'Texture::Texture(const char *image, GLenum texType, GLuint slot, GLenum format, GLenum pixelType)']]],
+  ['texunit_1',['texUnit',['../class_texture.html#aa48c66d91ec1d9b10ba1a3f1b5eeba3e',1,'Texture']]],
+  ['translate_2',['translate',['../class_translator.html#ab93822ee62308cef7b8e469cc139b10e',1,'Translator::translate()'],['../classmain.html#a281072ee855f8c2353ea0bb8a6efcee5',1,'main::translate()']]],
+  ['translator_3',['Translator',['../class_translator.html',1,'Translator'],['../class_translator.html#a920302395a35ebf8e72e2632c4634500',1,'Translator::Translator()']]],
+  ['translator_4',['translator',['../classmain.html#adae1c2d9630cc2522f9615c306659b33',1,'main']]],
+  ['type_5',['type',['../class_texture.html#a66407e358ec8b32a7bfe1e047d5628d7',1,'Texture']]]
 ];

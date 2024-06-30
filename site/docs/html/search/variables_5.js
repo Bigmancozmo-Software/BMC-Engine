@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['unit_0',['unit',['../class_texture.html#a9041cdeccaf234cd3945ef88e1092ebf',1,'Texture']]],
-  ['useantialiasing_1',['useAntiAliasing',['../class_debug_settings.html#a14397a9c130134055c706bb6a5ede224',1,'DebugSettings']]]
+  ['position_0',['position',['../class_camera.html#a04b5db2c530d8630660e8cfb93a4b3b5',1,'Camera']]]
 ];
