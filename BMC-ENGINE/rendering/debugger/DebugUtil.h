@@ -11,6 +11,11 @@
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
+/// 
+/// The utility used for debugging & experimentation.
+/// 
+/// Enabled with the --debug (-d) launch argument or when the engine is a debug build.
+/// 
 class DebugUtil {
 public:
 	DebugUtil(GLFWwindow*);
