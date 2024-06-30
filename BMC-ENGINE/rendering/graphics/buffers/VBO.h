@@ -5,6 +5,9 @@
 
 #include <iostream>
 
+/// 
+/// Vertex buffer object
+/// 
 class VBO {
 public:
 	/// 

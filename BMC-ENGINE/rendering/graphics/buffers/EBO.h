@@ -5,6 +5,9 @@
 
 #include <iostream>
 
+/// 
+/// Element buffer object
+/// 
 class EBO {
 public:
 	/// 

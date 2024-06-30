@@ -3,6 +3,9 @@
 
 #include "glad/glad.h"
 
+/// 
+/// Vertex array object
+/// 
 class VAO {
 public:
 	/// 
