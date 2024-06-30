@@ -13,7 +13,6 @@
 
 /// 
 /// The utility used for debugging & experimentation.
-/// 
 /// Enabled with the --debug (-d) launch argument or when the engine is a debug build.
 /// 
 class DebugUtil {
@@ -43,6 +42,9 @@ private:
 	void processVars();
 };
 
+/// 
+/// The configuration set by the debugger.
+/// 
 class DebugSettings {
 public:
 	/// 

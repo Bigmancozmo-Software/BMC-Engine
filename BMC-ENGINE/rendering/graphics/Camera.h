@@ -15,6 +15,10 @@
 #include "../shaders/Shader.h"
 #include "../../rendering/window/Window.h"
 
+/// 
+/// The camera manager.
+/// Creates a matrix, which is sent to the vertex shader.
+/// 
 class Camera {
 public:
 	/// 

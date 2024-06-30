@@ -4,6 +4,9 @@
 #include <glad/glad.h>
 #include <iostream>
 
+/// 
+/// Generates a cube, if given a size.
+/// 
 class CubeGenerator {
 public:
 	/// 
