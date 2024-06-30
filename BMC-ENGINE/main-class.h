@@ -4,6 +4,9 @@
 #include <iostream>
 #include "classes/lang/Translator.h"
 
+/// 
+/// Stores global data for the main class.
+/// 
 class main {
 public:
 	/// 

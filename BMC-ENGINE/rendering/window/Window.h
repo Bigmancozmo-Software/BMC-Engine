@@ -16,6 +16,10 @@
 
 #include "errors/ErrorHandler.h"
 
+/// 
+/// An easier implementation for creating a GLFW window,
+/// instead of using GLFW functions.
+/// 
 class Window {
 public:
 	/// 

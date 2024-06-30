@@ -6,6 +6,9 @@
 #include <sstream>
 #include <iostream>
 
+/// 
+/// Reads a file from the filesystem.
+/// 
 class FileReader {
 public:
 	/// 

@@ -98,28 +98,28 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;classes/lang/Translator.h&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="classmain.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="classmain.html">main</a> {</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classmain.html#a8ebcbaca2fb786528949c4556d6feac9">   12</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> std::string <a class="code hl_variable" href="classmain.html#a8ebcbaca2fb786528949c4556d6feac9">locale</a> = <span class="stringliteral">&quot;en-US&quot;</span>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classmain.html#adae1c2d9630cc2522f9615c306659b33">   17</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_translator.html">Translator</a>* <a class="code hl_variable" href="classmain.html#adae1c2d9630cc2522f9615c306659b33">translator</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_translator.html">Translator</a>(<a class="code hl_variable" href="classmain.html#a8ebcbaca2fb786528949c4556d6feac9">locale</a>);</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classmain.html#a281072ee855f8c2353ea0bb8a6efcee5">   23</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> std::string <a class="code hl_function" href="classmain.html#a281072ee855f8c2353ea0bb8a6efcee5">translate</a>(std::string key) {</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classmain.html#adae1c2d9630cc2522f9615c306659b33">translator</a>-&gt;<a class="code hl_function" href="class_translator.html#ab93822ee62308cef7b8e469cc139b10e">translate</a>(key);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classmain.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classmain.html">main</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classmain.html#a8ebcbaca2fb786528949c4556d6feac9">   15</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> std::string <a class="code hl_variable" href="classmain.html#a8ebcbaca2fb786528949c4556d6feac9">locale</a> = <span class="stringliteral">&quot;en-US&quot;</span>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="classmain.html#adae1c2d9630cc2522f9615c306659b33">   20</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> <a class="code hl_class" href="class_translator.html">Translator</a>* <a class="code hl_variable" href="classmain.html#adae1c2d9630cc2522f9615c306659b33">translator</a> = <span class="keyword">new</span> <a class="code hl_class" href="class_translator.html">Translator</a>(<a class="code hl_variable" href="classmain.html#a8ebcbaca2fb786528949c4556d6feac9">locale</a>);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="classmain.html#a281072ee855f8c2353ea0bb8a6efcee5">   26</a></span>    <span class="keyword">inline</span> <span class="keyword">static</span> std::string <a class="code hl_function" href="classmain.html#a281072ee855f8c2353ea0bb8a6efcee5">translate</a>(std::string key) {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> <a class="code hl_variable" href="classmain.html#adae1c2d9630cc2522f9615c306659b33">translator</a>-&gt;<a class="code hl_function" href="class_translator.html#ab93822ee62308cef7b8e469cc139b10e">translate</a>(key);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
 </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
 </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_translator_html"><div class="ttname"><a href="class_translator.html">Translator</a></div><div class="ttdef"><b>Definition</b> Translator.h:10</div></div>
 <div class="ttc" id="aclass_translator_html_ab93822ee62308cef7b8e469cc139b10e"><div class="ttname"><a href="class_translator.html#ab93822ee62308cef7b8e469cc139b10e">Translator::translate</a></div><div class="ttdeci">std::string translate(std::string key)</div><div class="ttdef"><b>Definition</b> Translator.cpp:21</div></div>
-<div class="ttc" id="aclassmain_html"><div class="ttname"><a href="classmain.html">main</a></div><div class="ttdef"><b>Definition</b> main-class.h:7</div></div>
-<div class="ttc" id="aclassmain_html_a281072ee855f8c2353ea0bb8a6efcee5"><div class="ttname"><a href="classmain.html#a281072ee855f8c2353ea0bb8a6efcee5">main::translate</a></div><div class="ttdeci">static std::string translate(std::string key)</div><div class="ttdef"><b>Definition</b> main-class.h:23</div></div>
-<div class="ttc" id="aclassmain_html_a8ebcbaca2fb786528949c4556d6feac9"><div class="ttname"><a href="classmain.html#a8ebcbaca2fb786528949c4556d6feac9">main::locale</a></div><div class="ttdeci">static std::string locale</div><div class="ttdef"><b>Definition</b> main-class.h:12</div></div>
-<div class="ttc" id="aclassmain_html_adae1c2d9630cc2522f9615c306659b33"><div class="ttname"><a href="classmain.html#adae1c2d9630cc2522f9615c306659b33">main::translator</a></div><div class="ttdeci">static Translator * translator</div><div class="ttdef"><b>Definition</b> main-class.h:17</div></div>
+<div class="ttc" id="aclassmain_html"><div class="ttname"><a href="classmain.html">main</a></div><div class="ttdef"><b>Definition</b> main-class.h:10</div></div>
+<div class="ttc" id="aclassmain_html_a281072ee855f8c2353ea0bb8a6efcee5"><div class="ttname"><a href="classmain.html#a281072ee855f8c2353ea0bb8a6efcee5">main::translate</a></div><div class="ttdeci">static std::string translate(std::string key)</div><div class="ttdef"><b>Definition</b> main-class.h:26</div></div>
+<div class="ttc" id="aclassmain_html_a8ebcbaca2fb786528949c4556d6feac9"><div class="ttname"><a href="classmain.html#a8ebcbaca2fb786528949c4556d6feac9">main::locale</a></div><div class="ttdeci">static std::string locale</div><div class="ttdef"><b>Definition</b> main-class.h:15</div></div>
+<div class="ttc" id="aclassmain_html_adae1c2d9630cc2522f9615c306659b33"><div class="ttname"><a href="classmain.html#adae1c2d9630cc2522f9615c306659b33">main::translator</a></div><div class="ttdeci">static Translator * translator</div><div class="ttdef"><b>Definition</b> main-class.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

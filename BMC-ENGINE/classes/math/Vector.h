@@ -1,6 +1,9 @@
 #ifndef VECTOR_H
 #define VECTOR_H
 
+/// 
+/// Two-component vector (X/Y)
+/// 
 class Vector2 {
 public:
 	/// 
@@ -32,6 +35,9 @@ public:
 	Vector2();
 };
 
+/// 
+/// Three-component vector (X/Y/Z)
+/// 
 class Vector3 {
 public:
 	/// 
