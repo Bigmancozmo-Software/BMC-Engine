@@ -10,7 +10,6 @@ add_executable(TestRunner ${_SOURCES})
 
 
 # Testing
-add_subdirectory (${CMAKE_SOURCE_DIR}/extern/GTest)
-find_package(GTest REQUIRED)
+add_subdirectory (extern/GTest)
 enable_testing()
 target_link_libraries(TestRunner PUBLIC gtest_main BMC-ENGINE)
