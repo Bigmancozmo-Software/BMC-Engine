@@ -7,6 +7,9 @@
 #include "../../files/FileReader.h"
 #include <unordered_map>
 
+/// 
+/// Reads & translates keys for the current locale.
+/// 
 class Translator {
 public:
 	/// 

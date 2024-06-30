@@ -5,6 +5,9 @@
 #include "../shaders/Shader.h"
 #include "stb_image.h"
 
+/// 
+/// Simple container for OpenGL textures.
+/// 
 class Texture
 {
 public:

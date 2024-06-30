@@ -12,6 +12,9 @@
 #include <Windows.h>
 #endif
 
+/// 
+/// Handles errors in the program.
+/// 
 class ErrorHandler {
 public:
 	/// 

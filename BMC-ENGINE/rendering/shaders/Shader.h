@@ -14,6 +14,9 @@
 
 #include "../../files/FileReader.h"
 
+/// 
+/// Makes OpenGL shader creation easier by providing simple functions.
+/// 
 class Shader
 {
 public:
