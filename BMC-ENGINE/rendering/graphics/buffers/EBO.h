@@ -14,7 +14,7 @@ public:
 
 	/// 
 	/// Create the EBO.
-	/// @param verts The indices array.
+	/// @param inds The indices array.
 	/// @param length The amount of items in the indices array.
 	///
 	EBO(GLuint* inds, int length);
