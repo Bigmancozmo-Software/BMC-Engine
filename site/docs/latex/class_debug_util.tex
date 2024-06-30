@@ -1,15 +1,53 @@
 \doxysection{Debug\+Util Class Reference}
 \hypertarget{class_debug_util}{}\label{class_debug_util}\index{DebugUtil@{DebugUtil}}
+
+
+{\ttfamily \#include $<$Debug\+Util.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_debug_util_a3573b922801ef552d5bc4f53e0c7cf7b}\label{class_debug_util_a3573b922801ef552d5bc4f53e0c7cf7b} 
-{\bfseries Debug\+Util} (GLFWwindow \texorpdfstring{$\ast$}{*})
+\mbox{\hyperlink{class_debug_util_a113f7b5d2bd951156554f8420eb08a64}{Debug\+Util}} (GLFWwindow \texorpdfstring{$\ast$}{*}window)
 \item 
-\Hypertarget{class_debug_util_a92c92c47dc9876609f2e9994668018ae}\label{class_debug_util_a92c92c47dc9876609f2e9994668018ae} 
-void {\bfseries draw} ()
+\mbox{\hyperlink{class_debug_util_ad7da54284999ad68e1e37a6fad443df6}{\texorpdfstring{$\sim$}{\string~}\+Debug\+Util}} ()
+\item 
+void \mbox{\hyperlink{class_debug_util_a92c92c47dc9876609f2e9994668018ae}{draw}} ()
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The utility used for debugging \& experimentation.
+
+Enabled with the --debug (-\/d) launch argument or when the engine is a debug build. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_debug_util_a113f7b5d2bd951156554f8420eb08a64}\index{DebugUtil@{DebugUtil}!DebugUtil@{DebugUtil}}
+\index{DebugUtil@{DebugUtil}!DebugUtil@{DebugUtil}}
+\doxysubsubsection{\texorpdfstring{DebugUtil()}{DebugUtil()}}
+{\footnotesize\ttfamily \label{class_debug_util_a113f7b5d2bd951156554f8420eb08a64} 
+Debug\+Util\+::\+Debug\+Util (\begin{DoxyParamCaption}\item[{GLFWwindow \texorpdfstring{$\ast$}{*}}]{window}{}\end{DoxyParamCaption})}
+
+Creates the utility 
+\begin{DoxyParams}{Parameters}
+{\em window} & The GLFWwindow\texorpdfstring{$\ast$}{*} used for Im\+Gui. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_debug_util_ad7da54284999ad68e1e37a6fad443df6}\index{DebugUtil@{DebugUtil}!````~DebugUtil@{\texorpdfstring{$\sim$}{\string~}DebugUtil}}
+\index{````~DebugUtil@{\texorpdfstring{$\sim$}{\string~}DebugUtil}!DebugUtil@{DebugUtil}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}DebugUtil()}{\string~DebugUtil()}}
+{\footnotesize\ttfamily \label{class_debug_util_ad7da54284999ad68e1e37a6fad443df6} 
+Debug\+Util\+::\texorpdfstring{$\sim$}{\string~}\+Debug\+Util (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Shutdown \& destroy Im\+Gui. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_debug_util_a92c92c47dc9876609f2e9994668018ae}\index{DebugUtil@{DebugUtil}!draw@{draw}}
+\index{draw@{draw}!DebugUtil@{DebugUtil}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_debug_util_a92c92c47dc9876609f2e9994668018ae} 
+void Debug\+Util\+::draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Draw the debugger on the screen. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

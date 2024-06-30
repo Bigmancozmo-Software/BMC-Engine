@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['y_0',['y',['../class_vector2.html#a0ac4e1861754c11801150e0bbb2d0866',1,'Vector2::y'],['../class_vector3.html#a090e57f10e8bb91e7e418768a97fd6af',1,'Vector3::y']]]
+  ['unit_0',['unit',['../class_texture.html#a9041cdeccaf234cd3945ef88e1092ebf',1,'Texture']]],
+  ['useantialiasing_1',['useAntiAliasing',['../class_debug_settings.html#a14397a9c130134055c706bb6a5ede224',1,'DebugSettings']]]
 ];

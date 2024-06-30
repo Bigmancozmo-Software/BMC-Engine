@@ -91,16 +91,82 @@ $(function(){ initResizable(false); });
   <div class="headertitle"><div class="title">DebugUtil Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_debug_util_8h_source.html">DebugUtil.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3573b922801ef552d5bc4f53e0c7cf7b" id="r_a3573b922801ef552d5bc4f53e0c7cf7b"><td class="memItemLeft" align="right" valign="top"><a id="a3573b922801ef552d5bc4f53e0c7cf7b" name="a3573b922801ef552d5bc4f53e0c7cf7b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>DebugUtil</b> (GLFWwindow *)</td></tr>
-<tr class="separator:a3573b922801ef552d5bc4f53e0c7cf7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92c92c47dc9876609f2e9994668018ae" id="r_a92c92c47dc9876609f2e9994668018ae"><td class="memItemLeft" align="right" valign="top"><a id="a92c92c47dc9876609f2e9994668018ae" name="a92c92c47dc9876609f2e9994668018ae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>draw</b> ()</td></tr>
+<tr class="memitem:a113f7b5d2bd951156554f8420eb08a64" id="r_a113f7b5d2bd951156554f8420eb08a64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a113f7b5d2bd951156554f8420eb08a64">DebugUtil</a> (GLFWwindow *window)</td></tr>
+<tr class="separator:a113f7b5d2bd951156554f8420eb08a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7da54284999ad68e1e37a6fad443df6" id="r_ad7da54284999ad68e1e37a6fad443df6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7da54284999ad68e1e37a6fad443df6">~DebugUtil</a> ()</td></tr>
+<tr class="separator:ad7da54284999ad68e1e37a6fad443df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92c92c47dc9876609f2e9994668018ae" id="r_a92c92c47dc9876609f2e9994668018ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92c92c47dc9876609f2e9994668018ae">draw</a> ()</td></tr>
 <tr class="separator:a92c92c47dc9876609f2e9994668018ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The utility used for debugging &amp; experimentation.</p>
+<p>Enabled with the &ndash;debug (-d) launch argument or when the engine is a debug build. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a113f7b5d2bd951156554f8420eb08a64" name="a113f7b5d2bd951156554f8420eb08a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a113f7b5d2bd951156554f8420eb08a64">&#9670;&#160;</a></span>DebugUtil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DebugUtil::DebugUtil </td>
+          <td>(</td>
+          <td class="paramtype">GLFWwindow *</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates the utility </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>The GLFWwindow* used for ImGui. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad7da54284999ad68e1e37a6fad443df6" name="ad7da54284999ad68e1e37a6fad443df6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7da54284999ad68e1e37a6fad443df6">&#9670;&#160;</a></span>~DebugUtil()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DebugUtil::~DebugUtil </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Shutdown &amp; destroy ImGui. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a92c92c47dc9876609f2e9994668018ae" name="a92c92c47dc9876609f2e9994668018ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c92c47dc9876609f2e9994668018ae">&#9670;&#160;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugUtil::draw </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Draw the debugger on the screen. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>BMC-ENGINE/rendering/debugger/<a class="el" href="_debug_util_8h_source.html">DebugUtil.h</a></li>
 <li>BMC-ENGINE/rendering/debugger/<b>DebugUtil.cpp</b></li>

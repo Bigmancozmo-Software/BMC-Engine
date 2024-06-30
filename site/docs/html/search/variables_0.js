@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['id_0',['ID',['../class_texture.html#ab36997a503d4ee65aac557b857a1db8e',1,'Texture::ID'],['../class_shader.html#a7be2afcbd5ba5873a04536a2b4b5e576',1,'Shader::ID']]],
-  ['id_1',['id',['../class_e_b_o.html#a2da498f8e0a9fc5b058319b018fa9034',1,'EBO::id'],['../class_v_a_o.html#a92126cbccdb64e6020a4ada210b3bd96',1,'VAO::id'],['../class_v_b_o.html#ad5826819690b602ef07442dea9597f3b',1,'VBO::id']]]
+  ['camfov_0',['camFOV',['../class_debug_settings.html#a80a8cf2c165791bb9657ec53be7b2f23',1,'DebugSettings']]],
+  ['camsensitivity_1',['camSensitivity',['../class_debug_settings.html#a6b72cf610609c39ee4b2c675f7204b25',1,'DebugSettings']]],
+  ['camspeed_2',['camSpeed',['../class_debug_settings.html#a9556a27d19aa66b433618f2a101fdd81',1,'DebugSettings']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['readfile_0',['readFile',['../class_file_reader.html#ae46d7c0c4121a3601c8e3494ebdc5a0b',1,'FileReader']]]
+  ['maximize_0',['maximize',['../class_window.html#a652b249e69ee5ff3ba8aa3bd4feccdae',1,'Window']]]
 ];
