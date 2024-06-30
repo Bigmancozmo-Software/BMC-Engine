@@ -57,12 +57,14 @@ else()
 	add_executable(BMC-ENGINE ${FULL_SRC})
 endif()
 
+set_target_properties(BMC-ENGINE PROPERTIES ENABLE_EXPORTS ON)
+
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 find_package(OpenGL REQUIRED)
 
-target_link_libraries(BMC-ENGINE glfw)
-target_link_libraries(BMC-ENGINE OpenGL::GL)
+target_link_libraries(BMC-ENGINE PRIVATE glfw)
+target_link_libraries(BMC-ENGINE PRIVATE OpenGL::GL)
 
 if(WIN32)
 	set_target_properties(BMC-ENGINE PROPERTIES
@@ -73,6 +75,3 @@ endif()
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET BMC-ENGINE PROPERTY CXX_STANDARD 20)
 endif()
-
-# Testing
-include(CTest)
