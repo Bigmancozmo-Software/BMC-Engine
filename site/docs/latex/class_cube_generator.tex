@@ -1,0 +1,49 @@
+\doxysection{Cube\+Generator Class Reference}
+\hypertarget{class_cube_generator}{}\label{class_cube_generator}\index{CubeGenerator@{CubeGenerator}}
+
+
+{\ttfamily \#include $<$Generators.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_cube_generator_a792a4f8ffb6a6148827cebef8c19a626}{vertices}} (GLfloat verts\mbox{[}$\,$\mbox{]}, float size)
+\item 
+static void \mbox{\hyperlink{class_cube_generator_aa82bcf811f813a870007a0925caa9fb0}{indices}} (GLuint inds\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates a cube, if given a size. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_cube_generator_aa82bcf811f813a870007a0925caa9fb0}\index{CubeGenerator@{CubeGenerator}!indices@{indices}}
+\index{indices@{indices}!CubeGenerator@{CubeGenerator}}
+\doxysubsubsection{\texorpdfstring{indices()}{indices()}}
+{\footnotesize\ttfamily \label{class_cube_generator_aa82bcf811f813a870007a0925caa9fb0} 
+void Cube\+Generator\+::indices (\begin{DoxyParamCaption}\item[{GLuint}]{inds}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Assigns an array the indices of a basic cube. 
+\begin{DoxyParams}{Parameters}
+{\em inds} & The array to assign to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_cube_generator_a792a4f8ffb6a6148827cebef8c19a626}\index{CubeGenerator@{CubeGenerator}!vertices@{vertices}}
+\index{vertices@{vertices}!CubeGenerator@{CubeGenerator}}
+\doxysubsubsection{\texorpdfstring{vertices()}{vertices()}}
+{\footnotesize\ttfamily \label{class_cube_generator_a792a4f8ffb6a6148827cebef8c19a626} 
+void Cube\+Generator\+::vertices (\begin{DoxyParamCaption}\item[{GLfloat}]{verts}{\mbox{[}$\,$\mbox{]}, }\item[{float}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Assigns an array the vertices of a basic cube. 
+\begin{DoxyParams}{Parameters}
+{\em verts} & The array to assign to. \\
+\hline
+{\em size} & The size multiplier for the cube. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+BMC-\/\+ENGINE/rendering/model/Generators.\+h\item 
+BMC-\/\+ENGINE/rendering/model/Cube\+Generator.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\doxysection{Translator Class Reference}
+\hypertarget{class_translator}{}\label{class_translator}\index{Translator@{Translator}}
+
+
+{\ttfamily \#include $<$Translator.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_translator_a920302395a35ebf8e72e2632c4634500}{Translator}} (std\+::string locale)
+\item 
+std\+::string \mbox{\hyperlink{class_translator_ab93822ee62308cef7b8e469cc139b10e}{translate}} (std\+::string key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reads \& translates keys for the current locale. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_translator_a920302395a35ebf8e72e2632c4634500}\index{Translator@{Translator}!Translator@{Translator}}
+\index{Translator@{Translator}!Translator@{Translator}}
+\doxysubsubsection{\texorpdfstring{Translator()}{Translator()}}
+{\footnotesize\ttfamily \label{class_translator_a920302395a35ebf8e72e2632c4634500} 
+Translator\+::\+Translator (\begin{DoxyParamCaption}\item[{std\+::string}]{locale}{}\end{DoxyParamCaption})}
+
+Create the translator object 
+\begin{DoxyParams}{Parameters}
+{\em locale} & The language, ex en-\/\+US. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_translator_ab93822ee62308cef7b8e469cc139b10e}\index{Translator@{Translator}!translate@{translate}}
+\index{translate@{translate}!Translator@{Translator}}
+\doxysubsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily \label{class_translator_ab93822ee62308cef7b8e469cc139b10e} 
+std\+::string Translator\+::translate (\begin{DoxyParamCaption}\item[{std\+::string}]{key}{}\end{DoxyParamCaption})}
+
+Translate a key to the selected locale. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The key to translate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An std\+::string of the translated key. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+BMC-\/\+ENGINE/classes/lang/Translator.\+h\item 
+BMC-\/\+ENGINE/classes/lang/Translator.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,36 @@
+\doxysection{Error\+Handler Class Reference}
+\hypertarget{class_error_handler}{}\label{class_error_handler}\index{ErrorHandler@{ErrorHandler}}
+
+
+{\ttfamily \#include $<$Error\+Handler.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_error_handler_a38b6609587a7cdf1984056b657b3325d}{Error\+Popup}} (int type, const char \texorpdfstring{$\ast$}{*}\+\_\+text)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles errors in the program. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_error_handler_a38b6609587a7cdf1984056b657b3325d}\index{ErrorHandler@{ErrorHandler}!ErrorPopup@{ErrorPopup}}
+\index{ErrorPopup@{ErrorPopup}!ErrorHandler@{ErrorHandler}}
+\doxysubsubsection{\texorpdfstring{ErrorPopup()}{ErrorPopup()}}
+{\footnotesize\ttfamily \label{class_error_handler_a38b6609587a7cdf1984056b657b3325d} 
+void Error\+Handler\+::\+Error\+Popup (\begin{DoxyParamCaption}\item[{int}]{type}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{\+\_\+text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates and OS-\/specific popup if an error occurred. 
+\begin{DoxyParams}{Parameters}
+{\em type} & The severity, from \doxylink{_error_definitions_8h_source}{Error\+Definitions.\+h}, that the error is. \\
+\hline
+{\em \+\_\+text} & The message in the popup. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+BMC-\/\+ENGINE/classes/errors/Error\+Handler.\+h\item 
+BMC-\/\+ENGINE/classes/errors/Error\+Handler.\+cpp\end{DoxyCompactItemize}
