@@ -1,0 +1,24 @@
+\doxysection{main-\/class.h}
+\hypertarget{main-class_8h_source}{}\label{main-class_8h_source}\index{BMC-\/ENGINE/main-\/class.h@{BMC-\/ENGINE/main-\/class.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MAIN\_CLASS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MAIN\_CLASS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}classes/lang/Translator.h"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classmain}{main}}\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classmain_a8ebcbaca2fb786528949c4556d6feac9}{locale}}\ =\ \textcolor{stringliteral}{"{}en-\/US"{}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_translator}{Translator}}*\ \mbox{\hyperlink{classmain_adae1c2d9630cc2522f9615c306659b33}{translator}}\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_translator}{Translator}}(\mbox{\hyperlink{classmain_a8ebcbaca2fb786528949c4556d6feac9}{locale}});}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{inline}\ \textcolor{keyword}{static}\ std::string\ \mbox{\hyperlink{classmain_a281072ee855f8c2353ea0bb8a6efcee5}{translate}}(std::string\ key)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classmain_adae1c2d9630cc2522f9615c306659b33}{translator}}-\/>\mbox{\hyperlink{class_translator_ab93822ee62308cef7b8e469cc139b10e}{translate}}(key);}
+\DoxyCodeLine{00028\ \ \ \ \ \}}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

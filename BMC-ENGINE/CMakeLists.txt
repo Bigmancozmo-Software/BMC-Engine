@@ -43,7 +43,7 @@ file(GLOB FULL_SRC
 # resources dir
 add_custom_target(copy_resources ALL)
 
-add_custom_command(
+add_custom_target(
     TARGET copy_resources POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         ${CMAKE_SOURCE_DIR}/resources
@@ -57,10 +57,14 @@ else()
 	add_executable(BMC-ENGINE ${FULL_SRC})
 endif()
 
+set_target_properties(BMC-ENGINE PROPERTIES ENABLE_EXPORTS ON)
+
+set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+
 find_package(OpenGL REQUIRED)
 
-target_link_libraries(BMC-ENGINE glfw)
-target_link_libraries(BMC-ENGINE OpenGL::GL)
+target_link_libraries(BMC-ENGINE PRIVATE glfw)
+target_link_libraries(BMC-ENGINE PRIVATE OpenGL::GL)
 
 if(WIN32)
 	set_target_properties(BMC-ENGINE PROPERTIES

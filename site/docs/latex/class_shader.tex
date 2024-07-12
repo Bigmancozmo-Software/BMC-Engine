@@ -1,0 +1,163 @@
+\doxysection{Shader Class Reference}
+\hypertarget{class_shader}{}\label{class_shader}\index{Shader@{Shader}}
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_shader_a3e135bbf914b087a939114d79c10d283}{Shader}} (const char \texorpdfstring{$\ast$}{*}vertex\+Path, const char \texorpdfstring{$\ast$}{*}fragment\+Path)
+\item 
+void \mbox{\hyperlink{class_shader_a870fa9f13d69e558815d6fd351a469dc}{use}} ()
+\item 
+void \mbox{\hyperlink{class_shader_ab1a56d6c299bd7eaa18c2e142ef7bd9f}{set\+Bool}} (const std\+::string \&name, bool value) const
+\item 
+void \mbox{\hyperlink{class_shader_ad362e2b654cd95a3574cd505411e41fd}{set\+Int}} (const std\+::string \&name, int value) const
+\item 
+void \mbox{\hyperlink{class_shader_afe7367621f74c2d26431d8ac15252bf3}{set\+Float}} (const std\+::string \&name, float value) const
+\item 
+void \mbox{\hyperlink{class_shader_ad5949442e2f9a2896fd7256458e436f5}{set\+Mat4}} (const std\+::string \&name, glm\+::mat4 value) const
+\item 
+void \mbox{\hyperlink{class_shader_ab309c3332890cfd6767ac1d190229796}{set\+Vec3}} (const std\+::string \&name, glm\+::vec3 value) const
+\item 
+void \mbox{\hyperlink{class_shader_adb520b04adb0258ff0df62f45bf28779}{set\+Vec4}} (const std\+::string \&name, glm\+::vec4 value) const
+\item 
+void \mbox{\hyperlink{class_shader_acf3b1aca02ced8a7358486b47453c63d}{vertex\+Attrib\+Pointer}} (int index, int length, int type, int total\+Size)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+GLuint \mbox{\hyperlink{class_shader_a7be2afcbd5ba5873a04536a2b4b5e576}{ID}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Makes Open\+GL shader creation easier by providing simple functions. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_shader_a3e135bbf914b087a939114d79c10d283}\index{Shader@{Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{Shader()}{Shader()}}
+{\footnotesize\ttfamily \label{class_shader_a3e135bbf914b087a939114d79c10d283} 
+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{vertex\+Path}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{fragment\+Path}{}\end{DoxyParamCaption})}
+
+The ID to assign the shader to. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shader_ab1a56d6c299bd7eaa18c2e142ef7bd9f}\index{Shader@{Shader}!setBool@{setBool}}
+\index{setBool@{setBool}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{setBool()}{setBool()}}
+{\footnotesize\ttfamily \label{class_shader_ab1a56d6c299bd7eaa18c2e142ef7bd9f} 
+void Shader\+::set\+Bool (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{bool}]{value}{}\end{DoxyParamCaption}) const}
+
+Sets a boolean uniform in the shader. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the uniform. \\
+\hline
+{\em value} & The value to set it to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shader_afe7367621f74c2d26431d8ac15252bf3}\index{Shader@{Shader}!setFloat@{setFloat}}
+\index{setFloat@{setFloat}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{setFloat()}{setFloat()}}
+{\footnotesize\ttfamily \label{class_shader_afe7367621f74c2d26431d8ac15252bf3} 
+void Shader\+::set\+Float (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{float}]{value}{}\end{DoxyParamCaption}) const}
+
+Sets a float uniform in the shader. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the uniform. \\
+\hline
+{\em value} & The value to set it to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shader_ad362e2b654cd95a3574cd505411e41fd}\index{Shader@{Shader}!setInt@{setInt}}
+\index{setInt@{setInt}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{setInt()}{setInt()}}
+{\footnotesize\ttfamily \label{class_shader_ad362e2b654cd95a3574cd505411e41fd} 
+void Shader\+::set\+Int (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{int}]{value}{}\end{DoxyParamCaption}) const}
+
+Sets an integer uniform in the shader. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the uniform. \\
+\hline
+{\em value} & The value to set it to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shader_ad5949442e2f9a2896fd7256458e436f5}\index{Shader@{Shader}!setMat4@{setMat4}}
+\index{setMat4@{setMat4}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{setMat4()}{setMat4()}}
+{\footnotesize\ttfamily \label{class_shader_ad5949442e2f9a2896fd7256458e436f5} 
+void Shader\+::set\+Mat4 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{glm\+::mat4}]{value}{}\end{DoxyParamCaption}) const}
+
+Sets a mat4 uniform in the shader. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the uniform. \\
+\hline
+{\em value} & The value to set it to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shader_ab309c3332890cfd6767ac1d190229796}\index{Shader@{Shader}!setVec3@{setVec3}}
+\index{setVec3@{setVec3}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{setVec3()}{setVec3()}}
+{\footnotesize\ttfamily \label{class_shader_ab309c3332890cfd6767ac1d190229796} 
+void Shader\+::set\+Vec3 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{glm\+::vec3}]{value}{}\end{DoxyParamCaption}) const}
+
+Sets a vec3 uniform in the shader. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the uniform. \\
+\hline
+{\em value} & The value to set it to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shader_adb520b04adb0258ff0df62f45bf28779}\index{Shader@{Shader}!setVec4@{setVec4}}
+\index{setVec4@{setVec4}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{setVec4()}{setVec4()}}
+{\footnotesize\ttfamily \label{class_shader_adb520b04adb0258ff0df62f45bf28779} 
+void Shader\+::set\+Vec4 (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name}{, }\item[{glm\+::vec4}]{value}{}\end{DoxyParamCaption}) const}
+
+Sets a vec4 uniform in the shader. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the uniform. \\
+\hline
+{\em value} & The value to set it to. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shader_a870fa9f13d69e558815d6fd351a469dc}\index{Shader@{Shader}!use@{use}}
+\index{use@{use}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{use()}{use()}}
+{\footnotesize\ttfamily \label{class_shader_a870fa9f13d69e558815d6fd351a469dc} 
+void Shader\+::use (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+The ID to assign the shader to. \Hypertarget{class_shader_acf3b1aca02ced8a7358486b47453c63d}\index{Shader@{Shader}!vertexAttribPointer@{vertexAttribPointer}}
+\index{vertexAttribPointer@{vertexAttribPointer}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{vertexAttribPointer()}{vertexAttribPointer()}}
+{\footnotesize\ttfamily \label{class_shader_acf3b1aca02ced8a7358486b47453c63d} 
+void Shader\+::vertex\+Attrib\+Pointer (\begin{DoxyParamCaption}\item[{int}]{index}{, }\item[{int}]{length}{, }\item[{int}]{type}{, }\item[{int}]{total\+Size}{}\end{DoxyParamCaption})}
+
+Create a vertex attribute pointer. 
+\begin{DoxyParams}{Parameters}
+{\em index} & The index in the vertices array. \\
+\hline
+{\em length} & The length of the vertex attribute pointer (ex. a vec3 would be 3). \\
+\hline
+{\em type} & The type of the data in the vertices array. \\
+\hline
+{\em total\+Size} & The length of 1 vertex in the vertices array. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_shader_a7be2afcbd5ba5873a04536a2b4b5e576}\index{Shader@{Shader}!ID@{ID}}
+\index{ID@{ID}!Shader@{Shader}}
+\doxysubsubsection{\texorpdfstring{ID}{ID}}
+{\footnotesize\ttfamily \label{class_shader_a7be2afcbd5ba5873a04536a2b4b5e576} 
+GLuint Shader\+::\+ID}
+
+The ID to assign the shader to. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+BMC-\/\+ENGINE/rendering/shaders/Shader.\+h\item 
+BMC-\/\+ENGINE/rendering/shaders/Shader.\+cpp\end{DoxyCompactItemize}

@@ -1,7 +1,8 @@
-#ifndef ERROR_CRITICAL
-#define ERROR_CRITICAL 100 // Error is critical - close program
-#endif
+#ifndef ERROR_DEFINITIONS_H
 
-#ifndef ERROR_REGULAR
-#define ERROR_CAN_CONTINUE 10 // Can continue after error
-#endif
+enum Errors {
+	ERROR_CAN_CONTINUE = 10,
+	ERROR_CRITICAL = 100
+};
+
+#endif // ERROR_DEFINITIONS_H

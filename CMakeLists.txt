@@ -12,17 +12,21 @@ if (POLICY CMP0141)
   set(CMAKE_MSVC_DEBUG_INFORMATION_FORMAT "$<IF:$<AND:$<C_COMPILER_ID:MSVC>,$<CXX_COMPILER_ID:MSVC>>,$<$<CONFIG:Debug,RelWithDebInfo>:EditAndContinue>,$<$<CONFIG:Debug,RelWithDebInfo>:ProgramDatabase>>")
 endif()
 
-# Add base subdirectory
+set(CMAKE_POSITION_INDEPENDENT_CODE ON)
+
+enable_testing()
+
+# Subdirectories 1
 add_subdirectory ("BMC-ENGINE")
 
 # Include directories
-target_include_directories(BMC-ENGINE PRIVATE extern/glfw/include)
-target_include_directories(BMC-ENGINE PRIVATE libs/glad/include)
-target_include_directories(BMC-ENGINE PRIVATE libs/imgui)
-target_include_directories(BMC-ENGINE PRIVATE libs/imgui/backends)
-target_include_directories(BMC-ENGINE PRIVATE extern/stb)
-target_include_directories(BMC-ENGINE PRIVATE BMC-ENGINE/classes)
-target_include_directories(BMC-ENGINE PRIVATE extern/glm)
+target_include_directories(BMC-ENGINE PUBLIC extern/glfw/include)
+target_include_directories(BMC-ENGINE PUBLIC libs/glad/include)
+target_include_directories(BMC-ENGINE PUBLIC libs/imgui)
+target_include_directories(BMC-ENGINE PUBLIC libs/imgui/backends)
+target_include_directories(BMC-ENGINE PUBLIC extern/stb)
+target_include_directories(BMC-ENGINE PUBLIC BMC-ENGINE/classes)
+target_include_directories(BMC-ENGINE PUBLIC extern/glm)
 
 # More subdirectories
 add_subdirectory ("extern/glfw")

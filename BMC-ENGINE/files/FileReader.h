@@ -6,8 +6,16 @@
 #include <sstream>
 #include <iostream>
 
+/// 
+/// Reads a file from the filesystem.
+/// 
 class FileReader {
 public:
+	/// 
+	/// Reads the contents of a file.
+	/// @param path The location of the file.
+	/// @return The contents of the file, as an std::string.
+	/// 
 	static std::string readFile(const char* path);
 };
 

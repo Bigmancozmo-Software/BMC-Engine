@@ -12,8 +12,16 @@
 #include <Windows.h>
 #endif
 
+/// 
+/// Handles errors in the program.
+/// 
 class ErrorHandler {
 public:
+	/// 
+	/// Creates and OS-specific popup if an error occurred.
+	/// @param type The severity, from ErrorDefinitions.h, that the error is.
+	/// @param _text The message in the popup.
+	/// 
 	static void ErrorPopup(int type, const char* _text);
 };
 

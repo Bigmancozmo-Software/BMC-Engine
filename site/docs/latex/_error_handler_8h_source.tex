@@ -1,0 +1,26 @@
+\doxysection{Error\+Handler.\+h}
+\hypertarget{_error_handler_8h_source}{}\label{_error_handler_8h_source}\index{BMC-\/ENGINE/classes/errors/ErrorHandler.h@{BMC-\/ENGINE/classes/errors/ErrorHandler.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ERROR\_HANDLER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ERROR\_HANDLER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}ErrorDefinitions.h"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <GLFW/glfw3.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}../lang/Translator.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}../../main-\/class.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#ifdef\ WIN32}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <Windows.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_error_handler}{ErrorHandler}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_error_handler_a38b6609587a7cdf1984056b657b3325d}{ErrorPopup}}(\textcolor{keywordtype}{int}\ type,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \_text);}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ERROR\_HANDLER\_H}}
+
+\end{DoxyCode}

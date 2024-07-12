@@ -1,0 +1,179 @@
+\doxysection{Camera Class Reference}
+\hypertarget{class_camera}{}\label{class_camera}\index{Camera@{Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_camera_ad7b7c380055d3426b9e44b07ec3c07a8}{Camera}} (int \mbox{\hyperlink{class_camera_ac4ee2bb6d3a691805c8d3acd09c00298}{win\+Width}}, int \mbox{\hyperlink{class_camera_a693afa7151290887dec5b10fb594d035}{win\+Height}}, glm\+::vec3 \mbox{\hyperlink{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5}{position}})
+\item 
+\mbox{\hyperlink{class_camera_a3f69e3e801b38f19e5c6a8a1c5c69c3f}{Camera}} (\mbox{\hyperlink{class_vector2}{Vector2}} \texorpdfstring{$\ast$}{*}size, glm\+::vec3 \mbox{\hyperlink{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5}{position}})
+\item 
+void \mbox{\hyperlink{class_camera_af2f7d8094afc9fe8fc2a74deb7088909}{update\+Matrix}} (float FOVdeg, float near\+Plane, float far\+Plane)
+\item 
+void \mbox{\hyperlink{class_camera_a7f56af367ee2479dfaff6cda227e1793}{matrix}} (\mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*}shader, const char \texorpdfstring{$\ast$}{*}uniform)
+\item 
+void \mbox{\hyperlink{class_camera_a130d59d482d22ec4650bf010cfecd267}{inputs}} (\mbox{\hyperlink{class_window}{Window}} \texorpdfstring{$\ast$}{*}window)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5}{position}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_camera_a1be00c1e1049e3f682094be8d85060a8}{orientation}} = glm\+::vec3(0.\+0f, 0.\+0f, -\/1.\+0f)
+\item 
+glm\+::vec3 \mbox{\hyperlink{class_camera_a3fe5f351380fb118ffc600591769f049}{up}} = glm\+::vec3(0.\+0f, 1.\+0f, 0.\+0f)
+\item 
+glm\+::mat4 \mbox{\hyperlink{class_camera_ab64c758c9bfd88201598e8f77cb380eb}{camera\+Matrix}} = glm\+::mat4(1.\+0f)
+\item 
+bool \mbox{\hyperlink{class_camera_a9ab381eac17a629e3451328622c6c5a9}{first\+Click}} = true
+\item 
+int \mbox{\hyperlink{class_camera_ac4ee2bb6d3a691805c8d3acd09c00298}{win\+Width}}
+\item 
+int \mbox{\hyperlink{class_camera_a693afa7151290887dec5b10fb594d035}{win\+Height}}
+\item 
+float \mbox{\hyperlink{class_camera_a2960f533df18fe6d7d574c316c6d217a}{speed}} = 0.\+012f
+\item 
+float \mbox{\hyperlink{class_camera_a5431c8caefafb42a667ca4c801bef07f}{sensitivity}} = 365.\+5f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The camera manager. Creates a matrix, which is sent to the vertex shader. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_camera_ad7b7c380055d3426b9e44b07ec3c07a8}\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_camera_ad7b7c380055d3426b9e44b07ec3c07a8} 
+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{int}]{win\+Width}{, }\item[{int}]{win\+Height}{, }\item[{glm\+::vec3}]{position}{}\end{DoxyParamCaption})}
+
+Creates the camera. 
+\begin{DoxyParams}{Parameters}
+{\em win\+Width} & The window\textquotesingle{}s width. \\
+\hline
+{\em win\+Height} & The window\textquotesingle{}s height. \\
+\hline
+{\em position} & The camera\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a3f69e3e801b38f19e5c6a8a1c5c69c3f}\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{Camera()}{Camera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_camera_a3f69e3e801b38f19e5c6a8a1c5c69c3f} 
+Camera\+::\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector2}{Vector2}} \texorpdfstring{$\ast$}{*}}]{size}{, }\item[{glm\+::vec3}]{position}{}\end{DoxyParamCaption})}
+
+Creates the camera. 
+\begin{DoxyParams}{Parameters}
+{\em size} & The window\textquotesingle{}s size, as a \doxylink{class_vector3}{Vector3}. \\
+\hline
+{\em position} & The camera\textquotesingle{}s position. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_camera_a130d59d482d22ec4650bf010cfecd267}\index{Camera@{Camera}!inputs@{inputs}}
+\index{inputs@{inputs}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{inputs()}{inputs()}}
+{\footnotesize\ttfamily \label{class_camera_a130d59d482d22ec4650bf010cfecd267} 
+void Camera\+::inputs (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_window}{Window}} \texorpdfstring{$\ast$}{*}}]{window}{}\end{DoxyParamCaption})}
+
+Process the camera\textquotesingle{}s inputs. 
+\begin{DoxyParams}{Parameters}
+{\em window} & The engine window. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_a7f56af367ee2479dfaff6cda227e1793}\index{Camera@{Camera}!matrix@{matrix}}
+\index{matrix@{matrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{matrix()}{matrix()}}
+{\footnotesize\ttfamily \label{class_camera_a7f56af367ee2479dfaff6cda227e1793} 
+void Camera\+::matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_shader}{Shader}} \texorpdfstring{$\ast$}{*}}]{shader}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{uniform}{}\end{DoxyParamCaption})}
+
+Send the camera matrix to the shader. 
+\begin{DoxyParams}{Parameters}
+{\em shader} & The vertex shader. \\
+\hline
+{\em uniform} & The name of the matrix uniform. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_camera_af2f7d8094afc9fe8fc2a74deb7088909}\index{Camera@{Camera}!updateMatrix@{updateMatrix}}
+\index{updateMatrix@{updateMatrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{updateMatrix()}{updateMatrix()}}
+{\footnotesize\ttfamily \label{class_camera_af2f7d8094afc9fe8fc2a74deb7088909} 
+void Camera\+::update\+Matrix (\begin{DoxyParamCaption}\item[{float}]{FOVdeg}{, }\item[{float}]{near\+Plane}{, }\item[{float}]{far\+Plane}{}\end{DoxyParamCaption})}
+
+Project the matrix. 
+\begin{DoxyParams}{Parameters}
+{\em FOVdeg} & The FOV, in degrees. \\
+\hline
+{\em near\+Plane} & How close to the camera objects can be before getting clipped. \\
+\hline
+{\em far\+Plane} & How far away from the camera objects can be before getting clipped. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_camera_ab64c758c9bfd88201598e8f77cb380eb}\index{Camera@{Camera}!cameraMatrix@{cameraMatrix}}
+\index{cameraMatrix@{cameraMatrix}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{cameraMatrix}{cameraMatrix}}
+{\footnotesize\ttfamily \label{class_camera_ab64c758c9bfd88201598e8f77cb380eb} 
+glm\+::mat4 Camera\+::camera\+Matrix = glm\+::mat4(1.\+0f)}
+
+The camera\textquotesingle{}s matrix, which all vertices are multiplied by. \Hypertarget{class_camera_a9ab381eac17a629e3451328622c6c5a9}\index{Camera@{Camera}!firstClick@{firstClick}}
+\index{firstClick@{firstClick}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{firstClick}{firstClick}}
+{\footnotesize\ttfamily \label{class_camera_a9ab381eac17a629e3451328622c6c5a9} 
+bool Camera\+::first\+Click = true}
+
+To be removed -\/ ignore this. \Hypertarget{class_camera_a1be00c1e1049e3f682094be8d85060a8}\index{Camera@{Camera}!orientation@{orientation}}
+\index{orientation@{orientation}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{orientation}{orientation}}
+{\footnotesize\ttfamily \label{class_camera_a1be00c1e1049e3f682094be8d85060a8} 
+glm\+::vec3 Camera\+::orientation = glm\+::vec3(0.\+0f, 0.\+0f, -\/1.\+0f)}
+
+The camera\textquotesingle{}s rotation. \Hypertarget{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5}\index{Camera@{Camera}!position@{position}}
+\index{position@{position}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily \label{class_camera_a04b5db2c530d8630660e8cfb93a4b3b5} 
+glm\+::vec3 Camera\+::position}
+
+The camera\textquotesingle{}s position. \Hypertarget{class_camera_a5431c8caefafb42a667ca4c801bef07f}\index{Camera@{Camera}!sensitivity@{sensitivity}}
+\index{sensitivity@{sensitivity}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{sensitivity}{sensitivity}}
+{\footnotesize\ttfamily \label{class_camera_a5431c8caefafb42a667ca4c801bef07f} 
+float Camera\+::sensitivity = 365.\+5f}
+
+The camera\textquotesingle{}s rotation sensitivity. \Hypertarget{class_camera_a2960f533df18fe6d7d574c316c6d217a}\index{Camera@{Camera}!speed@{speed}}
+\index{speed@{speed}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily \label{class_camera_a2960f533df18fe6d7d574c316c6d217a} 
+float Camera\+::speed = 0.\+012f}
+
+The camera\textquotesingle{}s movement speed. \Hypertarget{class_camera_a3fe5f351380fb118ffc600591769f049}\index{Camera@{Camera}!up@{up}}
+\index{up@{up}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{up}{up}}
+{\footnotesize\ttfamily \label{class_camera_a3fe5f351380fb118ffc600591769f049} 
+glm\+::vec3 Camera\+::up = glm\+::vec3(0.\+0f, 1.\+0f, 0.\+0f)}
+
+The up vector. \Hypertarget{class_camera_a693afa7151290887dec5b10fb594d035}\index{Camera@{Camera}!winHeight@{winHeight}}
+\index{winHeight@{winHeight}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{winHeight}{winHeight}}
+{\footnotesize\ttfamily \label{class_camera_a693afa7151290887dec5b10fb594d035} 
+int Camera\+::win\+Height}
+
+The window\textquotesingle{}s height. \Hypertarget{class_camera_ac4ee2bb6d3a691805c8d3acd09c00298}\index{Camera@{Camera}!winWidth@{winWidth}}
+\index{winWidth@{winWidth}!Camera@{Camera}}
+\doxysubsubsection{\texorpdfstring{winWidth}{winWidth}}
+{\footnotesize\ttfamily \label{class_camera_ac4ee2bb6d3a691805c8d3acd09c00298} 
+int Camera\+::win\+Width}
+
+The window\textquotesingle{}s width. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+BMC-\/\+ENGINE/rendering/graphics/Camera.\+h\item 
+BMC-\/\+ENGINE/rendering/graphics/Camera.\+cpp\end{DoxyCompactItemize}

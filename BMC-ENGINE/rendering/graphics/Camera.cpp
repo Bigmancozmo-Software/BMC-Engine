@@ -1,17 +1,17 @@
 #include "Camera.h"
 
-Camera::Camera(int width, int height, glm::vec3 position)
+Camera::Camera(int winWidth, int winHeight, glm::vec3 position)
 {
 	this->position = position;
-	this->height = height;
-	this->width = width;
+	this->winHeight = winHeight;
+	this->winWidth = winWidth;
 }
 
 Camera::Camera(Vector2* size, glm::vec3 position)
 {
 	this->position = position;
-	this->height = size->y;
-	this->width = size->x;
+	this->winHeight = size->y;
+	this->winWidth = size->x;
 }
 
 void Camera::updateMatrix(float FOVdeg, float nearPlane, float farPlane)
@@ -20,7 +20,7 @@ void Camera::updateMatrix(float FOVdeg, float nearPlane, float farPlane)
 	glm::mat4 proj = glm::mat4(1.0f);
 
 	view = glm::lookAt(position, position + orientation, up);
-	proj = glm::perspective(glm::radians(FOVdeg), (float)(width / height), nearPlane, farPlane);
+	proj = glm::perspective(glm::radians(FOVdeg), (float)(winWidth / winHeight), nearPlane, farPlane);
 
 	cameraMatrix = proj * view;
 }
@@ -51,20 +51,20 @@ void Camera::inputs(Window* window)
 		glfwSetInputMode(win, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
 
 		if (firstClick) {
-			glfwSetCursorPos(win, width / 2, height / 2);
+			glfwSetCursorPos(win, winWidth / 2, winHeight / 2);
 			firstClick = false;
 		}
 
 		double mx, my;
 		glfwGetCursorPos(win, &mx, &my);
-		float rotX = sensitivity * (float)(my - (height / 2)) / height;
-		float rotY = sensitivity * (float)(mx - (height / 2)) / height;
+		float rotX = sensitivity * (float)(my - (winHeight / 2)) / winHeight;
+		float rotY = sensitivity * (float)(mx - (winHeight / 2)) / winHeight;
 
 		glm::vec3 newOri = glm::rotate(orientation, glm::radians(-rotX), glm::normalize(glm::cross(orientation, up)));
 		orientation = newOri;
 
 		orientation = glm::rotate(orientation, glm::radians(-rotY), up);
-		glfwSetCursorPos(win, width / 2, height / 2);
+		glfwSetCursorPos(win, winWidth / 2, winHeight / 2);
 	}
 	else if (glfwGetMouseButton(win, GLFW_MOUSE_BUTTON_RIGHT) == GLFW_RELEASE) {
 		glfwSetInputMode(win, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
