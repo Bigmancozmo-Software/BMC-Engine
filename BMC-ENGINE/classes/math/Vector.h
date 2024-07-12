@@ -33,6 +33,11 @@ public:
 	/// Create a blank Vector2, with X/Y = 0.
 	/// 
 	Vector2();
+
+	Vector2 operator+(const Vector2& other) const { return Vector2(x + other.x, y + other.y); };
+	Vector2 operator-(const Vector2& other) const { return Vector2(x - other.x, y - other.y); };
+	Vector2 operator*(const Vector2& other) const { return Vector2(x * other.x, y * other.y); };
+	Vector2 operator/(const Vector2& other) const { return Vector2(x / other.x, y / other.y); };
 };
 
 /// 
@@ -73,6 +78,11 @@ public:
 	/// Create a blank Vector3, with X/Y/Z = 0.
 	/// 
 	Vector3();
+
+	Vector3 operator+(const Vector3& other) const { return Vector3(x + other.x, y + other.y, z + other.z); };
+	Vector3 operator-(const Vector3& other) const { return Vector3(x - other.x, y - other.y, z - other.z); };
+	Vector3 operator*(const Vector3& other) const { return Vector3(x * other.x, y * other.y, z * other.z); };
+	Vector3 operator/(const Vector3& other) const { return Vector3(x / other.x, y / other.y, z / other.z); };
 };
 
 #endif // VECTOR_H
