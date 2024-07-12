@@ -27,10 +27,8 @@ target_include_directories(BMC-ENGINE PUBLIC BMC-ENGINE/classes)
 target_include_directories(BMC-ENGINE PUBLIC extern/glm)
 
 # More subdirectories
-#add_subdirectory ("extern/GTest")
 add_subdirectory ("extern/glfw")
 add_subdirectory ("libs/glad/include")
 add_subdirectory ("libs/glad/src")
 add_subdirectory ("libs/imgui")
 add_subdirectory ("libs/imgui/backends")
-#add_subdirectory ("tests")
