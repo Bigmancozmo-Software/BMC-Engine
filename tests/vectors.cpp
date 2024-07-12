@@ -44,3 +44,27 @@ TEST(Vector3Tests, Add) {
 	EXPECT_EQ(added.x, expected.x);
 	EXPECT_EQ(added.y, expected.y);
 }
+
+TEST(Vector3Tests, Subtract) {
+	Vector3 added = Vector3(5, 6, 3) - Vector3(8, 3, 7);
+	Vector3 expected = Vector3(-3, 3, -4);
+
+	EXPECT_EQ(added.x, expected.x);
+	EXPECT_EQ(added.y, expected.y);
+}
+
+TEST(Vector3Tests, Multiply) {
+	Vector3 added = Vector3(5, 6, 3) * Vector3(8, 3, 7);
+	Vector3 expected = Vector3(40, 18, 21);
+
+	EXPECT_EQ(added.x, expected.x);
+	EXPECT_EQ(added.y, expected.y);
+}
+
+TEST(Vector3Tests, Divide) {
+	Vector3 added = Vector3(5, 6, 3) / Vector3(8, 3, 7);
+	Vector3 expected = Vector3(5 / 8, 6 / 3, 3 / 7);
+
+	EXPECT_EQ(added.x, expected.x);
+	EXPECT_EQ(added.y, expected.y);
+}
