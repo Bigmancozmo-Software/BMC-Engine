@@ -5,14 +5,14 @@ file(GLOB NEEDED_SOURCE
 )
 
 add_executable(
-  unit_tests
+  tests
   "tests/vectors.cpp"
   ${NEEDED_SOURCE}
 )
 target_link_libraries(
-  unit_tests
+  tests
   GTest::gtest_main
 )
 
 include(GoogleTest)
-gtest_discover_tests(unit_tests)
+gtest_discover_tests(tests)
