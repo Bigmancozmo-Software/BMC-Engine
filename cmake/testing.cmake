@@ -1,8 +1,13 @@
 enable_testing()
 
+file(GLOB NEEDED_SOURCE
+	"BMC-ENGINE/classes/math/Vector.cpp"
+)
+
 add_executable(
   unit_tests
-  "GTestExperimentation/add_test.cpp"
+  "tests/vectors.cpp"
+  ${NEEDED_SOURCE}
 )
 target_link_libraries(
   unit_tests
