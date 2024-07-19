@@ -1,4 +1,4 @@
-# TODO: find fmod
+# TODO: just put fmod in the source code lol
 
 set(FMOD_API_DIRECTORY "")
 
